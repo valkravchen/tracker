@@ -15,6 +15,6 @@ public class DummyDic {
 
     public static void main(String[] args) {
         DummyDic translator = new DummyDic();
-        System.out.println(translator.engToRus("Creation"));
+        System.out.println(translator.engToRus("Мир"));
     }
 }
