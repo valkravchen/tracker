@@ -21,12 +21,12 @@ public class Cat {
 
     public static void main(String[] args) {
         Cat gav = new Cat();
-        gav.giveNick("Гав");
-        gav.eat("Котлета");
-        gav.show();
         Cat black = new Cat();
+        gav.giveNick("Гав");
         black.giveNick("Чёрный кот");
+        gav.eat("Котлета");
         black.eat("Рыба");
+        gav.show();
         black.show();
     }
 }
