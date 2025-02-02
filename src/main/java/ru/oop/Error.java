@@ -1,6 +1,7 @@
 package ru.oop;
 
 public class Error {
+
     private boolean active;
     private int status;
     private String message;
