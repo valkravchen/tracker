@@ -1,14 +1,24 @@
 package ru.oop;
 
 public class Tamagotchi {
+
+    private int weight = 100;
+
+    public void feed() {
+        weight += 10;
+    }
+
+    public String info() {
+        return "Weight: " + weight;
+    }
+
     public static void main(String[] args) {
-        int weight = 100;
-        int weightCopy = weight;
-        System.out.println("Weight: " + weight);
-        System.out.println("Copy of weight: " + weightCopy);
-        System.out.println();
-        weightCopy += 10;
-        System.out.println("Weight: " + weight);
-        System.out.println("Copy of weight: " + weightCopy);
+        Tamagotchi pet = new Tamagotchi();
+        Tamagotchi petCopy = pet;
+        System.out.println("Weight: " + pet.info());
+        System.out.println("Copy of weight: " + petCopy.info());
+        petCopy.feed();
+        System.out.println("Weight: " + pet.info());
+        System.out.println("Copy of weight: " + petCopy.info());
     }
 }
