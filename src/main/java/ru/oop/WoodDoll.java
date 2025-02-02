@@ -20,7 +20,9 @@ public class WoodDoll {
     }
 
     public static void main(String[] args) {
-        WoodDoll little = new WoodDoll(null, "Little doll");
-        little.about();
+        WoodDoll little = new WoodDoll(null, "Little Doll");
+        WoodDoll middle = new WoodDoll(little, "Middle Doll");
+        WoodDoll big = new WoodDoll(middle, "Big Doll");
+        big.about();
     }
 }
