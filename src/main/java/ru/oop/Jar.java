@@ -16,7 +16,7 @@ public class Jar {
         Jar first = new Jar(10);
         Jar second = new Jar(5);
         System.out.println("first: " + first.value + ". second: " + second.value);
-        first.pour(second);
+        second.pour(first);
         System.out.println("first: " + first.value + ". second: " + second.value);
     }
 }
