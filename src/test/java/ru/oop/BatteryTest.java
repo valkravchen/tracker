@@ -22,6 +22,7 @@ class BatteryTest {
         int expected = 0;
         assertThat(charger.about()).isEqualTo("My charge: " + expected + "%");
     }
+
     @Test
     public void whenThis95Another0ThenAnotherLoadEqual95() {
         Battery charger = new Battery(95);
