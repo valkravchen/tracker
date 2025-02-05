@@ -2,7 +2,6 @@ package ru.oop;
 
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
 
 class BatteryTest {
 
@@ -22,5 +21,13 @@ class BatteryTest {
         charger.exchange(another);
         int expected = 0;
         assertThat(charger.about()).isEqualTo("My charge: " + expected + "%");
+    }
+    @Test
+    public void whenThis95Another0ThenAnotherLoadEqual95() {
+        Battery charger = new Battery(95);
+        Battery another = new Battery(0);
+        charger.exchange(another);
+        int expected = 95;
+        assertThat(another.about()).isEqualTo("My charge: " + expected + "%");
     }
 }
