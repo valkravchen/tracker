@@ -12,7 +12,7 @@ public class WoodDoll {
     public void about() {
         System.out.println("Hello, my name is " + name);
         if (child != null) {
-            System.out.println("I have a child. Let's I call her ...");
+            System.out.println("I have a child. Let's I call her...");
             child.about();
         } else {
             System.out.println("I don't have a child.");
