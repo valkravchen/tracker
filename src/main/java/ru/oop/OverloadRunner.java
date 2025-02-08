@@ -18,4 +18,9 @@ public class OverloadRunner {
         System.out.println("Your age: " + age);
         System.out.println("Your allow: " + allow);
     }
+
+    public void print(String name, int age) {
+        System.out.println("Your name: " + name);
+        System.out.println("Your age: " + age);
+    }
 }
