@@ -16,6 +16,7 @@ class TriangleTest {
         double expected = 8;
         assertThat(result).isCloseTo(expected, offset(0.001));
     }
+
     @Test
     public void when010and10and04ThenMinus1() {
         Point a = new Point(1, 0);
