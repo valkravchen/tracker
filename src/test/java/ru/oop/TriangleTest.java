@@ -26,5 +26,4 @@ class TriangleTest {
         double expected = -1;
         assertThat(result).isEqualTo(expected);
     }
-
 }
