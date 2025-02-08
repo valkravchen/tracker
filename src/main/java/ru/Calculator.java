@@ -7,9 +7,7 @@ public class Calculator {
     }
 
     public double add(double first, double second, double third) {
-        return add(
-                first,
-                add(second, third)
-        );
+        double temp = add(second, third);
+        return add(first, temp);
     }
 }
