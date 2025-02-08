@@ -12,4 +12,10 @@ public class OverloadRunner {
         System.out.println("Your age: " + age);
         System.out.println("Your allow: " + allow);
     }
+
+    public void print(boolean allow, int age, String name) {
+        System.out.println("Your name: " + name);
+        System.out.println("Your age: " + age);
+        System.out.println("Your allow: " + allow);
+    }
 }
