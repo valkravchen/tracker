@@ -1,6 +1,6 @@
 package ru.oop;
 
-public class Athlete extends Sportsman{
+public class Athlete extends Sportsman {
 
     @Override
     void run() {
