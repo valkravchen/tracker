@@ -1,6 +1,7 @@
 package ru.inheritance;
 
 public class Engineer extends Profession {
+
     private int experience;
 
     public Engineer(int experience) {
