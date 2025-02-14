@@ -5,7 +5,7 @@ public class Programmer extends Engineer {
     private String programLang;
 
     public Programmer(String programLang) {
-        super(0, true);
+        super(0, false);
         this.programLang = programLang;
     }
 
