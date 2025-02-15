@@ -2,8 +2,8 @@ package ru.inheritance;
 
 public class ReportUsage {
     public static void main(String[] args) {
-        HtmlReport report = new HtmlReport();
-        String text = report.generate("Report's name", "Report's body");
+        JSONReport report = new JSONReport();
+        String text = report.generate("David Gilmour", "Shine On You Crazy Diamond");
         System.out.println(text);
     }
 }
