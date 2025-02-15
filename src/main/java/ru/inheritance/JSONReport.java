@@ -1,7 +1,6 @@
 package ru.inheritance;
 
 public class JSONReport extends TextReport {
-
     public String generate(String name, String body) {
         return "{"
                 + System.lineSeparator()
