@@ -1,6 +1,6 @@
 package ru.inheritance;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     @Override
     public void instanceInvoke() {
         System.out.println("Вызов метода экземпляра Cat");
