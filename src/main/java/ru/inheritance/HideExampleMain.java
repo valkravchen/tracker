@@ -6,7 +6,5 @@ public class HideExampleMain {
         Cat cat = new Cat();
         animal.instanceInvoke();
         cat.instanceInvoke();
-        Animal.staticInvoke();
-        Cat.staticInvoke();
     }
 }
