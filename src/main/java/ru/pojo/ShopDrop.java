@@ -9,7 +9,8 @@ public class ShopDrop {
         for (Product product : products) {
             System.out.println(product.getName());
         }
-        products[1] = null;
+        products[1] = products[2];
+        products[2] = null;
         for (Product product : products) {
             if (product != null) {
                 System.out.println(product.getName());
