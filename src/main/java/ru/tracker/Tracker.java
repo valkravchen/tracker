@@ -1,7 +1,6 @@
 package ru.tracker;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Tracker {
     private final Item[] items = new Item[100];
@@ -16,23 +15,6 @@ public class Tracker {
 
     public Item[] findAll() {
         return Arrays.copyOf(items, size);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Tracker tracker = (Tracker) o;
-        return ids == tracker.ids && size == tracker.size && Arrays.equals(items, tracker.items);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(Arrays.hashCode(items), ids, size);
     }
 
     public Item[] findByName(String key) {
