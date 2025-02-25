@@ -19,7 +19,6 @@ public class Main {
         Item item4 = new Item("Замена Item 1");
         boolean replaced = tracker.replace(1, item4);
 
-
         for (Item item : tracker.findAll()) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
