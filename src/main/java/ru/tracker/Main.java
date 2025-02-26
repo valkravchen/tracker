@@ -23,7 +23,10 @@ public class Main {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
 
-        System.out.println("\nПроверяем поиск по ID");
-        int searchId = 2;
+        System.out.println("\nПроверяем поиск по ID.");
+        int searchId = 4;
+        Item foundItem = tracker.findById(searchId);
+        System.out.println("Результат поиска по ID = " + searchId + ": " +
+                (foundItem != null ? foundItem.getName() : "объект не найден"));
     }
 }
