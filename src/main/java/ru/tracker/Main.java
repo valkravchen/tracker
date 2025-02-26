@@ -49,10 +49,10 @@ public class Main {
         for (Item item : tracker.findAll()) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
-        System.out.println("\n5. Метод delete.");
+        System.out.println("\n6. Метод delete.");
         System.out.println("Проверяем удаление элемента.\n");
         System.out.println("Удаляем элемент с ID = 1");
-        tracker.delete(1);
+        tracker.delete(5);
         for (Item item : tracker.findAll()) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
