@@ -5,11 +5,12 @@ public class Main {
 
         Tracker tracker = new Tracker();
 
-        System.out.println("Добавляем объекты:");
-
         Item item1 = new Item("Первый");
         Item item2 = new Item();
         Item item3 = new Item("Третий");
+
+        System.out.println("1. Метод add.");
+        System.out.println("Добавляем элементы.\n");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
@@ -18,12 +19,14 @@ public class Main {
         System.out.println("Добавлено: ID = " + item2.getId() + ", Name = " + item2.getName());
         System.out.println("Добавлено: ID = " + item3.getId() + ", Name = " + item3.getName());
 
-        System.out.println("\nВсе элементы в трекере:");
+        System.out.println("\n2. Метод findAll.");
+        System.out.println("Все элементы в трекере.\n");
         for (Item item : tracker.findAll()) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
 
-        System.out.println("\nПроверяем поиск по ID.");
+        System.out.println("\n3. Метод findById.");
+        System.out.println("Проверяем поиск по ID.\n");
         int searchId = 4;
         Item foundItem = tracker.findById(searchId);
         System.out.println("Результат поиска по ID = " + searchId + ": " +
