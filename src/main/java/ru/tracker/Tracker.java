@@ -46,16 +46,16 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         if (id <= 0) {
-            System.out.println("ID должен быть положительным числом");
+            System.out.println("ID должен быть положительным числом!");
             return false;
         }
         if (item == null) {
-            System.out.println("Item не может быть null");
+            System.out.println("Item не может быть null!");
             return false;
         }
         int index = indexOf(id);
         if (index == -1) {
-            System.out.println("Элемент с таким ID не найден");
+            System.out.println("Элемент с таким ID не найден!");
             return false;
         }
         item.setId(id);
@@ -65,11 +65,11 @@ public class Tracker {
 
     public void delete(int id) {
         if (id <= 0) {
-            System.out.println("Ошибка: ID должен быть положительным числом");
+            System.out.println("Ошибка: ID должен быть положительным числом!");
         } else {
             int index = indexOf(id);
             if (index == -1) {
-                System.out.println("Ошибка: Элемент с таким ID не найден");
+                System.out.println("Ошибка: Элемент с таким ID не найден!");
             } else {
                 System.arraycopy(items, index + 1, items, index, size - index - 1);
                 items[size - 1] = null;
