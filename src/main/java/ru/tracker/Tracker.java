@@ -45,23 +45,34 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        int index = indexOf(id);
-        if (index != -1) {
-            item.setId(id);
-            items[index] = item;
-            return true;
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID должен быть положительным числом");
         }
-        return false;
+        if (item == null) {
+            throw new IllegalArgumentException("Item не может быть null");
+        }
+        int index = indexOf(id);
+        if (index == -1) {
+            throw new IllegalStateException("Элемент с таким ID не найден");
+        }
+        item.setId(id);
+        items[index] = item;
+        return true;
     }
 
     public void delete(int id) {
-        int index = indexOf(id);
-        if (index != -1) {
-            System.arraycopy(items, index + 1, items, index, size - index - 1);
-            items[size - 1] = null;
-            size--;
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID должен быть положительным числом");
         }
+        int index = indexOf(id);
+        if (index == -1) {
+            throw new IllegalStateException("Элемент с таким ID не найден");
+        }
+        System.arraycopy(items, index + 1, items, index, size - index - 1);
+        items[size - 1] = null;
+        size--;
     }
 }
+
 
 
