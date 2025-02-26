@@ -18,12 +18,12 @@ public class Main {
         System.out.println("Добавлено: ID = " + item2.getId() + ", Name = " + item2.getName());
         System.out.println("Добавлено: ID = " + item3.getId() + ", Name = " + item3.getName());
 
-
         System.out.println("\nВсе элементы в трекере:");
         for (Item item : tracker.findAll()) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
 
         System.out.println("\nПроверяем поиск по ID");
+        int searchId = 2;
     }
 }
