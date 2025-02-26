@@ -3,7 +3,7 @@ package ru.tracker;
 public class Main {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
-        Item item1 = new Item(-1,"Первый");
+        Item item1 = new Item(-1, "Первый");
         Item item2 = new Item();
         Item item3 = new Item("Третий");
 
