@@ -3,7 +3,7 @@ package ru.tracker;
 public class Main {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("Первый");
+        Item item1 = new Item(-1,"Первый");
         Item item2 = new Item();
         Item item3 = new Item("Третий");
 
@@ -43,7 +43,7 @@ public class Main {
 
         System.out.println("Проверяем замену элемента.\n");
         System.out.println("Заменяем элемент с ID = 2 на 'Второй'.");
-        boolean replaced = tracker.replace(2, new Item("Второй"));
+        boolean replaced = tracker.replace(0, new Item("Второй"));
         System.out.println("Заменено: " + replaced);
         System.out.println("\nВсе элементы после замены:");
         for (Item item : tracker.findAll()) {
