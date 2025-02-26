@@ -43,7 +43,7 @@ public class Main {
 
         System.out.println("Проверяем замену элемента.\n");
         System.out.println("Заменяем элемент с ID = 2 на 'Второй'.");
-        boolean replaced = tracker.replace(0, new Item("Второй"));
+        boolean replaced = tracker.replace(3, new Item("Второй"));
         System.out.println("Заменено: " + replaced);
         System.out.println("\nВсе элементы после замены:");
         for (Item item : tracker.findAll()) {
