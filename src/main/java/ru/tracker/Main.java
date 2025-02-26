@@ -32,5 +32,7 @@ public class Main {
         for (Item item : foundByMName) {
             System.out.println("ID: " + item.getId() + ", Name: " + item.getName());
         }
+        System.out.println("\n5. replace");
+        System.out.println("Проверяем замену элемента.");
     }
 }
