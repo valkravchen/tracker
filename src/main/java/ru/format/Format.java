@@ -3,7 +3,7 @@ package ru.format;
 public class Format {
 
     public static void getGreeting(String name) {
-        System.out.println(String.format("Ja%ca", 'v'));
+        System.out.format("Строка1%nСтрока2");
     }
 
     public static void main(String[] args) {
