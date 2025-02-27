@@ -25,7 +25,7 @@ public class Main {
         }
         System.out.println("\n3. Метод findById.");
 
-        System.out.println("Проверяем поиск по ID.\n");
+
         int searchId = 4;
         Item foundItem = tracker.findById(searchId);
         System.out.println("Результат поиска по ID = " + searchId + ": " +
