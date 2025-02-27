@@ -2,6 +2,16 @@ package ru.tracker;
 
 public class User {
     private int id;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     private String username;
     private String password;
 
