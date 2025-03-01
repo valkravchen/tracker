@@ -1,10 +1,39 @@
 package ru.enumeration;
 
 public enum Status {
-    ACCEPTED("Приянят"),
-    IN_WORK("В работе"),
-    WAITING("Ожидание"),
-    FINISHED("Работы завершены");
+    ACCEPTED("Принят") {
+        private String message = "Автомобиль принят на СТО";
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+    },
+
+    IN_WORK("В работе") {
+        private String message = "Автомобиль в работе";
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+    },
+
+    WAITING("Ожидание") {
+        private String message = "Автомобиль ожидает запчасти";
+
+        public String getMessage() {
+            return message;
+        }
+    },
+
+    FINISHED("Работы завершены") {
+        private String message = "Все работы завершены";
+
+        public String getMessage() {
+            return message;
+        }
+    };
 
     private String info;
 
@@ -15,4 +44,6 @@ public enum Status {
     public String getInfo() {
         return info;
     }
+
+    public abstract String getMessage();
 }
