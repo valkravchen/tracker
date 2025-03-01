@@ -9,7 +9,7 @@ public enum Status {
     private String info;
 
     Status(String info) {
-        this.info =info;
+        this.info = info;
     }
 
     public String getInfo() {
