@@ -2,8 +2,8 @@ package ru.varargs;
 
 public class VarArgs {
 
-    public static String text(String...strings) {
-        StringBuilder builder =new StringBuilder();
+    public static String text(String... strings) {
+        StringBuilder builder = new StringBuilder();
         for (String s : strings) {
             builder.append(s);
         }
