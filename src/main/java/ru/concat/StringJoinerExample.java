@@ -1,13 +1,23 @@
 package ru.concat;
 
-import java.util.StringJoiner;
 
 public class StringJoinerExample {
     public static void main(String[] args) {
-        StringJoiner stringJoiner = new StringJoiner(", ", "[", "]");
-        stringJoiner.add("abc").add("def").add("ghi");
-        System.out.println(stringJoiner);
-        String joined = stringJoiner.toString();
-        System.out.println(joined);
+        // Тест StringBuffer
+        long startBuffer = System.currentTimeMillis();
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < 1_000_000; i++) {
+            buffer.append(i);
+        }
+        System.out.println("StringBuffer: " + (System.currentTimeMillis() - startBuffer) + " мс");
+
+        // Тест StringBuilder
+        long startBuilder = System.currentTimeMillis();
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < 1_000_000; i++) {
+            builder.append(i);
+        }
+        System.out.println("StringBuilder: " + (System.currentTimeMillis() - startBuilder) + " мс");
     }
 }
+
