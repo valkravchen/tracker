@@ -1,17 +1,14 @@
 package ru.varargs;
 
 public class VarArgs {
-
-    public String text(String a) {
+    public static String text(String[] strings) {
         return "";
     }
 
-    public String text(String a, String b) {
-        return "";
-    }
-
-    public String text(String a, String b, String c) {
-        return "";
+    public static void main(String[] args) {
+        String[] strings = {"aaa", "bbb", "ccc"};
+        String str = text(strings);
+        System.out.println(str);
     }
 }
 
