@@ -12,9 +12,9 @@ public class Service {
     }
 
     public static void main(String[] args) {
-        FileStore store = new FileStore();
-        Service service = new Service(store);
-        service.add();
+       MemStore store = new MemStore();
+       Service service =new Service(store);
+       service.add();
     }
 }
 
