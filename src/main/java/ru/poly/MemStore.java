@@ -1,6 +1,6 @@
 package ru.poly;
 
-public class MemStore extends FileStore{
+public class MemStore extends FileStore {
     private String[] mem = new String[100];
     private int size = 0;
 
