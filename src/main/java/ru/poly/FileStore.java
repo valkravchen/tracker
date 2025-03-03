@@ -1,6 +1,6 @@
 package ru.poly;
 
-public class FileStore {
+public class FileStore implements Store{
     private String path;
 
     public FileStore() {
