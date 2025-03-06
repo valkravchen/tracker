@@ -4,7 +4,17 @@ import java.util.Scanner;
 
 public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
-        showMenu();
+        boolean run = true;
+        while (run) {
+            showMenu();
+            System.out.print("Выбрать: ");
+            int select = Integer.parseInt(scanner.nextLine());
+            if (select != 6) {
+                System.out.println("Пользователь выбрал: " + select);
+            } else {
+                run = false;
+            }
+        }
     }
 
     private void showMenu() {
