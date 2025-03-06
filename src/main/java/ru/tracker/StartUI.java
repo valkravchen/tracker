@@ -1,8 +1,29 @@
 package ru.tracker;
 
+import java.util.Scanner;
+
 public class StartUI {
+    public void init(Scanner scanner, Tracker tracker) {
+        showMenu();
+    }
+
+    private void showMenu() {
+        String[] menu = {
+                "Добавить новую заявку", "Показать все заявки", "Изменить заявку",
+                "Удалить заявку", "Показать заявку по id", "Показать заявки по имени", "Завершить программу"
+        };
+        System.out.println("Меню:");
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println(i + ". " + menu[i]);
+        }
+    }
+
     public static void main(String[] args) {
-        Item item = new Item(1, "Первая заявка");
-        System.out.println(item);
+        Scanner scanner = new Scanner(System.in);
+        Tracker tracker = new Tracker();
+        new StartUI().init(scanner, tracker);
     }
 }
+
+
+
