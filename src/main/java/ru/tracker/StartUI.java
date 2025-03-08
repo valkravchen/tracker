@@ -45,7 +45,7 @@ public class StartUI {
                 int sizeBefore = tracker.findAll().length;
                 tracker.delete(id);
                 int sizeAfter = tracker.findAll().length;
-                if (sizeBefore- 1 == sizeAfter) {
+                if (sizeBefore - 1 == sizeAfter) {
                     System.out.println("Заявка успешно удалена.");
                 } else {
                     System.out.println("Ошибка: заявка с id " + id + " не найдена.");
