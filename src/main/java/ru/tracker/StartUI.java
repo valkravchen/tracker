@@ -27,13 +27,13 @@ public class StartUI {
                     System.out.println("Хранилище еще не содержит заявок");
                 }
             } else if (select == 2) {
-                System.out.println("=== Изменение заявки ===");
+                System.out.println("=== Редактирование заявки ===");
                 System.out.print("Введите id заявки: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 System.out.println("Введите новое имя: ");
                 String newName = scanner.nextLine();
-                boolean isReplaced = tracker.replace(id, new Item(newName));
-                if (isReplaced) {
+                Item item = new Item(newName);
+                if (tracker.replace(id, item)) {
                     System.out.println("Заявка успешно изменена.");
                 } else {
                     System.out.println("Ошибка: заявка с id " + id + " не найдена.");
