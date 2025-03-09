@@ -30,7 +30,7 @@ public class StartUI {
                 System.out.println("=== Изменение заявки ===");
                 System.out.print("Введите id заявки: ");
                 int id = Integer.parseInt(scanner.nextLine());
-                System.out.println("Введите новое имя: ");
+                System.out.print("Введите новое имя: ");
                 String newName = scanner.nextLine();
                 Item item = new Item(newName);
                 if (tracker.replace(id, item)) {
@@ -56,6 +56,18 @@ public class StartUI {
                     System.out.println(item);
                 } else {
                     System.out.println("Ошибка: заявка с id " + id + " не найдена.");
+                }
+            } else if (select == 5) {
+                System.out.println("=== Вывод заявки по имени ===");
+                System.out.print("Введите имя заявки: ");
+                String name = scanner.nextLine();
+                Item[] items = tracker.findByName(name);
+                if (items.length != 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Ошибка: заявки с именем " + name + " не найдены.");
                 }
             } else if (select == 6) {
                 run = false;
