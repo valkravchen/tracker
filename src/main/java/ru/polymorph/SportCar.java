@@ -1,6 +1,6 @@
 package ru.polymorph;
 
-public class SportCar implements Vehicle, Fuel {
+public class SportCar implements Vehicle {
 
     @Override
     public void accelerate() {

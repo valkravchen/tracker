@@ -21,5 +21,10 @@ public class TownCar implements Vehicle {
     public void changeGear() {
         System.out.println("Стандартная тормозная система.");
     }
+
+    @Override
+    public void refill() {
+        System.out.println("Заправить 60 литров бензина.");
+    }
 }
 

@@ -1,6 +1,6 @@
 package ru.polymorph;
 
-public interface Vehicle {
+public interface Vehicle extends Fuel {
     void accelerate();
 
     void brake();
