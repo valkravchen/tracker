@@ -1,6 +1,6 @@
 package ru.polymorph;
 
-public class SportCar implements Vehicle{
+public class SportCar implements Vehicle, Fuel {
 
     @Override
     public void accelerate() {
@@ -20,5 +20,10 @@ public class SportCar implements Vehicle{
     @Override
     public void changeGear() {
         System.out.println("Механическая коробка передач. Включить первую, дальше переключать до шестой.");
+    }
+
+    @Override
+    public void refill() {
+        System.out.println("Заправить 100 литров бензина.");
     }
 }
