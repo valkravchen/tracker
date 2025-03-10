@@ -10,4 +10,8 @@ public class Dog implements Animal {
     public void eat() {
         System.out.println("Собака ест кость.");
     }
+
+    public void fetch() {
+        System.out.println("Собака приносит палку.");
+    }
 }
