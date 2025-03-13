@@ -1,6 +1,6 @@
 package ru.tracker;
 
-public class MockInput implements Input{
+public class MockInput implements Input {
     @Override
     public String ascStr(String question) {
         return "";
