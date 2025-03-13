@@ -1,7 +1,5 @@
 package ru.poly;
 
-import java.util.IllegalFormatCodePointException;
-
 public class Bus implements Transport {
     private int passengersCount;
     private final double pricePerUnitOfFuel;
