@@ -1,7 +1,9 @@
 package ru.cast;
 
-public class Dog extends Pet {
-    public void runAfterCat() {
-        System.out.println(nameClass + " не любит кошек, постоянно за ними гоняется.");
+public class Dog implements Animal {
+
+    @Override
+    public void sound() {
+        System.out.println(getClass().getSimpleName() + " произносит звук: Гав-гав.");
     }
 }
