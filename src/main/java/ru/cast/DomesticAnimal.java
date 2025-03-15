@@ -1,7 +1,7 @@
 package ru.cast;
 
-public class DomesticAnimal extends Animal {
+public class DomesticAnimal {
     public void liveOnFarm() {
-        System.out.println(nameClass + " живет на ферме, приносит пользу.");
+        System.out.println("Живет на ферме, приносит пользу.");
     }
 }

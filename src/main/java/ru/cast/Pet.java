@@ -1,7 +1,7 @@
 package ru.cast;
 
-public class Pet extends Animal {
+public class Pet {
     public void vaccinate() {
-        System.out.println(nameClass + " нуждается в прививках, чтобы не болеть.");
+        System.out.println("Нуждается в прививках, чтобы не болеть.");
     }
 }
