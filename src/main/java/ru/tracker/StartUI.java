@@ -1,7 +1,7 @@
 package ru.tracker;
 
 public class StartUI {
-    
+
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -40,7 +40,7 @@ public class StartUI {
 
     public static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Вывод заявки по id ===");
-        int id = Integer.parseInt(input.ascStr("Введите id заявки: "));
+        int id = input.ascInt("Введите id заявки: ");
         Item item = tracker.findById(id);
         if (item != null) {
             System.out.println(item);
@@ -51,7 +51,7 @@ public class StartUI {
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Удаление заявки ===");
-        int id = Integer.parseInt(input.ascStr("Введите id заявки: "));
+        int id = input.ascInt("Введите id заявки: ");
         if (tracker.delete(id)) {
             System.out.println("Заявка успешно удалена.");
         } else {
@@ -61,7 +61,7 @@ public class StartUI {
 
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Изменение заявки ===");
-        int id = Integer.parseInt(input.ascStr("Введите id заявки: "));
+        int id = input.ascInt("Введите id заявки: ");
         String newName = input.ascStr("Введите новое имя: ");
         Item item = new Item(newName);
         if (tracker.replace(id, item)) {
