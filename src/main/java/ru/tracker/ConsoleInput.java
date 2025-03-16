@@ -3,7 +3,6 @@ package ru.tracker;
 import java.util.Scanner;
 
 public class ConsoleInput implements Input {
-
     private final Scanner scanner = new Scanner(System.in);
 
     @Override
