@@ -1,13 +1,20 @@
 package ru.tracker;
 
 public class MockInput implements Input {
+    private final String[] answers;
+    private int position;
+
+    public MockInput(String[] answers) {
+        this.answers = answers;
+    }
+
     @Override
     public String ascStr(String question) {
-        return "";
+        return answers[position++];
     }
 
     @Override
     public int ascInt(String question) {
-        return 0;
+        return Integer.parseInt(ascStr(question));
     }
 }
