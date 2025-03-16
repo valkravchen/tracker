@@ -1,6 +1,10 @@
 package ru.tracker;
 
 public class StartUI {
+
+    public static void createItem(Input input, Tracker tracker) {
+    }
+
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -81,6 +85,7 @@ public class StartUI {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         new StartUI().init(input, tracker);
+        StartUI.createItem(input, tracker);
     }
 }
 
