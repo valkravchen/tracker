@@ -1,6 +1,14 @@
 package ru.tracker;
 
+import java.util.SortedMap;
+
 public class FindByNameAction implements UserAction {
+    private final Output output;
+
+    public FindByNameAction(Output output) {
+        this.output = output;
+    }
+
     @Override
     public String name() {
         return "Найти заявки по имени";
@@ -8,7 +16,7 @@ public class FindByNameAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.println("=== Вывод заявки по имени ===");
+        output.println("=== Вывод заявки по имени ===");
         String name = input.ascStr("Введите имя заявки: ");
         Item[] items = tracker.findByName(name);
         if (items.length != 0) {
@@ -16,7 +24,7 @@ public class FindByNameAction implements UserAction {
                 System.out.println(item);
             }
         } else {
-            System.out.println("Ошибка: заявки с именем " + name + " не найдены.");
+            output.println("Ошибка: заявки с именем " + name + " не найдены.");
         }
         return true;
     }
