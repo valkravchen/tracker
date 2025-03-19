@@ -1,7 +1,6 @@
 package ru.tracker;
 
 public class StartUI {
-
     private final Output output;
 
     public StartUI(Output output) {

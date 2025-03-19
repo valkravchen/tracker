@@ -1,7 +1,6 @@
 package ru.tracker;
 
 public class DeleteAction implements UserAction {
-
     private final Output output;
 
     public DeleteAction(Output output) {
