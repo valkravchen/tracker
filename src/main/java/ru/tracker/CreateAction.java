@@ -1,6 +1,7 @@
 package ru.tracker;
 
 public class CreateAction implements UserAction {
+
     private final Output output;
 
     public CreateAction(Output output) {
