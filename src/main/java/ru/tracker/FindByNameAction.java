@@ -1,7 +1,5 @@
 package ru.tracker;
 
-import java.util.SortedMap;
-
 public class FindByNameAction implements UserAction {
     private final Output output;
 
