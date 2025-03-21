@@ -10,6 +10,7 @@ public class MockOutput implements Output {
         } else {
             buffer.append("null");
         }
+        buffer.append(System.lineSeparator());
     }
 
     @Override
