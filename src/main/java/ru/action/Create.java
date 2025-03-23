@@ -1,10 +1,15 @@
-package ru.tracker;
+package ru.action;
 
-public class CreateAction implements UserAction {
+import ru.tracker.Input;
+import ru.tracker.Item;
+import ru.tracker.Output;
+import ru.tracker.Tracker;
+
+public class Create implements UserAction {
 
     private final Output output;
 
-    public CreateAction(Output output) {
+    public Create(Output output) {
         this.output = output;
     }
 

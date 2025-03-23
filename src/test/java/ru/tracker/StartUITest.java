@@ -1,6 +1,7 @@
 package ru.tracker;
 
 import org.junit.jupiter.api.Test;
+import ru.action.*;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -11,7 +12,7 @@ class StartUITest {
         Output output = new MockOutput();
         Input input = new MockInput(new String[]{"0"});
         Tracker tracker = new Tracker();
-        UserAction[] actions = {new ExitAction(output)};
+        UserAction[] actions = {new Exit(output)};
         new StartUI(output).init(input, tracker, actions);
         assertThat(output.toString()).isEqualTo("Меню:" + System.lineSeparator()
                 + "0. Завершить программу" + System.lineSeparator()
@@ -27,8 +28,8 @@ class StartUITest {
         String replaceName = "New Test Name";
         Input input = new MockInput(new String[]{"0", String.valueOf(one.getId()), replaceName, "1"});
         UserAction[] actions = new UserAction[]{
-                new ReplaceAction(output),
-                new ExitAction(output)
+                new Replace(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -55,8 +56,8 @@ class StartUITest {
         String replaceName = "New Test Name";
         Input input = new MockInput(new String[]{"0", String.valueOf(invalidId), replaceName, "1"});
         UserAction[] actions = new UserAction[]{
-                new ReplaceAction(output),
-                new ExitAction(output)
+                new Replace(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -83,8 +84,8 @@ class StartUITest {
                 new String[]{"0", "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindAllAction(output),
-                new ExitAction(output)
+                new FindAll(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -110,8 +111,8 @@ class StartUITest {
                 new String[]{"0", "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindAllAction(output),
-                new ExitAction(output)
+                new FindAll(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -139,8 +140,8 @@ class StartUITest {
                 new String[]{"0", findName, "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindByNameAction(output),
-                new ExitAction(output)
+                new FindByName(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -168,8 +169,8 @@ class StartUITest {
                 new String[]{"0", findName, "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindByNameAction(output),
-                new ExitAction(output)
+                new FindByName(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -197,8 +198,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(findId), "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindByIdAction(output),
-                new ExitAction(output)
+                new FindById(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
@@ -226,8 +227,8 @@ class StartUITest {
                 new String[]{"0", String.valueOf(findId), "1"}
         );
         UserAction[] actions = new UserAction[]{
-                new FindByIdAction(output),
-                new ExitAction(output)
+                new FindById(output),
+                new Exit(output)
         };
         new StartUI(output).init(input, tracker, actions);
         String line = System.lineSeparator();
