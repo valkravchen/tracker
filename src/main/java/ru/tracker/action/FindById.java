@@ -1,8 +1,8 @@
 package ru.tracker.action;
 
-import ru.tracker.Input;
+import ru.tracker.input.Input;
 import ru.tracker.Item;
-import ru.tracker.Output;
+import ru.tracker.output.Output;
 import ru.tracker.Tracker;
 
 public class FindById implements UserAction {
