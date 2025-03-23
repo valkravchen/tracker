@@ -1,6 +1,6 @@
 package ru.tracker;
 
-import ru.action.*;
+import ru.tracker.action.*;
 
 public class StartUI {
     private final Output output;

@@ -1,30 +1,29 @@
-package ru.action;
+package ru.tracker.action;
 
 import ru.tracker.Input;
 import ru.tracker.Item;
 import ru.tracker.Output;
 import ru.tracker.Tracker;
 
-public class Replace implements UserAction {
+public class FindById implements UserAction {
     private final Output output;
 
-    public Replace(Output output) {
+    public FindById(Output output) {
         this.output = output;
     }
 
     @Override
     public String name() {
-        return "Изменить заявку";
+        return "Найти заявку по id";
     }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        output.println("=== Изменение заявки ===");
+        output.println("=== Вывод заявки по id ===");
         int id = input.ascInt("Введите id заявки: ");
-        String newName = input.ascStr("Введите новое имя: ");
-        Item item = new Item(newName);
-        if (tracker.replace(id, item)) {
-            output.println("Заявка успешно изменена.");
+        Item item = tracker.findById(id);
+        if (item != null) {
+            output.println(item);
         } else {
             output.println("Ошибка: заявка с id " + id + " не найдена.");
         }
