@@ -6,7 +6,7 @@ public class Count {
             throw new IllegalArgumentException("Start should be less than finish.");
         }
         int result = 0;
-        for (int index = start ; index != finish; index++) {
+        for (int index = start; index != finish; index++) {
             result += index;
         }
         return result;
