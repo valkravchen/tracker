@@ -3,8 +3,8 @@ package ru.ex;
 public class FrequentEx {
     public static void main(String[] args) {
         String[] shops = {"Ebay", "Amazon", "Ozon"};
-        for (int index = 0; index < shops.length ; index++) {
-            System.out.println(shops[index]);
+        for (String shop : shops) {
+            System.out.println(shop);
         }
     }
 }
