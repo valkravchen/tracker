@@ -15,17 +15,16 @@ public class UserStore {
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("Пользователь не валиден.");
-        } else {
-            return true;
         }
+        return true;
     }
 
     public static void main(String[] args) {
         User[] users = {
-                new User("Они", true)
+                new User("Ли", true)
         };
         try {
-            User user = findUser(users, "Онаи");
+            User user = findUser(users, "Ли");
             if (validate(user)) {
                 System.out.println("Пользователь валиден.");
             }
