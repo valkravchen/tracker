@@ -13,21 +13,21 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() && user.getUsername().length() >= 3) {
-            return true;
-        } else {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("Пользователь не валиден.");
+        } else {
+            return true;
         }
     }
 
     public static void main(String[] args) {
         User[] users = {
-                new User("Он", true)
+                new User("Они", true)
         };
         try {
-            User user = findUser(users, "Он");
+            User user = findUser(users, "Онаи");
             if (validate(user)) {
-                System.out.println("Пользователь найден.");
+                System.out.println("Пользователь валиден.");
             }
         } catch (UserNotFoundException | UserInvalidException e) {
             System.err.println(e.getMessage());
