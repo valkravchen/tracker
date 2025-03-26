@@ -21,7 +21,7 @@ public class Create implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         output.println("=== Создание новой заявки ===");
-        String name = input.ascStr("Введите имя: ");
+        String name = input.askStr("Введите имя: ");
         Item item = new Item(name);
         tracker.add(item);
         output.println("Добавленная заявка: " + item);

@@ -9,12 +9,12 @@ public class MockInput implements Input {
     }
 
     @Override
-    public String ascStr(String question) {
+    public String askStr(String question) {
         return answers[position++];
     }
 
     @Override
-    public int ascInt(String question) {
-        return Integer.parseInt(ascStr(question));
+    public int askInt(String question) {
+        return Integer.parseInt(askStr(question));
     }
 }

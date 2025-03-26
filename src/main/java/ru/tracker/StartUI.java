@@ -3,6 +3,7 @@ package ru.tracker;
 import ru.tracker.action.*;
 import ru.tracker.input.ConsoleInput;
 import ru.tracker.input.Input;
+import ru.tracker.input.ValidateInput;
 import ru.tracker.output.ConsoleOutput;
 import ru.tracker.output.Output;
 
@@ -17,7 +18,11 @@ public class StartUI {
         boolean run = true;
         while (run) {
             showMenu(actions);
-            int select = input.ascInt("Выбрать: ");
+            int select = input.askInt("Выбрать: ");
+            if (select < 0 || select >= actions.length) {
+                output.println("❌Неверный ввод, вы можете выбрать: от 0 до " + (actions.length - 1));
+                continue;
+            }
             UserAction action = actions[select];
             run = action.execute(input, tracker);
         }
@@ -32,7 +37,7 @@ public class StartUI {
 
     public static void main(String[] args) {
         Output output = new ConsoleOutput();
-        Input input = new ConsoleInput();
+        Input input = new ValidateInput();
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new Create(output),

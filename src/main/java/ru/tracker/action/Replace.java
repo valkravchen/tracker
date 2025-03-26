@@ -20,8 +20,8 @@ public class Replace implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         output.println("=== Изменение заявки ===");
-        int id = input.ascInt("Введите id заявки: ");
-        String newName = input.ascStr("Введите новое имя: ");
+        int id = input.askInt("Введите id заявки: ");
+        String newName = input.askStr("Введите новое имя: ");
         Item item = new Item(newName);
         if (tracker.replace(id, item)) {
             output.println("Заявка успешно изменена.");

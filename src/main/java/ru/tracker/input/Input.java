@@ -1,7 +1,7 @@
 package ru.tracker.input;
 
 public interface Input {
-    String ascStr(String question);
+    String askStr(String question);
 
-    int ascInt(String question);
+    int askInt(String question);
 }
