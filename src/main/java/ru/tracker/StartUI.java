@@ -1,7 +1,6 @@
 package ru.tracker;
 
 import ru.tracker.action.*;
-import ru.tracker.input.ConsoleInput;
 import ru.tracker.input.Input;
 import ru.tracker.input.ValidateInput;
 import ru.tracker.output.ConsoleOutput;
@@ -20,7 +19,7 @@ public class StartUI {
             showMenu(actions);
             int select = input.askInt("Выбрать: ");
             if (select < 0 || select >= actions.length) {
-                output.println("❌Неверный ввод, вы можете выбрать: от 0 до " + (actions.length - 1));
+                output.println("Неверный ввод, вы можете выбрать: от 0 до " + (actions.length - 1));
                 continue;
             }
             UserAction action = actions[select];
