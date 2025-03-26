@@ -248,4 +248,24 @@ class StartUITest {
                         + "=== Завершение программы ===" + line
         );
     }
+
+    @Test
+    void whenInvalidExit() {
+        Output output = new MockOutput();
+        Input input = new MockInput(new String[]{"1", "0"});
+        Tracker tracker = new Tracker();
+        UserAction[] actions = new UserAction[]{
+                new Exit(output)
+        };
+        new StartUI(output).init(input, tracker, actions);
+        String line = System.lineSeparator();
+        assertThat(output.toString()).isEqualTo("Меню:" + line
+                + "0. Завершить программу" + line
+                + "❌Неверный ввод, вы можете выбрать: от 0 до 0" + line
+                + "Меню:" + line
+                + "0. Завершить программу" + line
+                + "=== Завершение программы ===" + line
+        );
+    }
+
 }
