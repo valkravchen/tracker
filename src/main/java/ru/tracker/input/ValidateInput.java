@@ -5,10 +5,9 @@ public class ValidateInput extends ConsoleInput {
     public int askInt(String question) {
         while (true) {
             try {
-                String input = super.askStr(question);
-                return Integer.parseInt(input);
+                return super.askInt(question);
             } catch (NumberFormatException e) {
-                System.out.println("❌Ошибка: введите целое число!");
+                System.out.println("Ошибка: введите целое число!");
             }
         }
     }
