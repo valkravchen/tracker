@@ -1,14 +1,35 @@
 package ru.tracker.input;
 
-public class ValidateInput extends ConsoleInput {
+import ru.tracker.output.Output;
+
+public class ValidateInput implements Input {
+    private final Output output;
+    private final Input input;
+
+    public ValidateInput(Output output, Input input) {
+        this.output = output;
+        this.input = input;
+    }
+
+    @Override
+    public String askStr(String question) {
+        return input.askStr(question);
+    }
+
     @Override
     public int askInt(String question) {
-        while (true) {
+        boolean invalid = true;
+        int value = -1;
+        do {
             try {
-                return super.askInt(question);
-            } catch (NumberFormatException e) {
-                System.out.println("❌Ошибка!❌ Введите целое число!");
+                value = input.askInt(question);
+                invalid = false;
+            } catch (NumberFormatException nfe) {
+                output.println("Пожалуйста, введите корректные данные");
             }
-        }
+        }while (invalid);
+        return value;
     }
 }
+
+
