@@ -27,7 +27,7 @@ public class ValidateInput implements Input {
             } catch (NumberFormatException nfe) {
                 output.println("Пожалуйста, введите корректные данные");
             }
-        }while (invalid);
+        } while (invalid);
         return value;
     }
 }
