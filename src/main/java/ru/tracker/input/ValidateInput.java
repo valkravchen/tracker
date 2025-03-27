@@ -18,31 +18,16 @@ public class ValidateInput implements Input {
 
     @Override
     public int askInt(String question) {
-        boolean invalid = true;
-        int value = -1;
-        do {
-            String result = input.askStr(question);
-            if (!isNumber(result)) {
-                System.out.println("Пожалуйста, введите корректные данные");
-                continue;
-            }
-            value = Integer.parseInt(result);
-            invalid = false;
-        } while (invalid);
-        return value;
-    }
-
-    private boolean isNumber(String value) {
-        boolean result = true;
-        char[] check = value.toCharArray();
-        for (char num : check) {
-            if (num < 48 || num > 57) {
-                result = false;
-                break;
+        while (true) {
+            try {
+                return input.askInt(question);
+            } catch (NumberFormatException e) {
+                output.println("Ошибка: введите корректное число");
             }
         }
-        return result;
     }
 }
+
+
 
 
