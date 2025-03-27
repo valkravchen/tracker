@@ -261,7 +261,7 @@ class StartUITest {
         String line = System.lineSeparator();
         assertThat(output.toString()).isEqualTo("Меню:" + line
                 + "0. Завершить программу" + line
-                + "❌Неверный ввод, вы можете выбрать: от 0 до 0" + line
+                + "❌Неверный ввод!❌ Вы можете выбрать: от 0 до 0" + line
                 + "Меню:" + line
                 + "0. Завершить программу" + line
                 + "=== Завершение программы ===" + line
