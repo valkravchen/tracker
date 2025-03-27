@@ -22,7 +22,7 @@ public class ValidateInput implements Input {
         int value = -1;
         do {
             String result = input.askStr(question);
-            if (!isNumber(result)){
+            if (!isNumber(result)) {
                 System.out.println("Пожалуйста, введите корректные данные");
                 continue;
             }
