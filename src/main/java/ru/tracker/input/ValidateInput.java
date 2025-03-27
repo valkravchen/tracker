@@ -7,7 +7,7 @@ public class ValidateInput extends ConsoleInput {
             try {
                 return super.askInt(question);
             } catch (NumberFormatException e) {
-                System.out.println("❌Ошибка: введите целое число!");
+                System.out.println("❌Ошибка!❌ Введите целое число!");
             }
         }
     }
