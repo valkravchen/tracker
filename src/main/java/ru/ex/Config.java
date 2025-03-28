@@ -8,7 +8,6 @@ public class Config {
         System.out.println("load config by " + path);
     }
 
-
     public static void main(String[] args) {
         load("jdbc://localhost:8080");
     }
