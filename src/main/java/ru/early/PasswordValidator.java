@@ -24,6 +24,9 @@ public class PasswordValidator {
         boolean isDigit = false;
         boolean isSpecial = false;
         for (char symbol : chars) {
+            if (isUpperCase && isLowerCase && isDigit && isSpecial) {
+                break;
+            }
             if (!isUpperCase && Character.isUpperCase(symbol)) {
                 isUpperCase = true;
             }
@@ -35,9 +38,6 @@ public class PasswordValidator {
             }
             if (!isSpecial && SPECIAL_CHARS.indexOf(symbol) != -1) {
                 isSpecial = true;
-            }
-            if (isUpperCase && isLowerCase && isDigit && isSpecial) {
-                break;
             }
         }
         if (!isUpperCase) {
