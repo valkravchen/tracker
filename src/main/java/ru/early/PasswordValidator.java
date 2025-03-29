@@ -45,8 +45,7 @@ public class PasswordValidator {
         }
 
         String lowerPassword = password.toLowerCase();
-        for (
-                String word : FORBIDDEN) {
+        for (String word : FORBIDDEN) {
             if (lowerPassword.contains(word)) {
                 throw new IllegalArgumentException("Password shouldn't contain substrings: " +
                         "qwerty, 12345, password, admin, user");
