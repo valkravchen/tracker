@@ -26,8 +26,12 @@ public class PasswordValidator {
             if (Character.isDigit(symbol)) {
                 isDigit = true;
             }
-            if (!Character.isLetterOrDigit(symbol)) {
+            if (SPECIAL_CHARS.indexOf(symbol) != -1) {
                 isSpecial = true;
+            }
+            if (isUpperCase && isLowerCase && isDigit && isSpecial) {
+                break;
+
             }
         }
 
@@ -54,4 +58,5 @@ public class PasswordValidator {
         return password;
     }
 }
+
 
