@@ -31,7 +31,6 @@ public class PasswordValidator {
             }
             if (isUpperCase && isLowerCase && isDigit && isSpecial) {
                 break;
-
             }
         }
 
