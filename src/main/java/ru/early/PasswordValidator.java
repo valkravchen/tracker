@@ -26,7 +26,7 @@ public class PasswordValidator {
             if (Character.isDigit(symbol)) {
                 isDigit = true;
             }
-            if (SPECIAL_CHARS.indexOf(symbol) != -1) {
+            if (!Character.isLetterOrDigit(symbol)) {
                 isSpecial = true;
             }
         }
