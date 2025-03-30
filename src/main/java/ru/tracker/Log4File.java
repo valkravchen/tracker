@@ -1,8 +1,11 @@
 package ru.tracker;
 
-public class Log4File {
+public final class Log4File {
     private String[] messages = new String[1000];
     private int index = 0;
+
+    private Log4File() {
+    }
 
     public void add(String message) {
         messages[index++] = message;
