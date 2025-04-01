@@ -1,4 +1,4 @@
-package ru;
+package ru.factory;
 
 import java.util.Scanner;
 
