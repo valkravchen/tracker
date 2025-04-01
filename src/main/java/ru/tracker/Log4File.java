@@ -1,6 +1,7 @@
 package ru.tracker;
 
 public final class Log4File {
+
     private static Log4File instance = null;
 
     private String[] messages = new String[1000];
