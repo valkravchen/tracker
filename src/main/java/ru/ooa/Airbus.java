@@ -1,7 +1,6 @@
 package ru.ooa;
 
 public final class Airbus extends Aircraf {
-
     private static final int COUNT_ENGINE = 2;
 
     private String name;
