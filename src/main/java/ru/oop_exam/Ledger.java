@@ -13,6 +13,11 @@ public class Ledger {
         System.out.println(owner + " имеет " + amount + " рублей");
     }
 
+    void addAmount(int value) {
+        amount += value;
+        System.out.println("Добавлено " + value + " рублей");
+    }
+
     public String getOwner() {
         return owner;
     }
