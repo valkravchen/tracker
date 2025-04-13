@@ -7,11 +7,7 @@ public class Notebook {
         this.note = note;
     }
 
-    void addNote() {
-        System.out.println("Добавлена новая заметка: " + note);
-    }
-
-    public String getNote() {
-        return note;
+    public void showNote() {
+        System.out.println("Заметка: " + note);
     }
 }
