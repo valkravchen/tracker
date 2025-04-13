@@ -9,11 +9,11 @@ public class Ledger {
         this.amount = amount;
     }
 
-    void check() {
+    public void check() {
         System.out.println(owner + " имеет " + amount + " рублей");
     }
 
-    void addAmount(int value) {
+   public void addAmount(int value) {
         amount += value;
         System.out.println("Добавлено " + value + " рублей");
     }
