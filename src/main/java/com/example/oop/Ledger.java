@@ -20,4 +20,11 @@ public class Ledger {
     public int getAmount() {
         return amount;
     }
+
+    public void addAmount(int value) {
+        if (value >= 0) {
+            amount += value;
+            System.out.println("Добавлено " + value + " рублей");
+        }
+    }
 }
