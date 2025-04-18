@@ -1,7 +1,6 @@
 package com.example.oop;
 
 public class Ledger {
-
     private String owner;
     private int amount;
 
