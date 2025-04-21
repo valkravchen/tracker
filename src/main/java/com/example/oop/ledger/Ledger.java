@@ -1,4 +1,4 @@
-package com.example.oop;
+package com.example.oop.ledger;
 
 public class Ledger {
     private String owner;

@@ -1,4 +1,4 @@
-package com.example.oop;
+package com.example.oop.ledger;
 
 public class LedgerDemo {
     public static void main(String[] args) {

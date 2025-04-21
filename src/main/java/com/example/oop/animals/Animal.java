@@ -1,4 +1,4 @@
-package com.example.oop;
+package com.example.oop.animals;
 
 public abstract class Animal {
     private String name;
