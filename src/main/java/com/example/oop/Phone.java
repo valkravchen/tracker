@@ -12,14 +12,3 @@ public class Phone {
         System.out.println(model + " звонит");
     }
 }
-// Класс PhoneDemo — демонстрирует создание и использование объектов телефона
-class PhoneDemo {
-    public static void main(String[] args) {
-        // Создаём первый объект — iPhone
-        Phone iPhone = new Phone("X");
-        // Создаём второй объект — Samsung
-        Phone samsung = new Phone("S21");
-        iPhone.call(); // Вывод: X звонит
-        samsung.call(); // Вывод: S21 звонит
-    }
-}
