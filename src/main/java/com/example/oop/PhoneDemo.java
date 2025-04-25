@@ -5,6 +5,5 @@ public class PhoneDemo {
         Phone iPhone = new Phone("X");
         Phone samsung = new Phone("S21");
         iPhone.call();
-        samsung.call();
     }
 }
