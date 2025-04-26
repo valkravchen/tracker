@@ -14,7 +14,7 @@ public class Lego {
     }
 
     public void showColor() {
-        System.out.println(shape + " имеет цвет" + color);
+        System.out.println(shape + " имеет цвет " + color);
     }
 
     public String getShape() {
