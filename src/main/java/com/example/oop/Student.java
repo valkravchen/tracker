@@ -17,4 +17,8 @@ public class Student {
     public void showStatus() {
         System.out.println(name + " " + (isStudying ? "учится" : "не учится"));
     }
+
+    public String getName() {
+        return name;
+    }
 }
