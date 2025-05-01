@@ -8,4 +8,9 @@ public class Student {
         this.name = name;
         this.isStudying = false;
     }
+
+    public void study() {
+        isStudying = true;
+        System.out.println(name + " учится");
+    }
 }
