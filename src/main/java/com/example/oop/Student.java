@@ -13,4 +13,8 @@ public class Student {
         isStudying = true;
         System.out.println(name + " учится");
     }
+
+    public void showStatus() {
+        System.out.println(name + " " + (isStudying ? "учится" : "не учится"));
+    }
 }
