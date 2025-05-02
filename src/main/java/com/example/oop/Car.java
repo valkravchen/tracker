@@ -10,4 +10,9 @@ public class Car {
         this.speed = 0;
         this.isRunning = false;
     }
+
+    public void start() {
+        isRunning = true;
+        System.out.println(model + " запущен");
+    }
 }
