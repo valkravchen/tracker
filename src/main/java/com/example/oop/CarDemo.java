@@ -9,5 +9,6 @@ public class CarDemo {
         sedan.setSpeed(60);
         sedan.showStatus();
         truck.showStatus();
+        System.out.println("Модель автомобиля: " + sedan.getModel());
     }
 }
