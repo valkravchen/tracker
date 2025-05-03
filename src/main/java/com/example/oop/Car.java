@@ -24,4 +24,9 @@ public class Car {
             System.out.println(model + " не запущен, скорость не установлена");
         }
     }
+
+    public void showStatus() {
+        System.out.println(model + " имеет статус: " + (isRunning ? "Запущен" : "Остановлен")
+                + ", скорость: " + speed + " км/ч");
+    }
 }
