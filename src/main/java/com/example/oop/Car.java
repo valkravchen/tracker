@@ -29,4 +29,8 @@ public class Car {
         System.out.println(model + " имеет статус: " + (isRunning ? "Запущен" : "Остановлен")
                 + ", скорость: " + speed + " км/ч");
     }
+
+    public String getModel() {
+        return model;
+    }
 }
