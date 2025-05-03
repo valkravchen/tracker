@@ -6,5 +6,8 @@ public class CarDemo {
         Car truck = new Car("Грузовик");
         sedan.start();
         truck.start();
+        sedan.setSpeed(60);
+        sedan.showStatus();
+        truck.showStatus();
     }
 }
