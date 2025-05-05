@@ -9,6 +9,12 @@ public class Car {
         this.speed = 0;
     }
 
+    public void accelerate(int increment) {
+        if (increment > 0) {
+            speed += increment;
+        }
+    }
+
     public int getSpeed() {
         return speed;
     }
