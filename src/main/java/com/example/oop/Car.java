@@ -8,6 +8,11 @@ public class Car {
         return model;
     }
 
+    public Car(String model) {
+        this.model = model;
+        this.speed = 0;
+    }
+
     public int getSpeed() {
         return speed;
     }
