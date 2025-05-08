@@ -11,4 +11,10 @@ public class Car {
     public int getSpeed() {
         return speed;
     }
+
+    public void accelerate(int increment) {
+        if (increment > 0) {
+            speed += increment;
+        }
+    }
 }
