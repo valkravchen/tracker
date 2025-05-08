@@ -10,4 +10,8 @@ public class SportsCar extends Car {
     public void accelerate(int increment) {
         super.accelerate(increment * 2);
     }
+
+    public void turboBoost() {
+        accelerate(50);
+    }
 }
