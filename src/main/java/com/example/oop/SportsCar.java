@@ -5,6 +5,7 @@ public class SportsCar extends Car {
         super(model);
 
     }
+
     @Override
     public void accelerate(int increment) {
         super.accelerate(increment * 2);
