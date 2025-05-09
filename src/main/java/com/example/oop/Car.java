@@ -48,6 +48,10 @@ public class Car implements Vehicle {
         return model;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
     public static int getCarCount() {
         return carCount;
     }
