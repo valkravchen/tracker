@@ -13,4 +13,10 @@ public class Car implements Vehicle {
     public void startEngine() {
         System.out.println("Двигатель автомобиля " + model + " запущен");
     }
+
+    public void accelerate(int increment) {
+        if (increment > 0) {
+            this.speed += increment;
+        }
+    }
 }
