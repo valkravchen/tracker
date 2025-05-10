@@ -2,7 +2,9 @@ package com.example.oop;
 
 public class OOPDemo {
     public static void main(String[] args) {
-        Car car = new Car("Ferrari");
-        car.startEngine();
+        SportsCar sportsCar = new SportsCar("Ferrari");
+        sportsCar.turboBoost();
+        sportsCar.turboBoost();
+        System.out.println(sportsCar.getSpeed());
     }
 }
