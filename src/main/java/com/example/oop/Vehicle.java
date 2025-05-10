@@ -5,7 +5,6 @@ public class Vehicle {
     private int speed;
     private int id;
 
-
     public Vehicle(int id, String brand, int speed) {
         this.id = id;
         this.brand = brand;
@@ -25,7 +24,7 @@ public class Vehicle {
     }
 
     public void move() {
-        System.out.println(brand + " движется со скоростью "  + speed);
+        System.out.println(brand + " движется со скоростью " + speed);
     }
 
     public void stop() {
