@@ -5,7 +5,6 @@ public class SportsCar extends Car {
         super(model);
     }
 
-    @Override
     public void accelerate(int increment) {
         if (increment > 0) {
             super.accelerate(increment * 2);
