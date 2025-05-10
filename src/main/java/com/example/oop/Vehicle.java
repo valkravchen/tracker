@@ -30,10 +30,4 @@ public class Vehicle {
     public void stop() {
         System.out.println("Остановка движения у " + brand);
     }
-
-    public static void main(String[] args) {
-        Vehicle toyota = new Vehicle(1, "Toyota", 100);
-        toyota.move();
-        toyota.stop();
-    }
 }
