@@ -19,4 +19,12 @@ public class Car implements Vehicle {
             this.speed += increment;
         }
     }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
 }
