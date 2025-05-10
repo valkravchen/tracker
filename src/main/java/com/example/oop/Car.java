@@ -19,8 +19,9 @@ public class Car extends Vehicle {
     }
 
     public void accelerate() {
-        int speed = getSpeed() + 10;
-        System.out.println("Автомобиль " + getBrand() + " " + model + " ускорился до " + speed);
+        int newSpeed = getSpeed() + 10;
+        setSpeed(newSpeed);
+        System.out.println("Автомобиль " + getBrand() + " " + model + " ускорился до " + newSpeed);
     }
 }
 
