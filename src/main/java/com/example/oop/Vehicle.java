@@ -5,10 +5,10 @@ public class Vehicle {
     private int speed;
     private int id;
 
-    public Vehicle(int id, String brand, int speed) {
-        this.id = id;
+    public Vehicle(String brand, int speed, int id) {
         this.brand = brand;
         this.speed = speed;
+        this.id = id;
     }
 
     public String getBrand() {
@@ -23,11 +23,15 @@ public class Vehicle {
         return id;
     }
 
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
     public void move() {
-        System.out.println(brand + " движется со скоростью " + speed);
+        System.out.println("Транспорт ID " + id + " (" + brand + ") движется со скоростью " + speed);
     }
 
     public void stop() {
-        System.out.println("Остановка движения у " + brand);
+        System.out.println("Транспорт ID " + id + " (" + brand + ") остановился");
     }
 }
