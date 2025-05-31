@@ -12,6 +12,6 @@ public class Car {
     }
 
     public void displayInfo() {
-        System.out.println("Model: " + model + ", year " + year);
+        System.out.println("Model: " + model + ", year: " + year);
     }
 }
