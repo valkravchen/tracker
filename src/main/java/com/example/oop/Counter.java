@@ -4,7 +4,7 @@ public class Counter {
     public static int totalCount = 0;
 
     public Counter() {
-        totalCount ++;
+        totalCount++;
     }
 
     public void displayInfo() {
