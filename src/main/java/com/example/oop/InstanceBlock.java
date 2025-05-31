@@ -8,12 +8,11 @@ public class InstanceBlock {
         System.out.println("Блок экземляра выполнен");
     }
 
-    public void InstanceBlockDemo() {
+    public InstanceBlock() {
         System.out.println("Конструктор выполнен");
     }
 
     public static void main(String[] args) {
         InstanceBlock instanceBlock = new InstanceBlock();
-        instanceBlock.InstanceBlockDemo();
     }
 }
