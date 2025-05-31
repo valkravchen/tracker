@@ -8,9 +8,5 @@ public class LocalClassExample {
                 System.out.println(localVar);
             }
         }
-        new LocalPrinter().print();
-    }
-
-    public static void main(String[] args) {
     }
 }
