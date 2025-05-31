@@ -1,7 +1,5 @@
 package com.example.oop;
 
-import java.util.concurrent.CancellationException;
-
 public class Car {
     private String model;
     private int year;
