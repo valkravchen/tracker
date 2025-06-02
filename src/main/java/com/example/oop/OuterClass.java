@@ -12,6 +12,5 @@ public class OuterClass {
 
     public static void main(String[] args) {
         Nested nested = new Nested();
-        nested.print();
     }
 }
