@@ -2,7 +2,7 @@ package com.example.oop;
 
 public class OuterClass {
     private static String staticField = "Статическое поле";
-    private String instanceField = "Поле экземпляра";
+    private String instanceField = "оле экземпляра";
 
     public static class Nested {
         public void print() {
