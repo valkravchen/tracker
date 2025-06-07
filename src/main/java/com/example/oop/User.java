@@ -13,7 +13,6 @@ public class User {
 
     public User(String name) {
         this(name, 0);
-        idCounter++;
     }
 
     public String getName() {
@@ -24,7 +23,7 @@ public class User {
         return age;
     }
 
-    public int getIdCounter() {
+    public static int getIdCounter() {
         return idCounter;
     }
 }
