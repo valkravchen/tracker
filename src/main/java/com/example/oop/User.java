@@ -13,7 +13,6 @@ public class User {
 
     public User(String name) {
         this(name, 0);
-        System.out.println("Вызывается конструктор с одним параметром");
     }
 
     public String getName() {
