@@ -11,6 +11,11 @@ public class User {
         idCounter++;
     }
 
+    public User(String name) {
+        this(name, 0);
+        idCounter++;
+    }
+
     public String getName() {
         return name;
     }
@@ -19,24 +24,8 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getDetails() {
-        return "Имя пользователя: " + name + "; возраст пользователя: " + age;
-    }
-
-    public static int getIdCounter() {
+    public int getIdCounter() {
         return idCounter;
-    }
-
-    public static void resetCounter() {
-        idCounter = 0;
-    }
-
-    public void printInfo() {
-        System.out.println("Имя пользователя: " + name + "; возраст пользователя: " + age);
     }
 }
 
