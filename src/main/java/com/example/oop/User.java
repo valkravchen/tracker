@@ -5,6 +5,17 @@ public class User {
     private String name;
     private int age;
 
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+        idCounter++;
+    }
+
+    public User(String name) {
+        this(name, 0);
+        System.out.println("Вызывается конструктор с одним параметром");
+    }
+
     public String getName() {
         return name;
     }
