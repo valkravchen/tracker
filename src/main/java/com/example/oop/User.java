@@ -2,7 +2,7 @@ package com.example.oop;
 
 public class User {
     private static int idCounter = 0;
-    private final String name;
+    private String name;
     private int age;
 
     public User(String name, int age) {
