@@ -34,5 +34,9 @@ public class User {
     public static void resetCounter() {
         idCounter = 0;
     }
+
+    public void printInfo() {
+        System.out.println("Имя пользователя: " + name + "; возраст пользователя: " + age);
+    }
 }
 
