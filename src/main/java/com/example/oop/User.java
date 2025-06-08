@@ -34,5 +34,15 @@ public class User {
             System.out.println("Внутренний класс: имя = " + name + "; возраст = " + age);
         }
     }
+
+    public void createLocalClass() {
+        class Local {
+            public void display() {
+                System.out.println("Локальный класс: имя = " + name);
+            }
+        }
+        Local local = new Local();
+        local.display();
+    }
 }
 
