@@ -41,7 +41,9 @@ public class User {
                 System.out.println("Локальный класс: имя = " + name);
             }
         }
+
         Local local = new Local();
+
         local.display();
     }
 }
