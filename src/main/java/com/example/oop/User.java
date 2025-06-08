@@ -36,9 +36,10 @@ public class User {
     }
 
     public void createLocalClass() {
+        final String prefix = "Пользователь: ";
         class Local {
             public void display() {
-                System.out.println("Локальный класс: имя = " + name);
+                System.out.println(prefix + name);
             }
         }
 
