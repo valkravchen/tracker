@@ -28,5 +28,11 @@ public class User {
             System.out.println("Статический вложенный класс: idCounter = " + idCounter);
         }
     }
+
+    public class Inner {
+        public void display() {
+            System.out.println("Внутренний класс: имя = " + name + "; возраст = " + age);
+        }
+    }
 }
 
