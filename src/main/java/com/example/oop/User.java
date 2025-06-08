@@ -11,10 +11,6 @@ public class User {
         idCounter++;
     }
 
-    public User(String name) {
-        this(name, 0);
-    }
-
     public String getName() {
         return name;
     }
@@ -25,6 +21,12 @@ public class User {
 
     public static int getIdCounter() {
         return idCounter;
+    }
+
+    public static class StaticNested {
+        public void display() {
+            System.out.println("Статический вложенный класс: idCounter = " + idCounter);
+        }
     }
 }
 
