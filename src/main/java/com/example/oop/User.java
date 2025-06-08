@@ -43,7 +43,6 @@ public class User {
         }
 
         Local local = new Local();
-
         local.display();
     }
 }
