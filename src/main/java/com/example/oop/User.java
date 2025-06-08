@@ -45,5 +45,14 @@ public class User {
         Local local = new Local();
         local.display();
     }
+
+    public Runnable createAnonymousClass() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Анонимный класс: имя = " + name);
+            }
+        };
+    }
 }
 

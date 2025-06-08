@@ -3,6 +3,7 @@ package com.example.oop;
 public class NestedClassesDemo {
     public static void main(String[] args) {
         User user = new User("Семён Семёныч", 40);
-       user.createLocalClass();
+        Runnable anon = user.createAnonymousClass();
+        anon.run();
     }
 }
