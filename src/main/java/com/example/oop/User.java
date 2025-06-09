@@ -9,6 +9,7 @@ public class User {
         this.name = name;
         this.age = age;
         idCounter++;
+        System.out.println("Конструктор вызван");
     }
 
     public String getName() {
