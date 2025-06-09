@@ -13,8 +13,9 @@ public class User {
     }
 
     public User(String name) {
-        this(name, 0);
+        this.name = name;
         System.out.println("Вызов второго конструктора");
+        idCounter++;
     }
 
     public String getName() {
