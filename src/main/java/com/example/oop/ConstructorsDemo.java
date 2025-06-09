@@ -2,6 +2,9 @@ package com.example.oop;
 
 public class ConstructorsDemo {
     public static void main(String[] args) {
-        User user = new User("Емеля", 25);
+        User user1 = new User("Емеля", 25);
+        User user2 = new User("Меля");
+        System.out.println(user1.getName() + ", " + user1.getAge());
+        System.out.println(user2.getName() + ", " + user2.getAge());
     }
 }

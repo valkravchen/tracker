@@ -9,7 +9,13 @@ public class User {
         this.name = name;
         this.age = age;
         idCounter++;
-        System.out.println("Конструктор вызван");
+        System.out.println("Вызов первого конструктора");
+    }
+
+    public User(String name) {
+        this.name = name;
+        age = 0;
+        System.out.println("Вызов второго конструктора");
     }
 
     public String getName() {
