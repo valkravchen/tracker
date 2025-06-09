@@ -6,5 +6,6 @@ public class ConstructorsDemo {
         System.out.println("Начальное состояние: " +
                 user.getName() + ", " +
                 user.getAge());
+        System.out.println("idCounter: " + User.getIdCounter());
     }
 }
