@@ -13,8 +13,7 @@ public class User {
     }
 
     public User(String name) {
-        this.name = name;
-        age = 0;
+        this(name, 0);
         System.out.println("Вызов второго конструктора");
     }
 
