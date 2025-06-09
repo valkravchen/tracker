@@ -20,40 +20,6 @@ public class User {
     }
 
     public static int getIdCounter() {
-        return idCounter;
+        return  idCounter;
     }
-
-    public static class StaticNested {
-        public void display() {
-            System.out.println("Статический вложенный класс: idCounter = " + idCounter);
-        }
-    }
-
-    public class Inner {
-        public void display() {
-            System.out.println("Внутренний класс: имя = " + name + "; возраст = " + age);
-        }
-    }
-
-    public void createLocalClass() {
-        final String prefix = "Пользователь: ";
-        class Local {
-            public void display() {
-                System.out.println(prefix + name);
-            }
-        }
-
-        Local local = new Local();
-        local.display();
-    }
-
-    public Runnable createAnonymousClass() {
-        return new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Анонимный класс: имя = " + name);
-            }
-        };
-    }
-}
-
+ }
