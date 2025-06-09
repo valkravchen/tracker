@@ -5,6 +5,12 @@ public class User {
     private String name;
     private int age;
 
+    {
+        name = "Имя неизвестно";
+        age = 18;
+        System.out.println("Блок экземляра выполнен");
+    }
+
     public User(String name, int age) {
         this.name = name;
         this.age = age;
@@ -16,6 +22,9 @@ public class User {
         this.name = name;
         System.out.println("Вызов второго конструктора");
         idCounter++;
+    }
+
+    public User() {
     }
 
     public String getName() {
