@@ -6,25 +6,14 @@ public class User {
     private int age;
 
     {
-        name = "Имя неизвестно";
+        name = "Имя";
         age = 18;
         System.out.println("Блок экземляра выполнен");
     }
 
-    public User(String name, int age) {
-        this.name = name;
-        this.age = age;
-        idCounter++;
-        System.out.println("Вызов первого конструктора");
-    }
-
-    public User(String name) {
-        this.name = name;
-        System.out.println("Вызов второго конструктора");
-        idCounter++;
-    }
-
     public User() {
+        this.name = "Имя";
+        this.age = 18;
     }
 
     public String getName() {
