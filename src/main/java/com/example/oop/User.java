@@ -5,15 +5,14 @@ public class User {
     private String name;
     private int age;
 
-    {
-        name = "Имя";
-        age = 18;
-        System.out.println("Блок экземляра выполнен");
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+        idCounter++;
     }
 
-    public User() {
-        this.name = "Имя";
-        this.age = 18;
+    public User(String name) {
+        this(name, 0);
     }
 
     public String getName() {
