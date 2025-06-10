@@ -8,11 +8,10 @@ public class User {
     public User(String name, int age) {
         this.name = name;
         this.age = age;
-        idCounter++;
     }
 
     public User(String name) {
-        this(name, 0);
+        this.name = name;
     }
 
     public String getName() {
@@ -24,6 +23,6 @@ public class User {
     }
 
     public static int getIdCounter() {
-        return  idCounter;
+        return idCounter;
     }
- }
+}
