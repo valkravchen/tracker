@@ -1,8 +1,15 @@
 package com.com.example;
 
-public class Child extends Parent{
-    public Child(String name) {
-        super(name);
-        System.out.println("Дочерний конструктор");
+public class Child extends Parent {
+    private int age;
+
+    public Child () {
+        // super(); // Вставляется автоматически
+        this.age = 18;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
+
