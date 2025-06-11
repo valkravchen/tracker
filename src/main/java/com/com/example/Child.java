@@ -3,7 +3,7 @@ package com.com.example;
 public class Child extends Parent {
     private int age;
 
-    public Child () {
+    public Child() {
         // super(); // Вставляется автоматически
         this.age = 18;
     }
