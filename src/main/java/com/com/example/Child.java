@@ -3,9 +3,9 @@ package com.com.example;
 public class Child extends Parent {
     private int age;
 
-    public Child() {
-        // super(); // Вставляется автоматически
-        this.age = 18;
+    public Child(String name, int age) {
+        super(name);
+        this.age = age;
     }
 
     public int getAge() {

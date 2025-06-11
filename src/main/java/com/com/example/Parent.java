@@ -3,8 +3,8 @@ package com.com.example;
 public class Parent {
     private String name;
 
-    public Parent() {
-        System.out.println("Родительский конструктор по умолчанию");
+    public Parent(String name) {
+        this.name = name;
     }
 
     public String getName() {
