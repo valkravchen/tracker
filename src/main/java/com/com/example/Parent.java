@@ -5,6 +5,7 @@ public class Parent {
 
     public Parent(String name) {
         this.name = name;
+        System.out.println("Родительский класс: " + name);
     }
 
     public String getName() {

@@ -6,6 +6,7 @@ public class Child extends Parent {
     public Child(String name, int age) {
         super(name);
         this.age = age;
+        System.out.println("Дочерний класс: " + age);
     }
 
     public int getAge() {
