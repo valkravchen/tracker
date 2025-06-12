@@ -23,11 +23,12 @@ public class User {
         return age;
     }
 
-    public int calculateBirthYear(int currentYear) {
-        return currentYear - age;
+    public void celebrateBirthday() {
+        age++;
+        System.out.println("С днём рождения, " + name + "! Вам исполнилось " + age + "!");
     }
 
-    public boolean isAdult() {
-        return age >= 18;
+    public String getGreeting() {              // Нестатический метод для поведения
+        return "Привет! Меня зовут  " + name;
     }
 }
