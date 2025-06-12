@@ -6,7 +6,7 @@ public class User {
     private int age;
 
     public User(String name) {
-       this.name = name;
+       name = name;
         idCounter++;
         System.out.println("Вызов первого конструктора");
     }
