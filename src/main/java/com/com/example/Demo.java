@@ -2,10 +2,10 @@ package com.com.example;
 
 public class Demo {
     public static void main(String[] args) {
-        User user1 = new User("Леопольд", 5);
-        User user2 = new User("H");
-        System.out.println("Имя: " + user1.getName() + "; возраст: " + user1.getAge());
-        System.out.println("Имя: " + user2.getName() + "; возраст: " + user2.getAge());
-        System.out.println("Счётчик: " + User.getIdCounter());
+        System.out.println(User.getIdCounter());
+        User user = new User("Бабай", 0);
+        System.out.println(User.getIdCounter());
+        User.resetCounter();
+        System.out.println(User.getIdCounter());
     }
 }
