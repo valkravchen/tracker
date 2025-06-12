@@ -27,4 +27,7 @@ public class User {
         idCounter = 0;
     }
 
+    public static String formatUserInfo(String name, int age) {
+        return "Имя: " + name + "; возраст: " + age;
+    }
 }
