@@ -5,16 +5,15 @@ public class User {
     private String name;
     private int age;
 
-    public User(String name) {
-       name = name;
+    public User(String name, int age) {
+       this.name = name;
+       this.age = age;
         idCounter++;
         System.out.println("Вызов первого конструктора");
     }
 
-    public User(int age) {
-        this.age = age;
-        idCounter++;
-        System.out.println("Вызов второго конструктора");
+    public User() {
+       this("Безымянный", 0);
     }
 
     public static int getIdCounter() {
