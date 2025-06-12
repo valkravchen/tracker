@@ -23,11 +23,11 @@ public class User {
         return age;
     }
 
-    public void setName(String newName) {
-        name = newName;
+    public int calculateBirthYear(int currentYear) {
+        return currentYear - age;
     }
 
-    public String getFullInfo() {
-        return "Имя: " + name + "; возраст: " + age;
+    public boolean isAdult() {
+        return age >= 18;
     }
 }
