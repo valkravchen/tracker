@@ -6,10 +6,17 @@ public class User {
     private int age;
 
     public User(String name, int age) {
-        this.name = name;
+       this.name = name;
         this.age = age;
         idCounter++;
         System.out.println("Вызов первого конструктора");
+    }
+
+    public User(int age, String name) {
+        this.age = age;
+        this.name = name;
+        idCounter++;
+        System.out.println("Вызов четвёртого конструктора");
     }
 
     public User(String name) {
@@ -20,9 +27,7 @@ public class User {
     }
 
     public User() {
-        this.name = "Безымянный";
-        this.age = 0;
-        idCounter++;
+        this("Безымянный", 0);
         System.out.println("Вызов третьего конструктора");
     }
 
@@ -37,4 +42,5 @@ public class User {
     public int getAge() {
         return age;
     }
+
 }
