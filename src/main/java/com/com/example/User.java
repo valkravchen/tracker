@@ -16,19 +16,7 @@ public class User {
         this.age = age;
         this.name = name;
         idCounter++;
-        System.out.println("Вызов четвёртого конструктора");
-    }
-
-    public User(String name) {
-        this.name = name;
-        this.age = 0;
-        idCounter++;
         System.out.println("Вызов второго конструктора");
-    }
-
-    public User() {
-        this("Безымянный", 0);
-        System.out.println("Вызов третьего конструктора");
     }
 
     public static int getIdCounter() {
