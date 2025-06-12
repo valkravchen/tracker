@@ -6,8 +6,8 @@ public class User {
     private int age;
 
     public User(String name, int age) {
-       this.name = name;
-       this.age = age;
+        this.name = name;
+        this.age = age;
         idCounter++;
     }
 
@@ -23,11 +23,11 @@ public class User {
         return age;
     }
 
-    public static void resetCounter() {
-        idCounter = 0;
+    public void setName(String newName) {
+        name = newName;
     }
 
-    public static String formatUserInfo(String name, int age) {
+    public String getFullInfo() {
         return "Имя: " + name + "; возраст: " + age;
     }
 }
