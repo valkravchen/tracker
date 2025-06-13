@@ -25,6 +25,10 @@ public class User {
         return isActive;
     }
 
+    public String getProfile() {
+        return "Имя пользователя: " + name + "; возраст пользователя: " + age;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -44,9 +48,9 @@ public class User {
             return "Статус пользователя " + name + " является неактивным";
         }
         if (age < 18) {
-            return "Пользователь: " + name + " несовершеннолетний";
+            return "Пользователь: " + name + " - несовершеннолетний";
         }
-        return "Пользователь: " + name + " совершеннолетний, с активным статусом";
+        return "Пользователь: " + name + " - совершеннолетний, с активным статусом";
     }
 
     public void updateProfile(String name, int age, boolean active) {
