@@ -6,5 +6,7 @@ public class Demo {
         User user2 = new User("Второй пользователь", 18);
         System.out.println(user1.getInfo());
         System.out.println(user2.getInfo());
+        user1.setInfo("Изменено имя первого пользователя", 23);
+        System.out.println(user1.getInfo());
     }
 }
