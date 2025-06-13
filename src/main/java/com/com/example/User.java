@@ -29,6 +29,10 @@ public class User {
         return "Имя пользователя: " + name + "; возраст пользователя: " + age;
     }
 
+    public static int getIdCounter() {
+        return idCounter;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
