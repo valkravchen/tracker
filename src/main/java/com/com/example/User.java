@@ -64,4 +64,8 @@ public class User {
     public boolean canAccessPremium() {
         return isActive && age >= 18;
     }
+
+    public String getFullProfile() {
+        return "Пользователь: " + getUserStatus() + "; доступ к премиум-классу: " + canAccessPremium();
+    }
 }
