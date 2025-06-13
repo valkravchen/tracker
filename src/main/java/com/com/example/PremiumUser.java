@@ -5,7 +5,14 @@ public class PremiumUser extends User {
         super(name, age);
     }
 
-    public static int getIdCounter() {
-        return 100;
+    public String getUserStatus() {
+        if (!isActive()) {
+            return "Статус пользователя " + getName() + " является неактивным";
+        }
+        if (getAge() < 18) {
+            return "Пользователь: " + getName() + " - несовершеннолетний";
+        }
+        return "Пользователь: " + getName() + " - совершеннолетний, с активным премиум-статусом";
     }
 }
+
