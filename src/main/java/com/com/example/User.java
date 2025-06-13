@@ -23,12 +23,12 @@ public class User {
         return age;
     }
 
-    public void celebrateBirthday() {
-        age++;
-        System.out.println("С днём рождения, " + name + "! Вам исполнилось " + age + "!");
+    public String getInfo() {
+        return "Имя пользователя: " + name + "; возраст: " + age;
     }
 
-    public String getGreeting() {              // Нестатический метод для поведения
-        return "Привет! Меня зовут  " + name;
+    public void setInfo(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 }
