@@ -72,4 +72,17 @@ public class User {
     public String getFullProfile() {
         return "Пользователь: " + getUserStatus() + "; доступ к премиум-классу: " + canAccessPremium();
     }
+
+    public String getFullInfo() {
+        String status = getUserStatus();
+        return "Пользователь: " + this.name +
+                "; возраст пользователя: " + this.age +
+                "; стаус пользователя: " + status;
+    }
+
+    public void updateAll(String name, int age) {
+        this.setName(name);
+        setAge(age);
+        this.isActive = true;
+    }
 }
