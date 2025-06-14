@@ -17,6 +17,10 @@ public class User {
         this("Без имени", 0);
     }
 
+    public User(String name) {
+        this(name, 18);
+    }
+
     public String getName() {
         return name;
     }
@@ -32,7 +36,6 @@ public class User {
     public String getProfile() {
         return "Имя пользователя: " + name + "; возраст пользователя: " + age;
     }
-
 
     public void setName(String name) {
         this.name = name;
@@ -62,11 +65,19 @@ public class User {
         return idCounter;
     }
 
-    public String getDetailedInfo() {
-        return this.getProfile();
+    public void updateDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.setActive(true);
     }
 
-    public void printThis() {
-        System.out.println(this);
+    public User setNameAndReturn(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public User setAgeAndReturn(int age) {
+        this.setAge(age);
+        return this;
     }
 }
