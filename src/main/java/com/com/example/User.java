@@ -85,4 +85,18 @@ public class User {
         setAge(age);
         this.isActive = true;
     }
+
+    public String getPersonalizedGreeting() {
+        if (isActive) {
+            if (age < 18) {
+                return "Привет, несовершеннолетний пользователь " + name + "!";
+            }
+            return "Привет, " + name + "!"; // Использует поле объекта
+        }
+        return name + ", активируйте аккаунт!"; // Использует поле объекта
+    }
+
+    public boolean isEligibleForDiscount() { // Нестатический метод
+        return isActive && age >= 60;      // Зависит от полей объекта
+    }
 }
