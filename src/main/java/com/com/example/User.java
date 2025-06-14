@@ -99,4 +99,14 @@ public class User {
     public boolean isEligibleForDiscount() { // Нестатический метод
         return isActive && age >= 60;      // Зависит от полей объекта
     }
+
+    public void resetProfile() {
+        this.name = "Безымянный";
+        this.age = 0;
+        this.isActive = false;
+    }
+
+    public String getSelfDescription() {
+        return this.getProfile() + "; активность: " + this.isActive;
+    }
 }
