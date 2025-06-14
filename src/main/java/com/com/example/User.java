@@ -69,5 +69,4 @@ public class User {
     public void printThis() {
         System.out.println(this);
     }
-
 }
