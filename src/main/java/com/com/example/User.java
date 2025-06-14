@@ -109,4 +109,9 @@ public class User {
     public String getSelfDescription() {
         return this.getProfile() + "; активность: " + this.isActive;
     }
+
+    public String getDetailedStatus() {
+        String status = getUserStatus();
+        return status + ", ID: " + idCounter;
+    }
 }
