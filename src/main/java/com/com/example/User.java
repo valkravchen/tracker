@@ -13,6 +13,10 @@ public class User {
         idCounter++;
     }
 
+    public User() {
+        this("Без имени", 0);
+    }
+
     public String getName() {
         return name;
     }
@@ -29,9 +33,6 @@ public class User {
         return "Имя пользователя: " + name + "; возраст пользователя: " + age;
     }
 
-    public static int getIdCounter() {
-        return idCounter;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -57,61 +58,16 @@ public class User {
         return "Пользователь: " + name + " - совершеннолетний, с активным статусом";
     }
 
-    public void updateProfile(String name, int age, boolean active) {
-        this.name = name;
-        if (age >= 0) {
-            this.age = age;
-        }
-        this.isActive = active;
+    public static int getIdCounter() {
+        return idCounter;
     }
 
-    public boolean canAccessPremium() {
-        return isActive && age >= 18;
+    public String getDetailedInfo() {
+        return this.getProfile();
     }
 
-    public String getFullProfile() {
-        return "Пользователь: " + getUserStatus() + "; доступ к премиум-классу: " + canAccessPremium();
+    public void printThis() {
+        System.out.println(this);
     }
 
-    public String getFullInfo() {
-        String status = getUserStatus();
-        return "Пользователь: " + this.name +
-                "; возраст пользователя: " + this.age +
-                "; стаус пользователя: " + status;
-    }
-
-    public void updateAll(String name, int age) {
-        this.setName(name);
-        setAge(age);
-        this.isActive = true;
-    }
-
-    public String getPersonalizedGreeting() {
-        if (isActive) {
-            if (age < 18) {
-                return "Привет, несовершеннолетний пользователь " + name + "!";
-            }
-            return "Привет, " + name + "!"; // Использует поле объекта
-        }
-        return name + ", активируйте аккаунт!"; // Использует поле объекта
-    }
-
-    public boolean isEligibleForDiscount() { // Нестатический метод
-        return isActive && age >= 60;      // Зависит от полей объекта
-    }
-
-    public void resetProfile() {
-        this.name = "Безымянный";
-        this.age = 0;
-        this.isActive = false;
-    }
-
-    public String getSelfDescription() {
-        return this.getProfile() + "; активность: " + this.isActive;
-    }
-
-    public String getDetailedStatus() {
-        String status = getUserStatus();
-        return status + ", ID: " + idCounter;
-    }
 }
