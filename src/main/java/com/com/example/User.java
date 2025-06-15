@@ -60,4 +60,12 @@ public class User {
     public static int getIdCounter() {
         return idCounter;
     }
+
+    public void setNameNoReturn(String name) {
+        this.name = name;
+    }
+
+    public void setAgeNoReturn(int age) {
+        this.age = age;
+    }
 }
