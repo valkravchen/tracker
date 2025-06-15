@@ -11,10 +11,12 @@ public class User {
         this.age = age;
         this.isActive = true;
         idCounter++;
+        System.out.println("Вызов конструктора 1");
     }
 
-    public User() {
-        this("Имя не указано", 0);
+    public User(String name) {
+        this(name, 0);
+        System.out.println("Вызов конструктора 2");
     }
 
     public String getName() {
