@@ -11,12 +11,6 @@ public class User {
         this.age = age;
         this.isActive = true;
         idCounter++;
-        System.out.println("Вызов конструктора 1");
-    }
-
-    public User(String name) {
-        this(name, 0);
-        System.out.println("Вызов конструктора 2");
     }
 
     public String getName() {
@@ -36,8 +30,9 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = (name != null) ? name : "Без имени";
     }
+
 
     public void setAge(int age) {
         if (age >= 0) {
@@ -61,14 +56,5 @@ public class User {
 
     public static int getIdCounter() {
         return idCounter;
-    }
-
-    public void setDetails(String name, int age) {
-        System.out.println("Параметр name = " + name);
-        System.out.println("Параметр age = " + age);
-        System.out.println("Поле name = " + this.name);
-        System.out.println("Поле age = " + this.age);
-        this.setName(name);
-        this.setAge(age);
     }
 }
