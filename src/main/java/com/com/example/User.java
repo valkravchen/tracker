@@ -11,6 +11,7 @@ public class User {
         this.age = age;
         this.isActive = true;
         idCounter++;
+        System.out.println("Объект создан. Адрес объекта:  " + this);
     }
 
     public User() {
