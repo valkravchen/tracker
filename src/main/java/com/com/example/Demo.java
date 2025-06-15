@@ -6,5 +6,6 @@ public class Demo {
         User user2 = new User();
         System.out.println(user1.getProfile());
         System.out.println(user2.getProfile());
+        System.out.println(User.getIdCounter());
     }
 }

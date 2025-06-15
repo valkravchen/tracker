@@ -14,10 +14,7 @@ public class User {
     }
 
     public User() {
-        name = "Имя не указано";
-        age = 0;
-        isActive = true;
-        idCounter++;
+        this("Имя не указано", 0);
     }
 
     public String getName() {
