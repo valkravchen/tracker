@@ -33,7 +33,6 @@ public class User {
         this.name = (name != null) ? name : "Без имени";
     }
 
-
     public void setAge(int age) {
         if (age >= 0) {
             this.age = age;
