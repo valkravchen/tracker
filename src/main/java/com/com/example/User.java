@@ -11,7 +11,6 @@ public class User {
         this.age = age;
         this.isActive = true;
         idCounter++;
-        System.out.println("Объект создан. Адрес объекта:  " + this);
     }
 
     public User() {
@@ -66,11 +65,8 @@ public class User {
         return idCounter;
     }
 
-    public String getObjectReference() {
-        return "Объект " + this;
-    }
-
-    public String getCallerInfo() {
-        return this.getProfile() + "; адрес объекта: " + this;
+    public void setNameWrong(String name) {
+        name = name;
+        System.out.println(this.name);
     }
 }
