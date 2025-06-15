@@ -60,9 +60,14 @@ public class User {
     public String toString() {
         return getProfile();
     }
+
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof User)) return false;
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof User)) {
+            return false;
+        }
         User other = (User) obj;
         return this.name.equals(other.name) && this.age == other.age;
     }
