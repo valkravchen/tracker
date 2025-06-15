@@ -68,4 +68,8 @@ public class User {
     public String getObjectReference() {
         return "Объект " + this;
     }
+
+    public String getCallerInfo() {
+        return this.getProfile() + "; адрес объекта: " + this;
+    }
 }
