@@ -14,11 +14,10 @@ public class User {
     }
 
     public User() {
-        this("Без имени", 0);
-    }
-
-    public User(String name) {
-        this(name, 18);
+        name = "Имя не указано";
+        age = 0;
+        isActive = true;
+        idCounter++;
     }
 
     public String getName() {
@@ -63,16 +62,5 @@ public class User {
 
     public static int getIdCounter() {
         return idCounter;
-    }
-
-    public void setDetailsWrong(String name, int age) {
-        System.out.println("Начальное значение поля name = " + this.name
-                + "; начальное значение age: " + this.age);
-        System.out.println("Параметр name = " + name
-                + "; параметр age = " + age);
-        this.name = name;
-        this.age = age;
-        System.out.println("Конечное значение name = " + this.name
-                + "; конечное значение age = " + this.age);
     }
 }
