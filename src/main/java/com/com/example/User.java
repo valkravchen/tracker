@@ -66,7 +66,8 @@ public class User {
     }
 
     public void setNameWrong(String name) {
-        name = name;
         System.out.println(this.name);
+        System.out.println(name);
+        this.name = name;
     }
 }
