@@ -70,4 +70,10 @@ public class User {
         this.setAge(age);
         return this;
     }
+
+    public void updateDetails(String name, int age) {
+        this.setName(name);
+        this.setAge(age);
+        this.setActive(true);
+    }
 }
