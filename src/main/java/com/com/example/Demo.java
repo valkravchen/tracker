@@ -2,11 +2,9 @@ package com.com.example;
 
 public class Demo {
     public static void main(String[] args) {
-        User user = new User();
+        User user = new User("Буратино", 10);
         System.out.println(user.getProfile());
-        user.updateDetails("Чиполлино", -4);
-        System.out.println(user.getProfile());
-        user.setAgeAndReturn(3).setNameAndReturn("Буратино");
+        user.setDetails("Чиполлино", 11);
         System.out.println(user.getProfile());
     }
 }

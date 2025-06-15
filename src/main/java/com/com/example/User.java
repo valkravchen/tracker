@@ -61,19 +61,12 @@ public class User {
         return idCounter;
     }
 
-    public User setNameAndReturn(String name) {
-        this.setName(name);
-        return this;
-    }
-
-    public User setAgeAndReturn(int age) {
-        this.setAge(age);
-        return this;
-    }
-
-    public void updateDetails(String name, int age) {
+    public void setDetails(String name, int age) {
+        System.out.println("Параметр name = " + name);
+        System.out.println("Параметр age = " + age);
+        System.out.println("Поле name = " + this.name);
+        System.out.println("Поле age = " + this.age);
         this.setName(name);
         this.setAge(age);
-        this.setActive(true);
     }
 }
