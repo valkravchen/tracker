@@ -66,11 +66,13 @@ public class User {
     }
 
     public void setDetailsWrong(String name, int age) {
+        System.out.println("Начальное значение поля name = " + this.name
+                + "; начальное значение age: " + this.age);
         System.out.println("Параметр name = " + name
                 + "; параметр age = " + age);
         this.name = name;
         this.age = age;
-        System.out.println("Значение name = " + name
-                + "; значение age = " + age);
+        System.out.println("Конечное значение name = " + this.name
+                + "; конечное значение age = " + this.age);
     }
 }
