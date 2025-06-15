@@ -1,6 +1,6 @@
 package com.com.example;
 
-public class SimpleUser extends Object {
+public class SimpleUser {
     String name;
 
     SimpleUser(String name) {
