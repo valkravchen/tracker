@@ -66,9 +66,11 @@ public class User {
     }
 
     public void setDetailsWrong(String name, int age) {
+        System.out.println("Параметр name = " + name
+                + "; параметр age = " + age);
         name = name;
         age = age;
-        System.out.println("Параметр name = " + name
-        + "; параметр age = " + age);
+        System.out.println("Значение name = " + name
+                + "; значение age = " + age);
     }
 }
