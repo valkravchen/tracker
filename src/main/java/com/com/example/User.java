@@ -67,7 +67,7 @@ public class User {
     }
 
     public User setAgeAndReturn(int age) {
-        this.age = age;
+        this.setAge(age);
         return this;
     }
 }
