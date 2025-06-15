@@ -65,16 +65,10 @@ public class User {
         return idCounter;
     }
 
-    public void setNameWrong(String name) {
-        System.out.println("Поле: " + this.name);
-        System.out.println("Параметр: " + name);
-        String localName = name;
-        System.out.println("Присвоили переменой localName: " +
-                "значение " + name);
-        System.out.println("Переменная localName: " + localName);
-        localName = "Карабас";
-        System.out.println("Изменили значение переменной localName на: " + localName);
-        this.name = name;
-        System.out.println("Изменили поле name");
+    public void setDetailsWrong(String name, int age) {
+        name = name;
+        age = age;
+        System.out.println("Параметр name = " + name
+        + "; параметр age = " + age);
     }
 }
