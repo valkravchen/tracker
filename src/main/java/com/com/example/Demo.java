@@ -4,6 +4,6 @@ public class Demo {
     public static void main(String[] args) {
         User user = new User("Буратино", 10);
         user.setNameWrong("Баба-яга");
-        System.out.println(user.getName());
+        System.out.println("Значение поля name: " + user.getName());
     }
 }

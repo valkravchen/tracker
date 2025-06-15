@@ -66,8 +66,14 @@ public class User {
     }
 
     public void setNameWrong(String name) {
-        System.out.println(this.name);
+        System.out.println("Поле: " + this.name);
+        System.out.println("Параметр: " + name);
+        String localName = name;
+        System.out.println("Присвоили переменой localName: " +
+                "значение " + name);
+        System.out.println("Переменная localName: " + localName);
+        localName = "Карабас";
+        System.out.println("Изменили значение переменной localName на Карабас " + localName);
         System.out.println(name);
-        this.name = name;
     }
 }
