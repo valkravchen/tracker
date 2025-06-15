@@ -61,11 +61,13 @@ public class User {
         return idCounter;
     }
 
-    public void setNameNoReturn(String name) {
+    public User setNameAndReturn(String name) {
         this.name = name;
+        return this;
     }
 
-    public void setAgeNoReturn(int age) {
+    public User setAgeAndReturn(int age) {
         this.age = age;
+        return this;
     }
 }
