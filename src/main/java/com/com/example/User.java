@@ -62,7 +62,7 @@ public class User {
     }
 
     public User setNameAndReturn(String name) {
-        this.name = name;
+        this.setName(name);
         return this;
     }
 
