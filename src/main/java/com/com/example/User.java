@@ -73,7 +73,7 @@ public class User {
                 "значение " + name);
         System.out.println("Переменная localName: " + localName);
         localName = "Карабас";
-        System.out.println("Изменили значение переменной localName на Карабас " + localName);
-        System.out.println(name);
-    }
+        System.out.println("Изменили значение переменной localName на: " + localName);
+        this.name = name;
+        System.out.println("Изменили поле name");    }
 }
