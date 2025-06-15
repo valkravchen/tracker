@@ -65,19 +65,7 @@ public class User {
         return idCounter;
     }
 
-    public void updateDetails(String name, int age) {
-        this.name = name;
-        this.age = age;
-        this.setActive(true);
-    }
-
-    public User setNameAndReturn(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public User setAgeAndReturn(int age) {
-        this.setAge(age);
-        return this;
+    public String getObjectReference() {
+        return "Объект " + this;
     }
 }
