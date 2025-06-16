@@ -13,11 +13,11 @@ public class User {
         idCounter++;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public int getAge() {
+    private int getAge() {
         return age;
     }
 
@@ -40,35 +40,20 @@ public class User {
     }
 
     public void setActive(boolean active) {
-        this.isActive = active;
+        isActive = active;
     }
 
-    public String getUserStatus() {
-        if (!isActive) {
-            return "Статус пользователя " + name + " является неактивным";
+    public String getUserStatus() {    // Бизнес-логика: статус
+        if (!isActive) {               // Проверяет активность
+            return name + " - неактивный пользователь";
         }
-        if (age < 18) {
-            return "Пользователь: " + name + " - несовершеннолетний";
+        if (age < 18) {                // Проверяет возраст
+            return name + " - несовершеннолетний пользователь";
         }
-        return "Пользователь: " + name + " - совершеннолетний, с активным статусом";
+        return name + " - активный совершеннолетний пользователь";
     }
 
-    public static int getIdCounter() {
-        return idCounter;
-    }
-
-    public String toString() {
-        return getProfile();
-    }
-
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof User)) {
-            return false;
-        }
-        User other = (User) obj;
-        return this.name.equals(other.name) && this.age == other.age;
+    public static int getIdCounter() { // Статический метод
+        return idCounter;             // Возвращает количество
     }
 }
