@@ -12,6 +12,8 @@ public class User {
     public String getStatus() {
         return "Пользователь: " + name;
     }
+
+
 }
 
 
