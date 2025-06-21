@@ -1,11 +1,11 @@
 package com.com.example;
 
 public class Outer {
-    private static String staticField = "Статическое поле";
+    private String field = "Нестатическое поле";
 
-    static class Nested {
+    class Inner {
         void print() {
-            System.out.println(staticField);
+            System.out.println(field);
         }
     }
 }
