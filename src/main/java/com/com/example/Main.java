@@ -2,7 +2,11 @@ package com.com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Outer outer = new Outer();
-        outer.method();
+        Greeting greeting = new Greeting() {
+            @Override
+            public void greet() {
+                System.out.println("Анонимный класс");
+            }
+        };
     }
 }
