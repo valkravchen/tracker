@@ -1,23 +1,21 @@
 package com.com.example;
 
 public class Outer {
-    void printMessage(String message) {
-        int repeatCount = 3;
-
-        class MessagePrinter {
-            void print() {
-                for (int i = 0; i < repeatCount; i++) {
-                    System.out.println(message);
-                }
-            }
-        }
-
-        MessagePrinter messagePrinter = new MessagePrinter();
-        messagePrinter.print();
-    }
+   void printMessage(String message) {
+       int repeat = 2;
+       Runnable r = new Runnable() {
+           @Override
+           public void run() {
+               for (int i = 0; i < repeat; i++) {
+                   System.out.println(message);
+               }
+           }
+       };
+       new Thread(r).start();
+   }
 
     public static void main(String[] args) {
-        Outer outer = new Outer();
-        outer.printMessage("Привет от локального класса!");
+       Outer outer = new Outer();
+       outer.printMessage("Здравия!");
     }
 }
