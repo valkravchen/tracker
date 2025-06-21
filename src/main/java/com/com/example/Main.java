@@ -1,7 +1,5 @@
 package com.com.example;
 
-import ru.inheritance.TextReport;
-
 public class Main {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount();
