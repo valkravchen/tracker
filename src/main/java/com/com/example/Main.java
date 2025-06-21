@@ -2,6 +2,9 @@ package com.com.example;
 
 public class Main {
     public static void main(String[] args) {
-        new Outer.Nested().print();
+        for (int i = 0; i < 100000; i++) {
+            Outer.Nested obj = new Outer.Nested();
+            System.out.println(obj);
+        }
     }
 }
