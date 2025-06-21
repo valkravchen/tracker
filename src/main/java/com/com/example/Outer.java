@@ -1,7 +1,5 @@
 package com.com.example;
 
-import ru.oop.Local;
-
 public class Outer {
     void printMessage() {
         final String localVar = "Здравстсвуй, локальный класс!";
