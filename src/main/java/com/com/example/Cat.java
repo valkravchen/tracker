@@ -1,9 +1,14 @@
 package com.com.example;
 
 public class Cat extends Animal {
-    private String breed;
+    @Override
+    void makeSound() {
+        System.out.println("Мяу!");
+    }
 
-    public Cat(String name) {
-        super(name);
+    @Override
+    void eat() {
+        System.out.println("Есть рыбу");
     }
 }
+

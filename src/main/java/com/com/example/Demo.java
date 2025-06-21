@@ -2,7 +2,11 @@ package com.com.example;
 
 public class Demo {
     public static void main(String[] args) {
-        Dog dog = new Dog("Барбос", "Дворовой пёс");
+        Animal cat = new Cat();
+        Animal dog = new Dog();
+        cat.makeSound();
+        dog.makeSound();
+        cat.eat();
         dog.eat();
     }
 }

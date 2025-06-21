@@ -1,13 +1,6 @@
 package com.com.example;
 
-public class Animal {
-    protected String name;
-
-    public Animal(String name) {
-        this.name = name;
-    }
-
-    public void eat() {
-        System.out.println(name + " ест.");
-    }
+abstract class Animal {
+ abstract void makeSound();
+ abstract void eat();
 }
