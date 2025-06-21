@@ -8,5 +8,6 @@ public class Main {
                 System.out.println("Анонимный класс");
             }
         };
+        greeting.greet();
     }
 }
