@@ -1,11 +1,16 @@
 package com.com.example;
 
 public class Outer {
-    private String field = "Нестатическое поле";
+    void method() {
+        String localVar = "Локальная";
 
-    class Inner {
-        void print() {
-            System.out.println(field);
+        class Local {
+            void print() {
+                System.out.println(localVar);
+            }
         }
+
+        Local local = new Local();
+        local.print();
     }
 }
