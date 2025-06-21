@@ -1,12 +1,19 @@
 package com.com.example;
 
-public class Outer {
-    private String message = "Здравствуй, inner class!";
+import ru.oop.Local;
 
-    class Inner {
-        void print() {
-            System.out.println(message);
+public class Outer {
+    void printMessage() {
+        final String localVar = "Здравстсвуй, локальный класс!";
+
+        class Local {
+            void print() {
+                System.out.println(localVar);
+            }
         }
+
+        Local local = new Local();
+        local.print();
     }
 }
 
