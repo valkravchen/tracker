@@ -1,9 +1,9 @@
 package com.com.example;
 
 public class Outer {
-    private static String message = "Здравствуйте!";
+    private  String message = "Здравствуйте!";
 
-    static class Nested {
+    class Inner{
         void print() {
             System.out.println(message);
         }
