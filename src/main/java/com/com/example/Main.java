@@ -2,13 +2,13 @@ package com.com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Greeting greeting = new Greeting() {
+        Animal cat = new Animal() {
             @Override
-            public void greet() {
-                System.out.println("Привет из анонимного класса!");
+            void makeSound() {
+                System.out.println("Мяу!");
             }
         };
 
-        greeting.greet();
+        cat.makeSound();
     }
 }
