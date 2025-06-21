@@ -1,16 +1,11 @@
 package com.com.example;
 
 public class Outer {
-    void method() {
-        String localVar = "Локальная";
+    private String message = "Приветствую!";
 
-        class Local {
-            void print() {
-                System.out.println(localVar);
-            }
+    class Inner {
+        void print() {
+            System.out.println(Outer.this.message);
         }
-
-        Local local = new Local();
-        local.print();
     }
 }

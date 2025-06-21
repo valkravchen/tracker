@@ -2,12 +2,8 @@ package com.com.example;
 
 public class Main {
     public static void main(String[] args) {
-        Greeting greeting = new Greeting() {
-            @Override
-            public void greet() {
-                System.out.println("Анонимный класс");
-            }
-        };
-        greeting.greet();
+        Outer outer = new Outer();
+        Outer.Inner inner = outer.new Inner();
+        inner.print();
     }
 }
