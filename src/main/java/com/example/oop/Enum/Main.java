@@ -5,5 +5,6 @@ public class Main {
         Day today = Day.SUNDAY;
         System.out.println(today);
         System.out.println(today.getRussianName());
+        System.out.println(today.isWeekend());
     }
 }
