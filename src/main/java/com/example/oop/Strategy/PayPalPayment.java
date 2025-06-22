@@ -1,6 +1,6 @@
 package com.example.oop.Strategy;
 
-public class PayPalPayment implements PaymentStrategy{
+public class PayPalPayment implements PaymentStrategy {
     private String email;
 
     public PayPalPayment(String email) {
