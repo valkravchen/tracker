@@ -33,10 +33,4 @@ public enum Day {
         }
         throw new IllegalArgumentException("Неверный номер дня: " + order);
     }
-
-    public static void main(String[] args) {
-        System.out.println(SUNDAY.getRussianName());
-        System.out.println(MONDAY.isWeekend());
-        System.out.println(Day.byOrder(3));
-    }
 }
