@@ -8,5 +8,7 @@ public class Main {
         System.out.println(today.isWeekend());
         Day day7 = Day.byOrder(7);
         System.out.println(day7);
+        Color.RED.print();
+        Color.GREEN.print();
     }
 }
