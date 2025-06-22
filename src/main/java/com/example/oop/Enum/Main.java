@@ -6,5 +6,7 @@ public class Main {
         System.out.println(today);
         System.out.println(today.getRussianName());
         System.out.println(today.isWeekend());
+        Day day7 = Day.byOrder(7);
+        System.out.println(day7);
     }
 }
