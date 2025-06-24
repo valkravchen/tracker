@@ -5,7 +5,7 @@ public class Student {
     private int age;
 
     public Student(String name, int age) {
-        this.name = name;
+        this.name = validateName(name) ? name : "Безымянный";
         this.age = validateAge(age) ? age : 18;
     }
 
@@ -23,12 +23,16 @@ public class Student {
         System.out.println("Имя: " + name + "; возраст: " + age);
     }
 
+    private boolean validateName(String name) {
+        return  name != null && !name.isEmpty();
+    }
+
     private boolean validateAge(int age) {
         return age >= 0;
     }
 
     public static void main(String[] args) {
-        Student student = new Student("Ратибор", -300);
+        Student student = new Student(null, -300);
         student.introduce();
     }
 }
