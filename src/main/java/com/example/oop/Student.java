@@ -18,4 +18,13 @@ public class Student {
         this.name = "Безымянный";
         this.age = 18;
     }
+
+    public void introduce() {
+        System.out.println("Имя: " + name + "; возраст: " + age);
+    }
+
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.introduce();
+    }
 }
