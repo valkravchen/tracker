@@ -6,7 +6,7 @@ public class Student {
 
     public Student(String name, int age) {
         this.name = name;
-        this.age = age;
+        this.age = validateAge(age) ? age : 18;
     }
 
     public Student(String name) {
@@ -23,8 +23,12 @@ public class Student {
         System.out.println("Имя: " + name + "; возраст: " + age);
     }
 
+    private boolean validateAge(int age) {
+        return age >= 0;
+    }
+
     public static void main(String[] args) {
-        Student student = new Student();
+        Student student = new Student("Ратибор", -300);
         student.introduce();
     }
 }
