@@ -1,5 +1,10 @@
 package com.example.oop.order;
 
-public class Order {
+import java.util.List;
 
+public class Order {
+    private int orderId;
+    private List<String> items;
+    private double totalPrice;
+    private static int nextOrderId;
 }
