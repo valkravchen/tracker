@@ -44,5 +44,7 @@ public class Car {
         System.out.println(car1.getCarInfo());
         System.out.println(car2.getCarInfo());
         System.out.println(car3.getCarInfo());
+        Car car4 = new Car("", null, 2090);
+        System.out.println(car4.getCarInfo());
     }
 }
