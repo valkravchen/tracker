@@ -14,14 +14,11 @@ public class Order {
         System.out.println("Система заказов запущена!");
     }
 
-    {
-        orderId = nextOrderId++;
-        System.out.println("Создан заказ: " + orderId);
-    }
-
     public Order(List<String> items, double totalPrice) {
         this.items = validateItems(items) ? items : new ArrayList<>();
         this.totalPrice = validatePrice(totalPrice) ? totalPrice : 0.0;
+        orderId = nextOrderId++;
+        System.out.println("Создан заказ: " + orderId);
     }
 
     public Order(List<String> items) {
