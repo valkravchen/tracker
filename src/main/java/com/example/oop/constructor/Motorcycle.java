@@ -17,6 +17,6 @@ public class Motorcycle extends Vehicle {
     }
 
     public String getInfo() {
-        return "Мотоцикл: " + super.getInfo() + "; " + type;
+        return "Мотоцикл: " + super.getInfo().substring(11) + "; " + type;
     }
 }
