@@ -6,6 +6,10 @@ public class Order {
     private double total;
     private static int nextOrderId;
 
+    public String getOrderId() {
+        return orderId;
+    }
+
     static {
         nextOrderId = 100;
     }
@@ -15,7 +19,7 @@ public class Order {
     }
 
     public Order(String description, double total) {
-        this.description = validateDescription(description) ? description : "Некорректное описание";
+        this.description = validateDescription(description) ? description : "пусто";
         this.total = validateTotal(total) ? total : 0.0;
     }
 
@@ -24,7 +28,7 @@ public class Order {
     }
 
     public Order() {
-        this("Пусто", 0.0);
+        this("пусто", 0.0);
     }
 
     private boolean validateDescription(String description) {
@@ -33,5 +37,25 @@ public class Order {
 
     private boolean validateTotal(double total) {
         return total >= 0.0;
+    }
+
+    public String getOrderInfo() {
+        return "Заказ: № " + orderId + "; " +
+                "описание заказа: " + description + "; " +
+                "сумма заказа: " + total;
+    }
+
+    public void updateTotal(double newTotal) {
+        this.total = validateTotal(newTotal) ? newTotal : 0.0;
+    }
+
+    public static void main(String[] args) {
+        Order order1 = new Order("Книги", 50.0);
+        Order order2 = new Order("Ноутбук");
+        Order order3 = new Order();
+        order1.updateTotal(75.0);
+        System.out.println(order1.getOrderInfo());
+        System.out.println(order2.getOrderInfo());
+        System.out.println(order3.getOrderInfo());
     }
 }
