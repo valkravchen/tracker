@@ -3,6 +3,7 @@ package com.example.oop;
 public class LibraryBook {
     private String bookId;
     private String title;
+    private String ex;
     private double rentalPrice;
     private static int nextBookId;
 
@@ -11,7 +12,7 @@ public class LibraryBook {
     }
 
     {
-        bookId = "Книга № " + nextBookId++;
+        bookId = "книга № " + nextBookId++;
     }
 
     public LibraryBook(String title, double rentalPrice) {
@@ -23,6 +24,10 @@ public class LibraryBook {
         this(title, 5.0);
     }
 
+    public LibraryBook() {
+        this("Без названия", 5.0);
+    }
+
     private boolean validateTitle(String title) {
         return title != null && !title.trim().isEmpty();
     }
@@ -31,8 +36,12 @@ public class LibraryBook {
         return price >= 0.0;
     }
 
+    public String getBookId() {
+        return bookId;
+    }
+
     public String getBookInfo() {
-        return "Книга: № " + bookId + "; название книги: \"" + title +
+        return "Информация о книге: " + bookId + "; название книги: \"" + title +
                 "\"; стоимость аренды: " + rentalPrice;
     }
 
@@ -49,11 +58,25 @@ public class LibraryBook {
         private String recordId;
 
         public RentalRecord(String bookId) {
-            this.recordId = (bookId != null && bookId.trim().isEmpty() ? "REC: " + bookId : "REC_Invalid");
+            this.recordId = (bookId != null && !bookId.trim().isEmpty()) ? "REC: " + bookId : "REC_Invalid";
         }
 
         public String getRecordInfo() {
             return "Запись ареды: № " + recordId;
         }
+    }
+
+    public static void main(String[] args) {
+        LibraryBook libraryBook1 = new LibraryBook("Java Programming", 10.0);
+        LibraryBook libraryBook2 = new LibraryBook("Python Guide");
+        LibraryBook libraryBook3 = new LibraryBook();
+        libraryBook2.updateRentalPrice(15.0);
+        RentalRecord rentalRecord = new RentalRecord(libraryBook1.getBookId());
+        System.out.println(libraryBook1.getBookInfo());
+        System.out.println(libraryBook2.getBookInfo());
+        System.out.println(libraryBook3.getBookInfo());
+        System.out.println(rentalRecord.getRecordInfo());
+        LibraryBook libraryBook5 = new LibraryBook("", -3);
+        System.out.println(libraryBook5.getBookInfo());
     }
 }
