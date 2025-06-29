@@ -8,7 +8,7 @@ public class Product {
     public Product(String productId, String name, double price) {
         this.productId = (productId != null && !productId.trim().isEmpty() ? productId : "P000");
         this.name = validateName(name) ? name : "некорректное название";
-        this.price = validatePrice(price) ? price : 10.0;
+        this.price = validatePrice(price) ? price : 00.0;
     }
 
     public Product(String name, double price) {
@@ -40,5 +40,7 @@ public class Product {
         System.out.println(product1.getProductInfo());
         System.out.println(product2.getProductInfo());
         System.out.println(product3.getProductInfo());
+        Product product4 = new Product("", null, -100);
+        System.out.println(product4.getProductInfo());
     }
 }
