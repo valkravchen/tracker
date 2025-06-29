@@ -26,4 +26,10 @@ public class Product {
     private boolean validatePrice(double price) {
         return price >= 0;
     }
+
+    public String getProductInfo() {
+        return "Характеристика товара: № " + productId +
+                "; наименование товара: " + name +
+                "; цена товара: " + price;
+    }
 }
