@@ -11,6 +11,10 @@ public class LibraryBook {
         nextBookId = 1000;
     }
 
+    {
+        bookId = "книга № " + nextBookId++;
+    }
+
     public LibraryBook(String title, double rentalPrice) {
         this.title = validateTitle(title) ? title : "некорректное название";
         this.rentalPrice = validateRentalPrice(rentalPrice) ? rentalPrice : 5.0;
