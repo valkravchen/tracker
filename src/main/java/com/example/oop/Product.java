@@ -32,4 +32,13 @@ public class Product {
                 "; наименование товара: " + name +
                 "; цена товара: " + price;
     }
+
+    public static void main(String[] args) {
+        Product product1 = new Product("P001", "мёд майский", 9.0);
+        Product product2 = new Product("лещ вяленый", 9.99);
+        Product product3 = new Product();
+        System.out.println(product1.getProductInfo());
+        System.out.println(product2.getProductInfo());
+        System.out.println(product3.getProductInfo());
+    }
 }
