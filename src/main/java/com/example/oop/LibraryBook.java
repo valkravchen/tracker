@@ -30,4 +30,30 @@ public class LibraryBook {
     private boolean validateRentalPrice(double price) {
         return price >= 0.0;
     }
+
+    public String getBookInfo() {
+        return "Книга: № " + bookId + "; название книги: \"" + title +
+                "\"; стоимость аренды: " + rentalPrice;
+    }
+
+    public void updateRentalPrice(double newPrice) {
+        rentalPrice = validateRentalPrice(newPrice) ? newPrice : 5.0;
+    }
+
+    @Override
+    public String toString() {
+        return getBookInfo();
+    }
+
+    public static class RentalRecord {
+        private String recordId;
+
+        public RentalRecord(String bookId) {
+            this.recordId = (bookId != null && bookId.trim().isEmpty() ? "REC: " + bookId : "REC_Invalid");
+        }
+
+        public String getRecordInfo() {
+            return "Запись ареды: № " + recordId;
+        }
+    }
 }
