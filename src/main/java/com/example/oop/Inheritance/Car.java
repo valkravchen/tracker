@@ -14,4 +14,25 @@ public class Car extends Vehicle {
         }
         return model;
     }
+
+    @Override
+    public String getInfo() {
+        return "Автомобиль: " + getBrand() +
+                ", год: " + getYear() +
+                ", модель: " + model;
+    }
+
+    @Override
+    public String startEngine() {
+        return "Автомобильный двигатель запущен";
+    }
+
+    @Override
+    public String stopEngine() {
+        return "Автомобильный двигатель остановлен";
+    }
+
+    public String getFullInfo() {
+        return super.getInfo() + ", модель: " + model;
+    }
 }

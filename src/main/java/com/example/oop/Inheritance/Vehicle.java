@@ -42,13 +42,4 @@ public class Vehicle {
     public String stopEngine() {
         return "Двигатель остановлен";
     }
-
-    public static void main(String[] args) {
-        Vehicle vehicle1 = new Vehicle("мопед", 1981);
-        System.out.println(vehicle1.getBrand());
-        System.out.println(vehicle1.getYear());
-        System.out.println(vehicle1.getInfo());
-        System.out.println(vehicle1.startEngine());
-        System.out.println(vehicle1.stopEngine());
-    }
 }
