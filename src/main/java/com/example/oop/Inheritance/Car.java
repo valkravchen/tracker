@@ -35,4 +35,18 @@ public class Car extends Vehicle {
     public String getFullInfo() {
         return super.getInfo() + ", модель: " + model;
     }
+
+    public static void main(String[] args) {
+        try {
+            Vehicle vehicle = new Vehicle("Toyota", 2020);
+            System.out.println("Vehicle:");
+            System.out.println("getInfo: " + vehicle.getInfo());
+            System.out.println("startEngine: " + vehicle.startEngine());
+            System.out.println("stopEngine: " + vehicle.stopEngine());
+            System.out.println("Superclass: " + vehicle.getClass().getSuperclass().getSimpleName());
+            System.out.println();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+    }
 }
