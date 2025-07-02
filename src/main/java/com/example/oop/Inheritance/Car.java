@@ -8,6 +8,9 @@ public class Car extends Vehicle {
         this.model = validateModel(model);
     }
 
+
+
+
     private String validateModel(String model) {
         if (model == null || model.trim().isEmpty()) {
             throw new IllegalArgumentException("Модель не может быть null или пустой строкой");
