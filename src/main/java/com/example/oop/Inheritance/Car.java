@@ -64,7 +64,7 @@ public class Car extends Vehicle {
         }
 
         try {
-            Car car2 = new Car("Nissan", 201, "Civic");
+            Car car2 = new Car("Жигули", 2018, "первая модель");
             System.out.println("Car1");
             System.out.println("getInfo: " + car2.getInfo());
             System.out.println("startEngine: " + car2.startEngine());
