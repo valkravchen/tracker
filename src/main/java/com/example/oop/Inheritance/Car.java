@@ -38,13 +38,41 @@ public class Car extends Vehicle {
 
     public static void main(String[] args) {
         try {
-            Vehicle vehicle = new Vehicle("Honda", 200);
+            Vehicle vehicle = new Vehicle("Honda", 2009);
             System.out.println("Vehicle:");
             System.out.println("getInfo: " + vehicle.getInfo());
             System.out.println("startEngine: " + vehicle.startEngine());
             System.out.println("stopEngine: " + vehicle.stopEngine());
             System.out.println("Superclass: " + vehicle.getClass().getSuperclass().getSimpleName());
             System.out.println();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+
+        try {
+            Car car1 = new Car("Honda", 2018, "Civic");
+            System.out.println("Car1");
+            System.out.println("getInfo: " + car1.getInfo());
+            System.out.println("startEngine: " + car1.startEngine());
+            System.out.println("stopEngine: " + car1.stopEngine());
+            System.out.println("getFullInfo: " + car1.getFullInfo());
+            System.out.println("Superclass: " + car1.getClass().getSuperclass().getSimpleName());
+            System.out.println();
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
+
+        try {
+            Car car2 = new Car(null, 2018, "Civic");
+            System.out.println("Car1");
+            System.out.println("getInfo: " + car2.getInfo());
+            System.out.println("startEngine: " + car2.startEngine());
+            System.out.println("stopEngine: " + car2.stopEngine());
+            System.out.println("getFullInfo: " + car2.getFullInfo());
+            System.out.println("Superclass: " + car2.getClass().getSuperclass().getSimpleName());
+            System.out.println();
+
         } catch (IllegalArgumentException e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
