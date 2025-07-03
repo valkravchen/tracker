@@ -30,5 +30,14 @@ public class Car extends Vehicle {
     }
 
     public static void main(String[] args) {
+        try {
+            Vehicle vehicle = new Vehicle("Toyota", 2020);
+            System.out.println("Vehicle:");
+            System.out.println("getInfo: " + vehicle.getInfo());
+            System.out.println("startEngine: " + vehicle.startEngine());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            System.out.println();
+        }
     }
 }
