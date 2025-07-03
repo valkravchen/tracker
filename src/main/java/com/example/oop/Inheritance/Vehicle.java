@@ -30,4 +30,12 @@ public class Vehicle {
     public int getYear() {
         return year;
     }
+
+    public String getInfo() {
+        return "Транспорт: " + brand + ", год: " + year;
+    }
+
+    public String startEngine() {
+        return "Двигатель запущен";
+    }
 }
