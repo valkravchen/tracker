@@ -22,4 +22,12 @@ public class Vehicle {
         }
         return year;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getYear() {
+        return year;
+    }
 }
