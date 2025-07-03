@@ -59,7 +59,7 @@ public class Car extends Vehicle {
             System.out.println();
         }
         try {
-            Car car2 = new Car(null, 1800, "");
+            Car car2 = new Car("Жигули", 1800, "");
             System.out.println("Car2:");
             System.out.println("getInfo: " + car2.getInfo());
             System.out.println("startEngine: " + car2.startEngine());
