@@ -16,7 +16,7 @@ public class Smartphone extends Gadget {
     }
 
     public static String getCategory() {
-        return "Гаджет";
+        return "Смартфон";
     }
 
     @Override
@@ -41,6 +41,15 @@ public class Smartphone extends Gadget {
         Smartphone smartphone = new Smartphone("Apple", 2020, "iPhone");
         Gadget smart = new Smartphone("Samsung", 2021, "Galaxy");
         System.out.println(Gadget.getCategory());
+        System.out.println(gadget.getCategory());
+        System.out.println(gadget.getInfo());
+        System.out.println();
+        System.out.println(Smartphone.getCategory());
+        System.out.println(smartphone.getCategory());
+        System.out.println(smartphone.getInfo());
+        System.out.println(smartphone.getParentCategory());
+        System.out.println(smartphone.trySuperCategory());
+        System.out.println();
     }
 }
 
