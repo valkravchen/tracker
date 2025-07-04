@@ -59,13 +59,24 @@ public class Car extends Vehicle {
             System.out.println();
         }
         try {
-            Car car2 = new Car("Жигули", 1977, "");
+            Car car2 = new Car("Жигули", 1977, "Копейка");
             System.out.println("Car2:");
             System.out.println("getInfo: " + car2.getInfo());
             System.out.println("startEngine: " + car2.startEngine());
             System.out.println("getParentInfo: " + car2.gerParentInfo());
             System.out.println("super.startEngine from constructor: " + car2.getParentStartEngineResult());
+            System.out.println();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+            System.out.println();
+        }
 
+        try {
+            Vehicle car = new Car("BMW", 2022, "X5");
+            System.out.println("Car3:");
+            System.out.println("getInfo: " + car.getInfo());
+            System.out.println("startEngine: " + car.startEngine());
+            System.out.println();
         } catch (IllegalArgumentException e) {
             System.out.println("Ошибка: " + e.getMessage());
             System.out.println();
