@@ -8,6 +8,23 @@ public class Car extends Vehicle {
         this.model = validateModel(model);
     }
 
+    @Override
+    public String move() {
+        return "Автомобиль движется: " + model;
+    }
+
+    public static String getType() {
+        return "Автомобиль";
+    }
+
+    public String getParentMove() {
+        return super.move();
+    }
+
+    public String tryOverrideFinale() {
+        return "Невозможно переопределить final метод getDescription()";
+    }
+
     private String validateModel(String model) {
         if (model == null || model.trim().isEmpty()) {
             throw new IllegalArgumentException("Модель не может быть null или пустой строкой");
