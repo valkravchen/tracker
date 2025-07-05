@@ -43,8 +43,23 @@ public class Robot extends Machine {
     }
 
     public static void main(String[] args) {
-        Machine machine = new Machine("Tesla", 2020);
-        Robot robot1 = new Robot("Boston Dynamics", 2022, "Atlas");
-        Machine machine1 = new Robot("Honda", 2021, "Asimo");
+        Machine machine1 = new Machine("Tesla", 2020);
+        Robot robot = new Robot("Boston Dynamics", 2022, "Atlas");
+        Machine machine2 = new Robot("Honda", 2021, "Asimo");
+        System.out.println(Machine.getType());
+        System.out.println(machine1.getType());
+        System.out.println(machine1.operate());
+        System.out.println(machine1.getDescription());
+        System.out.println();
+        System.out.println(Robot.getType());
+        System.out.println(robot.getType());
+        System.out.println(robot.operate());
+        System.out.println(robot.getDescription());
+        System.out.println(robot.getParentOperate());
+        System.out.println(robot.getParentOperateResult());
+        System.out.println();
+        System.out.println(machine2.getType());
+        System.out.println(machine2.operate());
+        System.out.println(machine2.getDescription());
     }
 }
