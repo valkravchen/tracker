@@ -21,15 +21,17 @@ public class Account {
         this.balance = validateBalance(balance);
     }
 
-    public String getDeposit(double amount) {
+    public String deposit(double amount) {
         validateAmount(amount, "Сумма пополнения должна быть положительной");
-        return "Пополнение на " + amount + ", новый баланс: " + (balance + amount);
+        balance += amount;
+        return "Пополнение на " + amount + ", новый баланс: " + balance;
     }
 
-    public String withdraw(int amount) {
+    public String withdraw(double amount) {
         validateAmount(amount, "Сумма снятия должна быть положительной");
         validateWithdraw(amount, balance);
-        return "Снятие " + amount + ", новый баланс: " + (balance - amount);
+        balance -= amount;
+        return "Снятие " + amount + ", новый баланс: " + balance;
     }
 
     private String validateOwner(String owner) {
