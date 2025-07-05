@@ -52,7 +52,7 @@ public class Calculator {
     }
 
     private void validateOperation(String operation) {
-        if (!operation.equals("sum") && !operation.equals("multiply")) {
+        if (operation == null || !operation.equals("sum") && !operation.equals("multiply")) {
             throw new IllegalArgumentException("Операция должна быть 'sum' или 'multiply'");
         }
     }
@@ -71,5 +71,14 @@ public class Calculator {
 
     public String getName() {
         return name;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator("Scientific");
+        System.out.println(calculator.calculate(5));
+        System.out.println(calculator.calculate(2.5));
+        System.out.println(calculator.calculate("sum", 3, 4));
+        System.out.println(calculator.calculate("multiply", 3, 4));
+        System.out.println(calculator.calculate(1, 2, 3));
     }
 }
