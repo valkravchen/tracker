@@ -53,4 +53,17 @@ public class SmartDevice implements Controllable, Connectable {
     public int getVersion() {
         return version;
     }
+
+    public static void main(String[] args) {
+        SmartDevice smartDevice = new SmartDevice("SmartHub", 2);
+        System.out.println(smartDevice.turnOn());
+        System.out.println(smartDevice.connect());
+        System.out.println(smartDevice.turnOff());
+        System.out.println(smartDevice.resolveTurnOffControllable());
+        System.out.println(smartDevice.resolveTurnOffConnectable());
+        Controllable controllable = smartDevice;
+        Connectable connectable = smartDevice;
+        System.out.println(controllable.turnOn());
+        System.out.println(connectable.connect());
+    }
 }
