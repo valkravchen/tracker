@@ -25,10 +25,18 @@ public class Car extends Vehicle {
         return "Невозможно переопределить final метод getDescription()";
     }
 
+    public String getModel() {
+        return model;
+    }
+
     private String validateModel(String model) {
         if (model == null || model.trim().isEmpty()) {
             throw new IllegalArgumentException("Модель не может быть null или пустой строкой");
         }
         return model;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
