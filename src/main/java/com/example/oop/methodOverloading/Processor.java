@@ -61,4 +61,12 @@ public class Processor {
     public String getName() {
         return name;
     }
+
+    public static void main(String[] args) {
+        Processor processor = new Processor("DataProcessor");
+        System.out.println(processor.process(5));
+        System.out.println(processor.process(2.5));
+        System.out.println(processor.process("hello"));
+        System.out.println(processor.process(6, 7));
+    }
 }
