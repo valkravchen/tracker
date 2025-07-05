@@ -59,4 +59,8 @@ public class Processor {
             throw new IllegalArgumentException("Значения не могут быть отрицательными");
         }
     }
+
+    public String getName() {
+        return name;
+    }
 }
