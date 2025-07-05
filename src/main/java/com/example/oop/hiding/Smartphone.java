@@ -50,6 +50,8 @@ public class Smartphone extends Gadget {
         System.out.println(smartphone.getParentCategory());
         System.out.println(smartphone.trySuperCategory());
         System.out.println();
+        System.out.println(smart.getCategory());
+        System.out.println(smart.getInfo());
     }
 }
 
