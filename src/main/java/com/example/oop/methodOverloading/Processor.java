@@ -1,7 +1,5 @@
 package com.example.oop.methodOverloading;
 
-import java.util.Locale;
-
 public class Processor {
     private String name;
 
