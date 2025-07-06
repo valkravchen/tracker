@@ -9,6 +9,30 @@ public class User {
         this.age = validateAge(age);
     }
 
+    protected User(String username) {
+        this(username, 0);
+    }
+
+    private User(int age) {
+        this("Anonymous", age);
+    }
+
+    User() {
+        this("Guest", 0);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public static User createWithPrivateConstructor(int age) {
+        return new User(age);
+    }
+
     private String validateUserName(String username) {
         if (username == null || username.trim().isEmpty()) {
             throw new IllegalArgumentException("Имя пользователя не может быть null или пустой строкой");
