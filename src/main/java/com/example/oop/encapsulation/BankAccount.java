@@ -34,7 +34,7 @@ public class BankAccount {
         this.balance = validateBalance(balance);
     }
 
-    public String depositAmount(double amount) {
+    public String deposit(double amount) {
         validateAmount(amount, "Сумма пополнения должна быть положительной");
         balance += amount;
         return "Пополнение на |" + amount + "|, новый баланс = " + balance;
