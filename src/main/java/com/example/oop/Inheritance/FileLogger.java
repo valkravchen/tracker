@@ -10,7 +10,7 @@ public class FileLogger implements Loggable {
     @Override
     public String log(String message) {
         validateMessage(message);
-        return "Логирование в |" + logFile + "|: Hello";
+        return "Логирование в |" + logFile + "|: " + message;
     }
 
     @Override
