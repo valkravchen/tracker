@@ -20,5 +20,13 @@ public class ProcessorTester {
         System.out.println(dataProcessor.getInfo());
         System.out.println();
         testProcessor(textProcessor);
+        System.out.println();
+        DataProcessor[] dataProcessors = {
+                new TextProcessor("Text1"),
+                new TextProcessor("Text2")
+        };
+        for (DataProcessor processor : dataProcessors) {
+            System.out.println(processor.process());
+        }
     }
 }
