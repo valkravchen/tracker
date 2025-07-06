@@ -29,7 +29,7 @@ public class TextProcessor implements DataProcessor {
         if (data == null || data.trim().isEmpty()) {
             throw new IllegalArgumentException("Данные не могут быть null или пустой строкой");
         }
-        if (data.length() > DataProcessor.MAX_DATA_LENGTH) {
+        if (data.length() > MAX_DATA_LENGTH) {
             throw new IllegalArgumentException("Длина данных не может превышать 100 символов");
         }
         return data;
