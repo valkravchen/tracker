@@ -18,6 +18,22 @@ public class BankAccount {
         return accountHolder;
     }
 
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = validateBalance(balance);
+    }
+
     private double validateBalance(double balance) {
         if (balance < 0) {
             throw new IllegalArgumentException("Баланс не может быть отрицательным*");
