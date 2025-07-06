@@ -34,8 +34,21 @@ public class BankAccount {
         this.balance = validateBalance(balance);
     }
 
+    public String depositAmount(double amount) {
+        validateAmount(amount, "Сумма пополнения должна быть положительной");
+        balance += amount;
+        return "Пополнение на |" + amount + "|, новый баланс = " + balance;
+    }
+
+    public String withdraw(double amount) {
+        validateAmount(amount, "Сумма снятия должна быть положительной");
+        validateWithdraw(amount, balance);
+        balance -= amount;
+        return "Снятие |" + amount + "|, новый баланс =  " + balance;
+    }
+
     private double validateBalance(double balance) {
-        if (balance < 0) {
+        if (balance <= 0) {
             throw new IllegalArgumentException("Баланс не может быть отрицательным*");
         }
         return balance;
@@ -46,5 +59,17 @@ public class BankAccount {
             throw new IllegalArgumentException("Номер счёта должен быть строкой длиной 10 символов");
         }
         return accountNumber;
+    }
+
+    private void validateAmount(double amount, String message) {
+        if (amount < 0) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    private void validateWithdraw(double amount, double balance) {
+        if (amount > balance) {
+            throw  new IllegalArgumentException("Недостаточно средств на счёте");
+        }
     }
 }
