@@ -21,7 +21,7 @@ public abstract class AbstractDevice {
     public abstract String stop();
 
     public String getStatus() {
-        return "Устройство: " + name + "; версия: " + version + "; сосояние: ";
+        return "Устройство: " + name + "; версия: " + version;
     }
 
     public String getName() {
