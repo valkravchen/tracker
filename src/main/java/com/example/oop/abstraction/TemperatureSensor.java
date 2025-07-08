@@ -38,11 +38,8 @@ public class TemperatureSensor extends AbstractSensor {
     }
 
     public static void main(String[] args) {
-        MotionSensor motionSensor = new MotionSensor("Motion001", 60, 80);
+        AbstractSensor motionSensor = new MotionSensor("Motion001", 40, 20);
         System.out.println(motionSensor.activate());
-        System.out.println(motionSensor.getStatus());
-        System.out.println(motionSensor.detect());
-        System.out.println(motionSensor.recharge(15));
         System.out.println(motionSensor.getStatus());
         System.out.println(motionSensor.reset());
         System.out.println(motionSensor.getStatus());
