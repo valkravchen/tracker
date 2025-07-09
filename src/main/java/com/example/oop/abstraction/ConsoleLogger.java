@@ -7,7 +7,7 @@ public class ConsoleLogger extends AbstractLogger {
 
     @Override
     public String formatMessage(String message) {
-        return "КОНСОЛЬ: "  + message;
+        return "КОНСОЛЬ: " + message;
     }
 
     public static void main(String[] args) {

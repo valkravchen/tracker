@@ -12,7 +12,7 @@ public abstract class AbstractLogger {
     abstract String formatMessage(String message);
 
     public void log(String message) {
-        System.out.println( logLevel + " " + source + ": " + formatMessage(message));
+        System.out.println(logLevel + " " + source + ": " + formatMessage(message));
     }
 
     public void logError(String errorDetails) {
