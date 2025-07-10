@@ -14,6 +14,7 @@ public class Car extends AbstractVehicle implements Movable {
 
     @Override
     public String accelerate() {
+        speed += 10;
         return "Автомобиль " + getBrand() + " ускоряется до " + speed + "км/ч";
     }
 
@@ -22,9 +23,8 @@ public class Car extends AbstractVehicle implements Movable {
     }
 
     public static void main(String[] args) {
-        Car car = new Car("Toyota", 2020);
+        Movable car = new Car("Toyota", 2020);
         System.out.println(car.move());
         System.out.println(car.accelerate());
-        System.out.println(car.stop());
     }
 }
