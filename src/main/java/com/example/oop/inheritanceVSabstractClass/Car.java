@@ -23,8 +23,17 @@ public class Car extends AbstractVehicle implements Movable {
     }
 
     public static void main(String[] args) {
-        Movable car = new Car("Toyota", 2020);
-        System.out.println(car.move());
-        System.out.println(car.accelerate());
+        Car car1 = new Car("Toyota", 2020);
+        System.out.println(car1.move());
+        System.out.println(car1.accelerate());
+        System.out.println(car1.stop());
+        System.out.println();
+        Movable car2 = car1;
+        System.out.println(car2.move());
+        System.out.println(car2.accelerate());
+        System.out.println();
+        AbstractVehicle car3 = car1;
+        System.out.println(car3.move());
+        System.out.println(car3.stop());
     }
 }
