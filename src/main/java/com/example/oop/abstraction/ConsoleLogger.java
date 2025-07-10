@@ -12,6 +12,10 @@ public class ConsoleLogger extends AbstractLogger {
 
     public static void main(String[] args) {
         ConsoleLogger console = new ConsoleLogger("ERROR", "AuthService");
+        FileLogger file = new FileLogger("ERROR", "Database");
         console.log("Пользователь вошел в систему");
+        file.logError("Ошибка подключения");
+        AbstractLogger logger = new FileLogger("DEBUG", "Cache");
+        logger.log("Тест кэша");
     }
 }
