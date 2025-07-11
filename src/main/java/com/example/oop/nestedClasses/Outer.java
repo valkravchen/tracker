@@ -36,4 +36,11 @@ public class Outer {
             return "Static nested class";
         }
     }
+
+    public static void main(String[] args) {
+        Outer outer = new Outer("Test", 1);
+        System.out.println(outer.getName());
+        System.out.println(outer.getId());
+        System.out.println(Outer.StaticNested.getDescription());
+    }
 }
