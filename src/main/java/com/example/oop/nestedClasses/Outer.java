@@ -1,5 +1,7 @@
 package com.example.oop.nestedClasses;
 
+import ru.oop.Local;
+
 public class Outer {
     private final String name;
     private final int id;
@@ -47,8 +49,21 @@ public class Outer {
         return new Inner();
     }
 
+    public String processLocal(int value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Значение не может быть отрицательным");
+        }
+        class Local {
+            public String compute() {
+                return "Local class, value: " + value + ", outer name: " + name;
+            }
+        }
+        Local local = new Local();
+        return local.compute();
+    }
+
     public static void main(String[] args) {
         Outer outer = new Outer("Test", 1);
-        System.out.println(outer.createInner().getInfo());
+        System.out.println(outer.processLocal(5));
     }
 }
