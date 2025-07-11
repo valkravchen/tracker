@@ -37,7 +37,18 @@ public class Outer {
         }
     }
 
+    public class Inner {
+        public String getInfo() {
+            return "Inner class, outer name: " + name + ", id: " + id;
+        }
+    }
+
+    public Inner createInner() {
+        return new Inner();
+    }
+
     public static void main(String[] args) {
-        System.out.println(Outer.StaticNested.getDescription());
+        Outer outer = new Outer("Test", 1);
+        System.out.println(outer.createInner().getInfo());
     }
 }
