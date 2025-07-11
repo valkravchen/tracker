@@ -30,4 +30,10 @@ public class Outer {
     public int getId() {
         return id;
     }
+
+    public static class StaticNested {
+        private static String getDescription() {
+            return "Static nested class";
+        }
+    }
 }
