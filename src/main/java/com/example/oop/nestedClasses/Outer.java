@@ -1,4 +1,4 @@
-package com.example.oop.nestedСlasses;
+package com.example.oop.nestedClasses;
 
 public class Outer {
     private final String name;
