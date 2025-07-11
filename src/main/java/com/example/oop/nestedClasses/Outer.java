@@ -1,7 +1,5 @@
 package com.example.oop.nestedClasses;
 
-import ru.oop.Local;
-
 public class Outer {
     private final String name;
     private final int id;
