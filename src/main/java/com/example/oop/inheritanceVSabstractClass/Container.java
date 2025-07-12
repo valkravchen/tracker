@@ -22,6 +22,10 @@ public class Container {
         public String getInfo() {
             return "Inner Element";
         }
+
+        public String getContainerInfo() {
+            return "Inner Element, container capacity: " + capacity;
+        }
     }
 
     public Element createElement() {
@@ -30,6 +34,6 @@ public class Container {
 
     public static void main(String[] args) {
         Container container = new Container(10);
-        System.out.println(container.createElement().getInfo());
+        System.out.println(container.createElement().getContainerInfo());
     }
 }
