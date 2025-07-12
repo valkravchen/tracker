@@ -56,6 +56,7 @@ public class DataProcessor {
             if (tempName == null || tempName.trim().isEmpty()) {
                 throw new IllegalArgumentException("Имя не может быть null или пустой строкой");
             }
+            this.tempName = tempName;
             return this;
         }
 
@@ -63,12 +64,17 @@ public class DataProcessor {
             if (tempId < 1) {
                 throw new IllegalArgumentException("ID не может быть меньше 1");
             }
+            this.tempId = tempId;
             return this;
         }
 
+        public DataProcessor build() {
+            return new DataProcessor(tempName, tempId);
+        }
+
         public static void main(String[] args) {
-            System.out.println(DataProcessor.Utility.formatData("test data"));
-            System.out.println(DataProcessor.Constans.getDefaultFormat());
+            DataProcessor processor = new DataProcessor.Builder().setTempName("BuilderTest").setTempId(5).build();
+            System.out.println(processor.getProcessorName());
         }
     }
 }
