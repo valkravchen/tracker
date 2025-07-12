@@ -58,8 +58,8 @@ public class Outer {
                 return "Local class, value: " + value + ", outer name: " + name;
             }
         }
-        Local local = new Local();
 
+        Local local = new Local();
         return local.compute();
     }
 
