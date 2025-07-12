@@ -27,7 +27,16 @@ public class DataProcessor {
         }
     }
 
+    public static class Constans {
+        public static final String DEFAULT_FORMAT = "UPPERCASE";
+
+        public static String getDefaultFormat() {
+            return DEFAULT_FORMAT;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println(DataProcessor.Utility.formatData("test data"));
+        System.out.println(DataProcessor.Constans.getDefaultFormat());
     }
 }
