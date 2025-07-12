@@ -13,19 +13,19 @@ public class Button {
 
     public interface ClickListener {
         public abstract void onClick();
-   }
+    }
 
-   private ClickListener listener;
+    private ClickListener listener;
 
-   public void addClickListener(ClickListener listener) {
-       this.listener = listener;
-   }
+    public void addClickListener(ClickListener listener) {
+        this.listener = listener;
+    }
 
-   public void click() {
-       if (listener != null ) {
-           listener.onClick();
-       }
-   }
+    public void click() {
+        if (listener != null) {
+            listener.onClick();
+        }
+    }
 
     private String validateLabel(String label) {
         if (label == null || label.trim().isEmpty()) {
