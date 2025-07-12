@@ -34,7 +34,7 @@ public class MyList {
     }
 
     public static void main(String[] args) {
-        MyList myList = new MyList(new String[] {"Item1", "Item2"});
+        MyList myList = new MyList(new String[]{"Item1", "Item2"});
         MyList.Iterator iterator = myList.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
