@@ -66,7 +66,6 @@ public class DataProcessor {
             return this;
         }
 
-
         public static void main(String[] args) {
             System.out.println(DataProcessor.Utility.formatData("test data"));
             System.out.println(DataProcessor.Constans.getDefaultFormat());
