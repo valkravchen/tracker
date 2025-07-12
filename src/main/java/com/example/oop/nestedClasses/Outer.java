@@ -59,6 +59,7 @@ public class Outer {
             }
         }
         Local local = new Local();
+
         return local.compute();
     }
 
