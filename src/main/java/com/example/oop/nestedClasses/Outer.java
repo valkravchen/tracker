@@ -66,7 +66,6 @@ public class Outer {
         return action.execute() + " from outer";
     }
 
-
     public static void main(String[] args) {
         Outer outer = new Outer("Test", 1);
         System.out.println(outer.performAction(new Action() {
