@@ -1,5 +1,7 @@
 package com.example.oop.nestedClasses;
 
+import com.example.oop.inheritanceVSabstractClass.Action;
+
 public class Outer {
     private final String name;
     private final int id;
@@ -60,8 +62,18 @@ public class Outer {
         return local.compute();
     }
 
+    public String performAction(Action action) {
+        return action.execute() + " from outer";
+    }
+
+
     public static void main(String[] args) {
         Outer outer = new Outer("Test", 1);
-        System.out.println(outer.processLocal(5));
+        System.out.println(outer.performAction(new Action() {
+            @Override
+            public String execute() {
+                return "Anonymous execute";
+            }
+        }));
     }
 }
