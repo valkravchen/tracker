@@ -47,11 +47,8 @@ public class UtilityHolder {
     }
 
     public static void main(String[] args) {
-        Helper helper = new Helper(1);
-        Helper helper1 = new Helper(2);
-        Helper helper2 = new Helper(3);
-        System.out.println(helper.getHelperId());
-        System.out.println(helper1.getHelperId());
-        System.out.println(helper2.getHelperId());
+        for (int i = 0; i < 100; i++) {
+            Counter counter = new Counter(i);
+        }
     }
 }
