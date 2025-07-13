@@ -1,8 +1,9 @@
 package com.example.oop.constructor;
 
 public class MathUtils {
-    private MathUtils(){
+    private MathUtils() {
     }
+
     public static int square(int x) {
         return x * x;
     }
