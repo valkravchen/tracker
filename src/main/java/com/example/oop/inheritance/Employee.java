@@ -1,4 +1,4 @@
-package com.example.oop.nheritance;
+package com.example.oop.inheritance;
 
 public class Employee extends Person {
     public Employee(String name) {
