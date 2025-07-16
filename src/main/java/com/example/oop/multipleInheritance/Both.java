@@ -3,7 +3,7 @@ package com.example.oop.multipleInheritance;
 public class Both implements Left, Right {
     @Override
     public void speak() {
-        System.out.println("Лево + право");
+        Left.super.speak();
     }
 
     public static void main(String[] args) {
