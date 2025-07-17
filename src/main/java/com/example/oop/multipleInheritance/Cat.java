@@ -1,6 +1,6 @@
 package com.example.oop.multipleInheritance;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     @Override
     public void speak() {
         System.out.println("Кошка мяукает");
