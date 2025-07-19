@@ -19,7 +19,7 @@ public class Circle implements Shape {
         };
 
         for (Shape shape : shapes) {
-            System.out.println("Плащадь фигуры: " + shape.getArea());
+            System.out.println("Площадь фигуры: " + shape.getArea());
         }
     }
 }
