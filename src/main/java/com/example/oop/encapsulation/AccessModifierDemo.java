@@ -22,4 +22,12 @@ public class AccessModifierDemo {
         this.data = "Приватный " + flag;
         System.out.println("Создан через приватный конструктор");
     }
+
+    public static AccessModifierDemo createSpecial() {
+        return new AccessModifierDemo(true);
+    }
+
+    public String getData() {
+        return data;
+    }
 }
