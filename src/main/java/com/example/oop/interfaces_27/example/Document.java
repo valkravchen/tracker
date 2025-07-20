@@ -9,7 +9,7 @@ public class Document implements Printable {
 
     @Override
     public void print() {
-        System.out.println("Печаиаем: " + content);
+        System.out.println("Печатаем: " + content);
     }
 
     @Override
