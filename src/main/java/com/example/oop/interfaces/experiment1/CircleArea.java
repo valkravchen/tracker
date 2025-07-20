@@ -16,4 +16,12 @@ public class CircleArea implements MathConstants {
     public String getFormula() {
         return "π * r²";
     }
+
+    public static void main(String[] args) {
+        CircleArea circleArea = new CircleArea(5);
+        System.out.println("Формула: " + circleArea.getFormula());
+        System.out.println("Площадь: " + circleArea.calculate());
+        System.out.println("Константы: π = " + PI + ", e = " + E +
+                ", макс. итераций = " + MAX_ITERATIONS);
+    }
 }
