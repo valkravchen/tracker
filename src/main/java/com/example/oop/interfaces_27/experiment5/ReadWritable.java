@@ -1,8 +1,10 @@
 package com.example.oop.interfaces_27.experiment5;
 
 public interface ReadWritable extends Readable, Writable {
+    StringBuilder content = new StringBuilder();
+
     public static void main(String[] args) {
-        StringBuilder content = new StringBuilder();
+
         ReadWritable readWritable = new ReadWritable() {
             @Override
             public String read() {
