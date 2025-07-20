@@ -1,6 +1,6 @@
-package com.example.oop.interfaces.example;
+package com.example.oop.interfaces_26.example;
 
-public class BasicImplementation implements com.example.oop.interfaces.example.BasicInterface {
+public class BasicImplementation implements com.example.oop.interfaces_26.example.BasicInterface {
     @Override
     public void process() {
         System.out.println("Кастомная обработка");

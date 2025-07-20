@@ -1,8 +1,8 @@
-package com.example.oop.interfaces.experiment2;
+package com.example.oop.interfaces_26.experiment2;
 
 import java.time.LocalTime;
 
-public class ConsoleLogger implements com.example.oop.interfaces.experiment2.Logger {
+public class ConsoleLogger implements com.example.oop.interfaces_26.experiment2.Logger {
     @Override
     public void log(String message) {
         System.out.println("[" + LocalTime.now() + "] " + message);

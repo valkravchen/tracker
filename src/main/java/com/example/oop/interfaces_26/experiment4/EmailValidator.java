@@ -1,6 +1,6 @@
-package com.example.oop.interfaces.experiment4;
+package com.example.oop.interfaces_26.experiment4;
 
-public class EmailValidator implements com.example.oop.interfaces.experiment4.DataValidator {
+public class EmailValidator implements com.example.oop.interfaces_26.experiment4.DataValidator {
     @Override
     public boolean validate(String data) {
         return data.contains("@");

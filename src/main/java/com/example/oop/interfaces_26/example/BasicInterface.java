@@ -1,4 +1,4 @@
-package com.example.oop.interfaces.example;
+package com.example.oop.interfaces_26.example;
 
 public interface BasicInterface {
     String VERSION = "1.0";

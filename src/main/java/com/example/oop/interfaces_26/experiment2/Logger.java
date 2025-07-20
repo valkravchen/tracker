@@ -1,4 +1,4 @@
-package com.example.oop.interfaces.experiment2;
+package com.example.oop.interfaces_26.experiment2;
 
 public interface Logger {
     void log(String message);

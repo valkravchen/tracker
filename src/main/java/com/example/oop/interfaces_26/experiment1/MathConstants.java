@@ -1,4 +1,4 @@
-package com.example.oop.interfaces.experiment1;
+package com.example.oop.interfaces_26.experiment1;
 
 public interface MathConstants {
     double PI = 3.14159;
