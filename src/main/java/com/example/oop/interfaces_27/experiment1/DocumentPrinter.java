@@ -3,8 +3,8 @@ package com.example.oop.interfaces_27.experiment1;
 public class DocumentPrinter implements Printable {
     private String printName;
 
-    public DocumentPrinter(String printName) {
-        this.printName = printName;
+    public DocumentPrinter(String printerName) {
+        this.printName = printerName;
     }
 
     @Override
