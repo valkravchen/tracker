@@ -1,6 +1,6 @@
 package com.example.oop.interfaces.experiment1;
 
-public class CircleArea implements MathConstants {
+public class CircleArea implements com.example.oop.interfaces.experiment1.MathConstants {
     private double radius;
 
     public CircleArea(double radius) {
