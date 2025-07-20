@@ -23,8 +23,9 @@ public interface Logger {
             public void log(String message) {
                 System.out.println(message);
             }
+
             @Override
-            public void info(String msg){
+            public void info(String msg) {
                 log(">>> " + msg);
             }
         };
