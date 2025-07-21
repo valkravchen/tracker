@@ -8,7 +8,7 @@ public interface Validator {
     }
 
     private void log(String message) {
-        System.out.println("[" + getCurrentTime() + "]" + message);
+        System.out.println("[" + getCurrentTime() + "] " + message);
     }
 
     default boolean validateWithLogging(String input) {
