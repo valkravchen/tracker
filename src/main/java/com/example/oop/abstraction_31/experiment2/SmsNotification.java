@@ -20,5 +20,4 @@ public class SmsNotification extends Notification {
         smsNotification.displayInfo();
         smsNotification.send();
     }
-
 }
