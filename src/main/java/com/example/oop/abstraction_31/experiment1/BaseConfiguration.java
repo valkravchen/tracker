@@ -2,7 +2,7 @@ package com.example.oop.abstraction_31.experiment1;
 
 public abstract class BaseConfiguration {
     private String appName = "MyApp";
-    private String version = "1";
+    private String version = "1.0";
 
     public String getAppName() {
         return appName;
