@@ -6,7 +6,7 @@ public abstract class Vehicle {
     private String brand;
     private int year;
 
-    public Vehicle(String brand, int year) {
+    protected Vehicle(String brand, int year) {
         if (brand == null || brand.trim().isEmpty()) {
             throw new IllegalArgumentException();
         }
