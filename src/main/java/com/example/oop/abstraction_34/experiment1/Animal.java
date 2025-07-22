@@ -1,6 +1,6 @@
 package com.example.oop.abstraction_34.experiment1;
 
-public abstract class Anima1 {
+public abstract class Animal {
     abstract void makeSound();
 
     abstract void eat();
