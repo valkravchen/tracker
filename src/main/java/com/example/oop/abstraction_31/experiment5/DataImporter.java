@@ -1,7 +1,7 @@
 package com.example.oop.abstraction_31.experiment5;
 
 public abstract class DataImporter {
-    final protected void importData() {
+    final void importData() {
         System.out.println("=== Начало импорта данных ===");
         readData();
         validateData();
