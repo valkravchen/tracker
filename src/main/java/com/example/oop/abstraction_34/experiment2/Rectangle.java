@@ -30,6 +30,6 @@ public class Rectangle extends Polygon {
         rectangle.draw();
         System.out.println("Площадь: " + rectangle.getArea());
         System.out.println("Периметр: " + rectangle.getPerimeter());
-        System.out.println("Количество сторон: "  + rectangle.getSides());
+        System.out.println("Количество сторон: " + rectangle.getSides());
     }
 }
