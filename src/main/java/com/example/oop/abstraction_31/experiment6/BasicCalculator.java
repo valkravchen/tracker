@@ -25,8 +25,8 @@ public class BasicCalculator extends Calculator {
         double result1 = basicCalculator.calculate(5.0, 3.0);
         double result2 = basicCalculator.calculate(2.0, 4.0, 6.0);
         String result3 = basicCalculator.calculate("multiply", 7.0, 8.0);
-        System.out.println("Результат: " + result1);
-        System.out.println("Результат: " + result2);
+        basicCalculator.displayResult(result1);
+        basicCalculator.displayResult(result2);
         System.out.println(result3);
     }
  }
