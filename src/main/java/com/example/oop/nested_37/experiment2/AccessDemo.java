@@ -1,4 +1,4 @@
-package com.example.oop.nestedСlasses_37.experiment2;
+package com.example.oop.nested_37.experiment2;
 
 public class AccessDemo {
     private String instanceField = "экземпляр";
