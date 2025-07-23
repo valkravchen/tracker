@@ -24,6 +24,7 @@ public class AccessDemo {
                         + localVar + ", " + instanceField + ", " + staticField);
             }
         }
+
         LocalAccessor localAccessor = new LocalAccessor();
         localAccessor.showAccess();
     }
