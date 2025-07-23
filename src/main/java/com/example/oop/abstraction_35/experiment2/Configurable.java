@@ -6,7 +6,7 @@ public interface Configurable {
     String getConfigValue(String key);
 
     default void printConfig(String key) {
-        System.out.println("Конфигурация " + key + getConfigValue(key));
+        System.out.println("Конфигурация " + key + ": " + getConfigValue(key));
         logAccess(key);
     }
 
