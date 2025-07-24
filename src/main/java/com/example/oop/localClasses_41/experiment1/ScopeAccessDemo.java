@@ -9,7 +9,7 @@ public class ScopeAccessDemo {
         String effectivelyFinal = "эффективно-финальная-переменная";
 
         class AccessTester {
-            public String localClassField = "поле-локального-класса";
+            private String localClassField = "поле-локального-класса";
 
             void showAllAccess() {
                 System.out.println("Локальный класс: " + localClassField);
