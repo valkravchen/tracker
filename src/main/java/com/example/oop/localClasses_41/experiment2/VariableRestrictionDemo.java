@@ -11,6 +11,7 @@ public class VariableRestrictionDemo {
 //                System.out.println("Нет доступа: " + restrictedVar); // ОШИБКА: переменная изменяется
             }
         }
+
         restrictedVar = "измененная-переменная";
         System.out.println("Переменная restrictedVar изменена на: " + restrictedVar);
         VariableAccessor accessor = new VariableAccessor();
