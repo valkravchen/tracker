@@ -62,6 +62,12 @@ public class Company {
     }
 
     public static void main(String[] args) {
-
+        Company.Department department = new Department("Разработка");
+        department.showInfo();
+        Company company = new Company();
+        Company.Employee employee = company.new Employee("Алексей");
+        employee.introduce();
+        company.processApplications();
+        company.createTask("код-ревью");
     }
 }
