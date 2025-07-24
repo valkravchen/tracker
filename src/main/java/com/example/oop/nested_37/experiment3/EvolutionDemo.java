@@ -33,7 +33,7 @@ public class EvolutionDemo {
             static final String SCOPE = "локальный-класс";
             static int localCounter = 0;
 
-            static public void incrementLocal() {
+            public static void incrementLocal() {
                 System.out.println("Локальный счетчик: " + localCounter);
             }
 
