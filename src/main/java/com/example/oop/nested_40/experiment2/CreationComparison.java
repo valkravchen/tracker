@@ -10,13 +10,14 @@ public class CreationComparison {
             staticInfo = "статический-" + info;
         }
 
-        public void  display() {
+        public void display() {
             System.out.println("Независимый объект: " + staticInfo);
         }
     }
 
     class InnerObject {
         private String innerInfo;
+
         public InnerObject(String info) {
             innerInfo = "внутренний-" + info;
         }
