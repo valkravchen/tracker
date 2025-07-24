@@ -46,10 +46,6 @@ public class ResourceManager {
         resource2.activate();
         resource3.activate();
         resource4.activate();
-        resource1.showStatus();
-        resource2.showStatus();
-        resource3.showStatus();
-        resource4.showStatus();
         System.out.println("Финальное состояние всех ресурсов:");
         resource1.showStatus();
         resource2.showStatus();
