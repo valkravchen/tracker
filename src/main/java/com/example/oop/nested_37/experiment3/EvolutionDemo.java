@@ -17,10 +17,12 @@ public class EvolutionDemo {
     class Inner {
         static final String TYPE = "внутренний-класс";
         static int innerCounter = 0;
+
         static void incrementInner() {
             innerCounter++;
             System.out.println("Внутренний счетчик: " + innerCounter);
         }
+
         public void showType() {
             System.out.println("Тип: " + TYPE);
         }
