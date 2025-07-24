@@ -42,5 +42,6 @@ public class EvolutionDemo {
         localClass.showType();
     }
 
-
+    public static void main(String[] args) {
+    }
 }
