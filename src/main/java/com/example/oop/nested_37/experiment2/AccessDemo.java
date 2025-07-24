@@ -1,26 +1,27 @@
 package com.example.oop.nested_37.experiment2;
 
 public class AccessDemo {
-    private String instanceField = "экземпляр";
-    private static String staticField = "статическое";
+    private String instanceField = "поле-экземпляра";
+    private static String staticField = "статическое-поле";
 
     static class StaticAccessor {
         public void showAccess() {
-            System.out.println("Static доступ: " + staticField);
+            System.out.println("Статический доступ: " + staticField);
+//            System.out.println(instanceField);
         }
     }
 
     class InstanceAccessor {
         public void showAccess() {
-            System.out.println("Instance доступ: " + instanceField + " и " + staticField);
+            System.out.println("Внутренний доступ: " + instanceField + " и " + staticField);
         }
     }
 
     public void demonstrateLocalAccess(String parameter) {
-        String localVar = "локальная";
+        String localVar = "локальная-переменная";
         class LocalAccessor {
             public void showAccess() {
-                System.out.println("Local доступ: " + parameter + ", "
+                System.out.println("Локальный доступ: " + parameter + ", "
                         + localVar + ", " + instanceField + ", " + staticField);
             }
         }
@@ -35,6 +36,6 @@ public class AccessDemo {
         AccessDemo accessDemo = new AccessDemo();
         AccessDemo.InstanceAccessor instanceAccessor = accessDemo.new InstanceAccessor();
         instanceAccessor.showAccess();
-        accessDemo.demonstrateLocalAccess("параметр");
+        accessDemo.demonstrateLocalAccess("метод-параметр");
     }
 }

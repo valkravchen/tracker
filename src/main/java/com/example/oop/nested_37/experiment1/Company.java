@@ -17,7 +17,7 @@ public class Company {
     }
 
     class Employee {
-        String employeeName;
+        private String employeeName;
 
         public Employee(String employeeName) {
             this.employeeName = employeeName;
