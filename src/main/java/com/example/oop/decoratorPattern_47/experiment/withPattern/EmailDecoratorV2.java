@@ -1,8 +1,8 @@
 package com.example.oop.decoratorPattern_47.experiment.withPattern;
 
 public class EmailDecoratorV2 extends NotificationDecoratorV2 {
-    public EmailDecoratorV2(NotificationV2 notificationV) {
-        super(notificationV);
+    public EmailDecoratorV2(NotificationV2 notification) {
+        super(notification);
     }
 
     @Override

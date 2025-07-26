@@ -1,5 +1,7 @@
 package com.example.oop.decoratorPattern_47.experiment.withoutPattern;
 
+import com.example.oop.decoratorPattern_47.experiment.withPattern.*;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== ПРОЦЕСС 1: РЕШЕНИЕ БЕЗ ПАТТЕРНА ===");
@@ -20,5 +22,16 @@ public class Main {
         System.out.println("РЕЗУЛЬТАТ ПРОЦЕССА 1: Было 4 класса → стало 8 классов");
         System.out.println("=== ПРОЦЕСС 2: РЕШЕНИЕ С ПАТТЕРНОМ ===");
         System.out.println("ШАГ 1: Рефакторим существующий код в паттерн Декоратор");
+        System.out.println("ШАГ 2: Создаю SlackDecoratorV2 - ОДИН класс для всех комбинаций");
+        System.out.println("ШАГ 3: Тестируем все комбинации с помощью одного SlackDecorator");
+        NotificationV2 slackOnly = new SlackDecoratorV2(new BasicNotificationV2());
+        slackOnly.send("только-slack");
+        NotificationV2 emailSlackCombo = new SlackDecoratorV2(new EmailDecoratorV2(new BasicNotificationV2()));
+        emailSlackCombo.send("email-slack-комбо");
+        NotificationV2 smsSlackCombo = new SlackDecoratorV2(new SMSDecoratorV2(new BasicNotificationV2()));
+        smsSlackCombo.send("sms-slack-комбо");
+        NotificationV2 allTypes = new SlackDecoratorV2(new SMSDecoratorV2(
+                new EmailDecoratorV2(new BasicNotificationV2())));
+        allTypes.send("allTypes");
     }
 }
