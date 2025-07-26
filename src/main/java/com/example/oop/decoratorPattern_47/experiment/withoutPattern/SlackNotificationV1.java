@@ -1,4 +1,4 @@
-package com.example.oop.decoratorPattern_47.experiment;
+package com.example.oop.decoratorPattern_47.experiment.withoutPattern;
 
 public class SlackNotificationV1 {
     void send(String message) {

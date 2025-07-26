@@ -1,4 +1,4 @@
-package com.example.oop.decoratorPattern_47.experiment;
+package com.example.oop.decoratorPattern_47.experiment.withoutPattern;
 
 public class Main {
     public static void main(String[] args) {
