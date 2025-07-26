@@ -18,5 +18,7 @@ public class Main {
         EmailSMSSlackNotificationV1 emailSMSSlack = new EmailSMSSlackNotificationV1();
         emailSMSSlack.send("тест-все-типы");
         System.out.println("РЕЗУЛЬТАТ ПРОЦЕССА 1: Было 4 класса → стало 8 классов");
+        System.out.println("=== ПРОЦЕСС 2: РЕШЕНИЕ С ПАТТЕРНОМ ===");
+        System.out.println("ШАГ 1: Рефакторим существующий код в паттерн Декоратор");
     }
 }
