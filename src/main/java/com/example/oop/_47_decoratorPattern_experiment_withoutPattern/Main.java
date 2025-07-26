@@ -25,10 +25,11 @@ public class Main {
         System.out.println("ШАГ 2: Создаю CinnamonDecoratorV2 - ОДИН класс для всех комбинаций");
         CoffeeV2 coffeeV2 = new SimpleCoffeeV2();
         CoffeeV2[] coffeeV2s = {
-                new SimpleCoffeeV2(),
-                new SugarDecoratorV2(coffeeV2),
-                new MilkDecoratorV2(coffeeV2),
-                new MilkDecoratorV2(new SugarDecoratorV2(coffeeV2))
+                new CinnamonDecoratorV2(coffeeV2),
+                new MilkDecoratorV2(new CinnamonDecoratorV2(coffeeV2)),
+                new SugarDecoratorV2(new CinnamonDecoratorV2(coffeeV2)),
+                new MilkDecoratorV2(new SugarDecoratorV2(new CinnamonDecoratorV2(coffeeV2)))
+
         };
         for (CoffeeV2 coffeeV3 : coffeeV2s) {
             System.out.println(coffeeV3.getDescription() + " - " + coffeeV3.getCost());
