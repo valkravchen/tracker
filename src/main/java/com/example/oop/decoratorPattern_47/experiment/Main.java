@@ -17,6 +17,6 @@ public class Main {
         System.out.println("ШАГ 5: Создаю EmailSMSSlackNotificationV1");
         EmailSMSSlackNotificationV1 emailSMSSlack = new EmailSMSSlackNotificationV1();
         emailSMSSlack.send("тест-все-типы");
-        System.out.println("РЕЗУЛЬТАТ ПРОЦЕССА 1: Было 4 класса → стало 7 классов");
+        System.out.println("РЕЗУЛЬТАТ ПРОЦЕССА 1: Было 4 класса → стало 8 классов");
     }
 }
