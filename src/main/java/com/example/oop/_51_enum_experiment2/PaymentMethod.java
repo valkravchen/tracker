@@ -30,7 +30,7 @@ public enum PaymentMethod implements Processable {
     ЭЛЕКТРОННЫЙ("электронная оплата") {
         @Override
         public void processPayment(double amount) {
-            System.out.println("Обработка электронной оплаты " + amount + " " +
+            System.out.println("Обработка электронной оплаты суммы " + amount + " " +
                     " через " + ЭЛЕКТРОННЫЙ.methodName);
         }
 
