@@ -30,10 +30,9 @@ public class StringJoinerDemo {
     void demonstrateJoinerMerging() {
         StringJoiner joiner1 = new StringJoiner(", ", "(", ")");
         joiner1.add("группа-1-элемент-1").add("группа-1-элемент-2");
-        System.out.println(joiner1.toString());
         StringJoiner joiner2 = new StringJoiner("; ", "[", "]");
         joiner2.add("группа-2-элемент-1").add("группа-2-элемент-2");
-        StringJoiner mergedJoiner = new StringJoiner(" + ").merge(joiner1).merge(joiner1);
+        StringJoiner mergedJoiner = new StringJoiner(" + ").merge(joiner1).merge(joiner2);
         System.out.println("Объединение StringJoiner'ов: " + mergedJoiner.toString());
     }
 
