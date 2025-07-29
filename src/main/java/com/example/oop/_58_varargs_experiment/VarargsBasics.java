@@ -3,7 +3,7 @@ package com.example.oop._58_varargs_experiment;
 public class VarargsBasics {
     static int calculateSum(String operation, int... numbers) {
         if (numbers.length == 0) {
-            System.out.println("Сумма без чисел для операции operation: 0");
+            System.out.println("Сумма без чисел для операции " + operation + ": " + 0);
             return 0;
         }
         int sum = 0;
