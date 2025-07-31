@@ -22,6 +22,7 @@ public abstract class Restaurant {
                 dish.getDishName());
         System.out.println("---");
     }
+
     public void showRestaurantInfo() {
         System.out.println("Ресторан специализации: " + restaurantType);
     }
