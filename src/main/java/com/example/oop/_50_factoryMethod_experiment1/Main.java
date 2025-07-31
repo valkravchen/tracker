@@ -17,5 +17,10 @@ public class Main {
         for (int i = 0; i < restaurants.length; i++) {
             restaurants[i].serveCustomer("клиент-" + (i + 1));
         }
+        System.out.println("Расширение системы новым рестораном:");
+        MexicanRestaurant mexicanRestaurant = new MexicanRestaurant();
+        mexicanRestaurant.showRestaurantInfo();
+        mexicanRestaurant.serveCustomer("любитель-острого");
+        System.out.println("Новый ресторан добавлен без изменения существующего кода!");
     }
 }
