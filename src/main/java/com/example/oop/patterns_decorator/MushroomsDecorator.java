@@ -1,6 +1,6 @@
 package com.example.oop.patterns_decorator;
 
-public class MushroomsDecorator extends PizzaDecorator{
+public class MushroomsDecorator extends PizzaDecorator {
     public MushroomsDecorator(Pizza pizza) {
         super(pizza);
     }
