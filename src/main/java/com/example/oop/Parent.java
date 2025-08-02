@@ -4,6 +4,7 @@ public class Parent {
     static void print() {
         System.out.println("Parent");
     } // Статический метод
+
     String value = "Parent";
 
     static class StaticNested {
@@ -11,6 +12,5 @@ public class Parent {
             print();
             System.out.println();
         }
-
     }// Переменная экземпляра
 }

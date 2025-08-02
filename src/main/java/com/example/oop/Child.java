@@ -1,9 +1,10 @@
 package com.example.oop;
 
-public class Child extends Parent{
+public class Child extends Parent {
     static void print() {
         System.out.println("Child");
     } // Сокрытие метода
+
     String value = "Child"; // Сокрытие переменной
 
     public static void main(String[] args) {
