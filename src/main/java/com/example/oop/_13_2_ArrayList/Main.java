@@ -8,8 +8,7 @@ public class Main {
         names.add("Petr");
         names.set(0, "Ivan");
         names.remove(0);
-        for (int index = 0; index < names.size(); index++) {
-            Object value = names.get(index);
+        for (Object value : names) {
             System.out.println(value);
         }
     }
