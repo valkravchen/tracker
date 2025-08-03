@@ -25,5 +25,8 @@ public class Box {
         Integer g = 250;
         Integer h = 250;
         System.out.println(g == h);
+        Integer v = 127;
+        Integer w = 127;
+        System.out.println(v == w);
     }
 }
