@@ -28,5 +28,10 @@ public class Box {
         Integer v = 127;
         Integer w = 127;
         System.out.println(v == w);
+        Integer sum = 0;
+        for (int i = 128; i < 300; i++) {
+            sum += i;
+        }
+        System.out.println(sum);
     }
 }
