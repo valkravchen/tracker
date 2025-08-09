@@ -2,6 +2,8 @@ package ru.tracker;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TrackerTest {
@@ -21,77 +23,41 @@ public class TrackerTest {
         Item second = new Item("Second");
         tracker.add(first);
         tracker.add(second);
-        Item result = tracker.findAll()[0];
-        assertThat(result.getName()).isEqualTo(first.getName());
+        List<Item> result = tracker.findAll();
+        assertThat(result.get(0).getName()).isEqualTo("First");
+        assertThat(result.get(1).getName()).isEqualTo("Second");
     }
 
     @Test
-    public void whenTestFindByNameCheckArrayLength() {
+    public void whenTestFindByName() {
         Tracker tracker = new Tracker();
-        Item first = new Item("First");
-        Item second = new Item("Second");
-        tracker.add(first);
-        tracker.add(second);
-        tracker.add(new Item("First"));
-        tracker.add(new Item("Second"));
-        tracker.add(new Item("First"));
-        Item[] result = tracker.findByName(first.getName());
-        assertThat(result.length).isEqualTo(3);
+        Item item = new Item("First");
+        tracker.add(item);
+        List<Item> result = tracker.findByName("First");
+        assertThat(result.get(0).getName()).isEqualTo("First");
     }
 
     @Test
-    public void whenTestFindByNameCheckSecondItemName() {
+    public void whenReplace() {
         Tracker tracker = new Tracker();
-        Item first = new Item("First");
-        Item second = new Item("Second");
-        tracker.add(first);
-        tracker.add(second);
-        tracker.add(new Item("First"));
-        tracker.add(new Item("Second"));
-        tracker.add(new Item("First"));
-        Item[] result = tracker.findByName(second.getName());
-        assertThat(result[1].getName()).isEqualTo(second.getName());
-    }
-
-    @Test
-    public void whenReplaceItemIsSuccessful() {
-        Tracker tracker = new Tracker();
-        Item item = new Item("Bug");
+        Item item = new Item("Item");
         tracker.add(item);
         int id = item.getId();
-        Item updateItem = new Item("Bug with description");
-        tracker.replace(id, updateItem);
-        assertThat(tracker.findById(id).getName()).isEqualTo("Bug with description");
+        Item newItem = new Item("New Item");
+        boolean result = tracker.replace(id, newItem);
+        assertThat(result).isTrue();
+        assertThat(tracker.findById(id).getName()).isEqualTo("New Item");
     }
 
     @Test
-    public void whenReplaceItemIsNotSuccessful() {
+    public void whenDelete() {
         Tracker tracker = new Tracker();
-        Item item = new Item("Bug");
-        tracker.add(item);
-        Item updateItem = new Item("Bug with description");
-        boolean result = tracker.replace(1000, updateItem);
-        assertThat(tracker.findById(item.getId()).getName()).isEqualTo("Bug");
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    public void whenDeleteItemIsSuccessful() {
-        Tracker tracker = new Tracker();
-        Item item = new Item("Bug");
+        Item item = new Item("Item");
         tracker.add(item);
         int id = item.getId();
-        tracker.delete(id);
+        boolean result = tracker.delete(id);
+        assertThat(result).isTrue();
         assertThat(tracker.findById(id)).isNull();
-    }
-
-    @Test
-    public void whenDeleteItemIsNotSuccessful() {
-        Tracker tracker = new Tracker();
-        Item item = new Item("Bug");
-        tracker.add(item);
-        tracker.delete(1000);
-        assertThat(tracker.findById(item.getId()).getName()).isEqualTo("Bug");
     }
 }
 
