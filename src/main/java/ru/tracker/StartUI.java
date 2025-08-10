@@ -3,7 +3,6 @@ package ru.tracker;
 import ru.tracker.action.*;
 import ru.tracker.input.ConsoleInput;
 import ru.tracker.input.Input;
-
 import ru.tracker.input.ValidateInput;
 import ru.tracker.output.ConsoleOutput;
 import ru.tracker.output.Output;
