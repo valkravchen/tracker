@@ -17,7 +17,7 @@ class StartUITest {
     @Test
     void whenExit() {
         Output output = new MockOutput();
-        Input input = new MockInput(new String[]{"0"});
+        Input input = new MockInput(List.of("0"));
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<>();
         actions.add(new Exit(output));
@@ -34,7 +34,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         String replaceName = "New Test Name";
-        Input input = new MockInput(new String[]{"0", String.valueOf(one.getId()), replaceName, "1"});
+        Input input = new MockInput(List.of("0", String.valueOf(one.getId()), replaceName, "1") );
         List<UserAction> actions = new ArrayList<>();
         actions.add(new Replace(output));
         actions.add(new Exit(output));
@@ -61,7 +61,7 @@ class StartUITest {
         Item two = tracker.add(new Item("test2"));
         int invalidId = two.getId() + 1;
         String replaceName = "New Test Name";
-        Input input = new MockInput(new String[]{"0", String.valueOf(invalidId), replaceName, "1"});
+        Input input = new MockInput(List.of("0", String.valueOf(invalidId), replaceName, "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new Replace(output));
         actions.add(new Exit(output));
@@ -86,9 +86,7 @@ class StartUITest {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
-        Input input = new MockInput(
-                new String[]{"0", "1"}
-        );
+        Input input = new MockInput(List.of("0", "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindAll(output));
         actions.add(new Exit(output));
@@ -112,9 +110,7 @@ class StartUITest {
     void whenFindAllWithNoItemsThenShowEmptyMessage() {
         Output output = new MockOutput();
         Tracker tracker = new Tracker();
-        Input input = new MockInput(
-                new String[]{"0", "1"}
-        );
+        Input input = new MockInput(List.of("0", "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindAll(output));
         actions.add(new Exit(output));
@@ -140,9 +136,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         String findName = "test1";
-        Input input = new MockInput(
-                new String[]{"0", findName, "1"}
-        );
+        Input input = new MockInput(List.of("0", findName, "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindByName(output));
         actions.add(new Exit(output));
@@ -168,9 +162,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         String findName = "test3";
-        Input input = new MockInput(
-                new String[]{"0", findName, "1"}
-        );
+        Input input = new MockInput(List.of("0", findName, "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindByName(output));
         actions.add(new Exit(output));
@@ -196,9 +188,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         int findId = 1;
-        Input input = new MockInput(
-                new String[]{"0", String.valueOf(findId), "1"}
-        );
+        Input input = new MockInput(List.of("0",String.valueOf(findId), "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindById(output));
         actions.add(new Exit(output));
@@ -224,9 +214,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         int findId = 3;
-        Input input = new MockInput(
-                new String[]{"0", String.valueOf(findId), "1"}
-        );
+        Input input = new MockInput(List.of("0", String.valueOf(findId), "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindById(output));
         actions.add(new Exit(output));
@@ -248,7 +236,7 @@ class StartUITest {
     @Test
     void whenInvalidExit() {
         Output output = new MockOutput();
-        Input input = new MockInput(new String[]{"1", "0"});
+        Input input = new MockInput(List.of("1", "0"));
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<>();
         actions.add(new Exit(output));
