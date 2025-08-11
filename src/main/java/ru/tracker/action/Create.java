@@ -6,7 +6,6 @@ import ru.tracker.output.Output;
 import ru.tracker.Tracker;
 
 public class Create implements UserAction {
-
     private final Output output;
 
     public Create(Output output) {

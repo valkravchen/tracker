@@ -34,7 +34,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         String replaceName = "New Test Name";
-        Input input = new MockInput(List.of("0", String.valueOf(one.getId()), replaceName, "1") );
+        Input input = new MockInput(List.of("0", String.valueOf(one.getId()), replaceName, "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new Replace(output));
         actions.add(new Exit(output));
@@ -188,7 +188,7 @@ class StartUITest {
         Item one = tracker.add(new Item("test1"));
         Item two = tracker.add(new Item("test2"));
         int findId = 1;
-        Input input = new MockInput(List.of("0",String.valueOf(findId), "1"));
+        Input input = new MockInput(List.of("0", String.valueOf(findId), "1"));
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindById(output));
         actions.add(new Exit(output));
