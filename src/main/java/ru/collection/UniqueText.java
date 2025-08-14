@@ -1,5 +1,6 @@
 package ru.collection;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class UniqueText {
@@ -9,13 +10,10 @@ public class UniqueText {
         if (origin.length != text.length) {
             return false;
         }
-        HashSet<String> check = new HashSet<>();
-        for (String word : origin) {
-            check.add(word);
-        }
+        HashSet<String> check = new HashSet<>(Arrays.asList(origin));
         for (String word : text) {
             if (!check.contains(word)) {
-             return false;
+                return false;
             }
         }
         return true;
