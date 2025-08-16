@@ -6,6 +6,7 @@ public class Account {
     private String passport;
     private String username;
     private String deposit;
+
     public Account(String passport, String username, String deposit) {
         this.passport = passport;
         this.username = username;
