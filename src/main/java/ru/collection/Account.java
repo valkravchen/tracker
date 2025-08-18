@@ -3,6 +3,7 @@ package ru.collection;
 import java.util.Objects;
 
 public class Account {
+
     private String passport;
     private String username;
     private String deposit;
