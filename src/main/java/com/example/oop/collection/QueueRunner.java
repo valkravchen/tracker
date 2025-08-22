@@ -1,6 +1,5 @@
 package com.example.oop.collection;
 
-import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
