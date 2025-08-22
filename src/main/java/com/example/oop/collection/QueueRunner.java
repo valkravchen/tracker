@@ -11,9 +11,6 @@ public class QueueRunner {
         queue.offer("second");
         queue.offer("third");
         queue.offer("fourth");
-
-        for (String string: queue) {
-            System.out.println(string);
-        }
+        System.out.println(queue.peek());
     }
 }
