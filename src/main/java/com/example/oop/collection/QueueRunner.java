@@ -11,6 +11,6 @@ public class QueueRunner {
         queue.offer("second");
         queue.offer("third");
         queue.offer("fourth");
-        System.out.println(queue.peek());
+        System.out.println(queue.element());
     }
 }
