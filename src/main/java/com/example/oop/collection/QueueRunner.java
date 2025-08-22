@@ -10,7 +10,7 @@ public class QueueRunner {
         queue.add("second");
         queue.add("third");
 
-        for (String string : queue) {
+        for (String string: queue) {
             System.out.println(string);
         }
         queue.remove();
