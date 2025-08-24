@@ -1,6 +1,7 @@
 package ru.queue;
 
 import java.util.Deque;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -9,10 +10,10 @@ public class Main {
         deque.add("second");
         deque.addFirst("first");
         deque.addLast("third");
-        System.out.println(deque);
-        System.out.println(deque.pop());
-        System.out.println(deque.poll());
-        System.out.println(deque.pollFirst());
-        System.out.println(deque.pollLast());
+
+        Iterator<String> iterator = deque.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
     }
 }
