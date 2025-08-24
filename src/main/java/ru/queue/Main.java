@@ -11,9 +11,8 @@ public class Main {
         deque.addFirst("first");
         deque.addLast("third");
 
-        Iterator<String> iterator = deque.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+        for (String string : deque) {
+            System.out.println(string);
         }
     }
 }
