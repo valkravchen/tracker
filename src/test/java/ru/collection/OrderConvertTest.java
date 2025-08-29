@@ -14,7 +14,7 @@ class OrderConvertTest {
     void whenSingleOrder() {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("3sfe", "Dress"));
-        HashMap<String, Order>  map = OrderConvert.process(orders);
+        HashMap<String, Order> map = OrderConvert.process(orders);
         Order expected = new Order("3sfe", "Dress");
         assertThat(map.get("3sfe")).isEqualTo(expected);
     }
