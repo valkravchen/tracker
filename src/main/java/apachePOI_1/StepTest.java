@@ -1,8 +1,8 @@
-package apachePOI;
+package apachePOI_1;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Step1Test {
+public class StepTest {
     public static void main(String[] args) {
         try {
             System.out.println("Проверяем библиотеку Apache POI...");
