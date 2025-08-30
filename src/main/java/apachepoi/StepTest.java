@@ -1,4 +1,4 @@
-package apachePOI;
+package apachepoi;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
