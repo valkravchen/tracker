@@ -20,7 +20,7 @@ public class TreeSetIteration {
         }
         System.out.println("\n2. Iterator (по возрастанию):");
         Iterator<String> iterator = words.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println("   " + iterator.next());
         }
 
