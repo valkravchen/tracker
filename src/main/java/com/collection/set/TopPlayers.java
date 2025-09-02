@@ -47,6 +47,7 @@ public class TopPlayers {
             System.out.println("Игрок уже существует: " + newPlayer);
         }
     }
+
     public static void showTopPlayers(Set<Player> players) {
         System.out.println("\nТоп игроков:");
         int position = 1;
