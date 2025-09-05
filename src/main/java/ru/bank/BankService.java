@@ -28,8 +28,7 @@ public class BankService {
 
     public boolean transferMoney(String sourcePassport, String sourceRequisite, String destinationPassport,
                                  String destinationRequisite, double amount) {
-        boolean result = false;
-        return result;
+        return false;
     }
 
     public List<Account> getAccounts(User user) {
