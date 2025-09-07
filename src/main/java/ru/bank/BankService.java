@@ -22,7 +22,10 @@ public class BankService {
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
         if (user != null) {
-            users.get(user).add(account);
+            List<Account> accounts = users.get(user);
+            if (!accounts.contains(account)) {
+                accounts.add(account);
+            }
         }
     }
 
@@ -35,31 +38,34 @@ public class BankService {
         return null;
     }
 
-    public Account findByRequisite() {
+    public Account findByRequisite(String passport, String requisite) {
+        User user = findByPassport(passport);
+        if (user != null) {
+            List<Account> accounts = users.get(user);
+            for (Account account : accounts) {
+                if (account.getRequisite().equals(requisite)) {
+                    return account;
+                }
+            }
+        }
         return null;
     }
 
     public boolean transferMoney(String sourcePassport, String sourceRequisite,
                                  String destinationPassport, String destinationRequisite, double amount) {
-
+        Account accountSource = findByRequisite(sourcePassport, sourceRequisite);
+        Account accountDestination = findByRequisite(destinationPassport, destinationRequisite);
+        if (accountSource != null && accountDestination != null && amount > 0) {
+            if (accountSource.getBalance() >= amount) {
+                accountSource.setBalance(accountSource.getBalance() - amount);
+                accountDestination.setBalance(accountDestination.getBalance() + amount);
+                return true;
+            }
+        }
         return false;
     }
 
     public List<Account> getAccounts(User user) {
         return users.get(user);
-    }
-
-    public static void main(String[] args) {
-        BankService service = new BankService();
-        User ivan = new User("1234", "Иван");
-        User maria = new User("5678", "Мария");
-        service.users.put(ivan, new ArrayList<>());
-        service.users.put(maria, new ArrayList<>());
-        User found1 = service.findByPassport("1234");
-        User found2 = service.findByPassport("5678");
-        User found3 = service.findByPassport("9999");
-        System.out.println(found1 != null ? found1.getUsername() : null);
-        System.out.println(found1 != null ? found2.getUsername() : null);
-        System.out.println(found3);
     }
 }
