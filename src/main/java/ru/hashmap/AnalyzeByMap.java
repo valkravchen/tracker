@@ -47,7 +47,7 @@ public class AnalyzeByMap {
                                 new Subject("Philosophy", 60)
                         )
                 ),
-                new Pupil("Sidorov",
+                new Pupil("Semenov",
                         List.of(
                                 new Subject("Philosophy", 50),
                                 new Subject("Lang", 60),
