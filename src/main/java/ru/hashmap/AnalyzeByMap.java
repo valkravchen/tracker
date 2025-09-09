@@ -1,5 +1,6 @@
 package ru.hashmap;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnalyzeByMap {
@@ -16,7 +17,18 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
-        return List.of();
+        List<Label> labels = new ArrayList<>();
+        for (Pupil pupil : pupils) {
+            int sum = 0;
+            int count = 0;
+            for (Subject subject : pupil.subjects()) {
+                sum += subject.score();
+                count++;
+            }
+            Label label = new Label(pupil.name(), (double) sum / count);
+            labels.add(label);
+        }
+        return labels;
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
@@ -57,3 +69,4 @@ public class AnalyzeByMap {
         );
     }
 }
+
