@@ -47,7 +47,7 @@ public class AnalyzeByMap {
         List<Pupil> pupils = List.of(
                 new Pupil("Ivanov",
                         List.of(
-                                new Subject("Math", 70),
+                                new Subject("Mth", 70),
                                 new Subject("Lang", 90),
                                 new Subject("Philosophy", 100)
                         )
