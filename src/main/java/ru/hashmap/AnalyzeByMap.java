@@ -1,7 +1,9 @@
 package ru.hashmap;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AnalyzeByMap {
     public static double averageScore(List<Pupil> pupils) {
@@ -47,7 +49,7 @@ public class AnalyzeByMap {
         List<Pupil> pupils = List.of(
                 new Pupil("Ivanov",
                         List.of(
-                                new Subject("Mth", 70),
+                                new Subject("Math", 70),
                                 new Subject("Lang", 90),
                                 new Subject("Philosophy", 100)
                         )
@@ -67,6 +69,20 @@ public class AnalyzeByMap {
                         )
                 )
         );
+        Map<String, Integer> subjectTotalScores = new LinkedHashMap<>();
+
+        for (Pupil pupil : pupils) {
+            for (Subject subject : pupil.subjects()) {
+                if (subjectTotalScores.containsKey(subject.name())) {
+                    subjectTotalScores.put(subject.name(),
+                            subjectTotalScores.get(subject.name()) + subject.score());
+                } else {
+                    subjectTotalScores.put(subject.name(), subject.score());
+                }
+            }
+        }
+            System.out.println(subjectTotalScores);
+
     }
 }
 
