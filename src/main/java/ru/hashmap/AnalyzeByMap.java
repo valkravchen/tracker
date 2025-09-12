@@ -70,7 +70,6 @@ public class AnalyzeByMap {
                 )
         );
         Map<String, Integer> subjectTotalScores = new LinkedHashMap<>();
-
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 if (subjectTotalScores.containsKey(subject.name())) {
