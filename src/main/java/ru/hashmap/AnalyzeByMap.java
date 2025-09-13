@@ -64,24 +64,29 @@ public class AnalyzeByMap {
                 new Pupil("Semenov",
                         List.of(
                                 new Subject("Philosophy", 50),
-                                new Subject("Lang", 60),
+                                new Subject("Lan", 60),
                                 new Subject("Math", 80)
                         )
                 )
         );
-        Map<String, Integer> subjectTotalScores = new LinkedHashMap<>();
+        Map<String, Integer> subjectScores = new LinkedHashMap<>();
+        Map<String, Integer> subjectCounts = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (subjectTotalScores.containsKey(subject.name())) {
-                    subjectTotalScores.put(subject.name(),
-                            subjectTotalScores.get(subject.name()) + subject.score());
-                } else {
-                    subjectTotalScores.put(subject.name(), subject.score());
-                }
+                String name = subject.name();
+                subjectScores.put(name, subjectScores.getOrDefault(name, 0) + subject.score());
+                subjectCounts.put(name, subjectCounts.getOrDefault(name, 0) + 1);
             }
         }
-            System.out.println(subjectTotalScores);
+        List<Label> result = new ArrayList<>();
 
+        for (String subjectName : subjectScores.keySet()) {
+            int totalScore = subjectScores.get(subjectName);
+            int count = subjectCounts.get(subjectName);
+            double average = (double) totalScore / count;
+            result.add(new Label(subjectName, average));
+        }
+        System.out.println(result);
     }
 }
 
