@@ -34,7 +34,24 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        return List.of();
+        Map<String, Integer> subjectScores = new LinkedHashMap<>();
+        Map<String, Integer> subjectCounts = new LinkedHashMap<>();
+        for (Pupil pupil : pupils) {
+            for (Subject subject : pupil.subjects()) {
+                String name = subject.name();
+                subjectScores.put(name, subjectScores.getOrDefault(name, 0) + subject.score());
+                subjectCounts.put(name, subjectCounts.getOrDefault(name, 0) + 1);
+            }
+        }
+        List<Label> result = new ArrayList<>();
+
+        for (String subjectName : subjectScores.keySet()) {
+            int totalScore = subjectScores.get(subjectName);
+            int count = subjectCounts.get(subjectName);
+            double average = (double) totalScore / count;
+            result.add(new Label(subjectName, average));
+        }
+        return result;
     }
 
     public static Label bestStudent(List<Pupil> pupils) {
@@ -69,24 +86,6 @@ public class AnalyzeByMap {
                         )
                 )
         );
-        Map<String, Integer> subjectScores = new LinkedHashMap<>();
-        Map<String, Integer> subjectCounts = new LinkedHashMap<>();
-        for (Pupil pupil : pupils) {
-            for (Subject subject : pupil.subjects()) {
-                String name = subject.name();
-                subjectScores.put(name, subjectScores.getOrDefault(name, 0) + subject.score());
-                subjectCounts.put(name, subjectCounts.getOrDefault(name, 0) + 1);
-            }
-        }
-        List<Label> result = new ArrayList<>();
-
-        for (String subjectName : subjectScores.keySet()) {
-            int totalScore = subjectScores.get(subjectName);
-            int count = subjectCounts.get(subjectName);
-            double average = (double) totalScore / count;
-            result.add(new Label(subjectName, average));
-        }
-        System.out.println(result);
     }
 }
 
