@@ -66,44 +66,19 @@ public class AnalyzeByMap {
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
-        return null;
-    }
-
-    public static void main(String[] args) {
-        List<Pupil> pupils = List.of(
-                new Pupil("Ivanov",
-                        List.of(
-                                new Subject("Math", 70),
-                                new Subject("Lang", 90),
-                                new Subject("Philosophy", 100)
-                        )
-                ),
-                new Pupil("Petrov",
-                        List.of(
-                                new Subject("Lang", 60),
-                                new Subject("Math", 60),
-                                new Subject("Philosophy", 60)
-                        )
-                ),
-                new Pupil("Semenov",
-                        List.of(
-                                new Subject("Philosophy", 50),
-                                new Subject("Lan", 60),
-                                new Subject("Math", 80)
-                        )
-                )
-        );
-        List<Label> labels = new ArrayList<>();
+        Map<String, Integer> subjectScores = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
-            int sum = 0;
             for (Subject subject : pupil.subjects()) {
-                sum += subject.score();
+                String name = subject.name();
+                subjectScores.put(name, subjectScores.getOrDefault(name, 0) + subject.score());
             }
-            Label label = new Label(pupil.name(), sum);
-            labels.add(label);
         }
-        labels.sort(Comparator.naturalOrder());
-        Label best = labels.get(labels.size() - 1);
-        System.out.println(best);
+        List<Label> result = new ArrayList<>();
+        for (String subjectName : subjectScores.keySet()) {
+            int totalScore = subjectScores.get(subjectName);
+            result.add(new Label(subjectName, totalScore));
+        }
+        result.sort(Comparator.naturalOrder());
+        return result.get(result.size() - 1);
     }
 }
