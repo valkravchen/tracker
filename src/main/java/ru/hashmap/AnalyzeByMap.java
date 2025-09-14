@@ -1,9 +1,6 @@
 package ru.hashmap;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AnalyzeByMap {
     public static double averageScore(List<Pupil> pupils) {
@@ -55,7 +52,17 @@ public class AnalyzeByMap {
     }
 
     public static Label bestStudent(List<Pupil> pupils) {
-        return null;
+        List<Label> labels = new ArrayList<>();
+        for (Pupil pupil : pupils) {
+            int sum = 0;
+            for (Subject subject : pupil.subjects()) {
+                sum += subject.score();
+            }
+            Label label = new Label(pupil.name(), sum);
+            labels.add(label);
+        }
+        labels.sort(Comparator.naturalOrder());
+        return labels.get(labels.size() - 1);
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
@@ -86,6 +93,17 @@ public class AnalyzeByMap {
                         )
                 )
         );
+        List<Label> labels = new ArrayList<>();
+        for (Pupil pupil : pupils) {
+            int sum = 0;
+            for (Subject subject : pupil.subjects()) {
+                sum += subject.score();
+            }
+            Label label = new Label(pupil.name(), sum);
+            labels.add(label);
+        }
+        labels.sort(Comparator.naturalOrder());
+        Label best = labels.get(labels.size() - 1);
+        System.out.println(best);
     }
 }
-
