@@ -10,5 +10,9 @@ public class ListSort {
         System.out.println(list);
         Collections.sort(list);
         System.out.println(list);
+        Integer first = 1;
+        Integer second = 2;
+        int result = first.compareTo(second);
+        System.out.println(result);
     }
 }
