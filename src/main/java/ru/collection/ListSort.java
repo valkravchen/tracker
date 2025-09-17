@@ -18,5 +18,7 @@ public class ListSort {
         String ivan = "Ivan";
         int resultString = petr.compareTo(ivan);
         System.out.println(resultString);
+        list.sort(Collections.reverseOrder());
+        System.out.println(list);
     }
 }
