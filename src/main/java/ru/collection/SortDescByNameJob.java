@@ -1,7 +1,6 @@
 package ru.collection;
 
 import java.util.Comparator;
-import java.util.Queue;
 
 public class SortDescByNameJob implements Comparator<Job> {
 
