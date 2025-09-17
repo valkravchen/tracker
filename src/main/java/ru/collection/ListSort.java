@@ -11,8 +11,12 @@ public class ListSort {
         Collections.sort(list);
         System.out.println(list);
         Integer first = 1;
-        Integer second = 2;
+        Integer second = 4;
         int result = first.compareTo(second);
         System.out.println(result);
+        String petr = "Petr";
+        String ivan = "Ivan";
+        int resultString = petr.compareTo(ivan);
+        System.out.println(resultString);
     }
 }
