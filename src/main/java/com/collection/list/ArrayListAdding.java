@@ -8,6 +8,7 @@ public class ArrayListAdding {
     public static void main(String[] args) {
         List<String> cities = new ArrayList<>();
         cities.add("Москва");
+
         cities.add("Санкт-Петербург");
         cities.add("Новосибирск");
         System.out.println("После add(): " + cities);
