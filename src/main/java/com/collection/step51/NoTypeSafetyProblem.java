@@ -25,6 +25,17 @@ public class NoTypeSafetyProblem {
         for (Object object : studentNames) {
             System.out.println("  - " + object.getClass().getSimpleName() + ": " + object);
         }
+        System.out.println("\n!!! ПОПЫТКА ОБРАБОТАТЬ КАК СТРОКИ !!!");
+        for (int i = 0; i < studentNames.size(); i++) {
+            try {
+                String name = (String) studentNames.get(i);
+                System.out.println("Студент " + i + ": " + name.toUpperCase());
+            } catch (ClassCastException e) {
+                runtimeErrors++;
+                System.out.println("ОШИБКА! Элемент " + i + " не является String: " +
+                        studentNames.get(i).getClass().getSimpleName());
+            }
+        }
     }
 
     public static void main(String[] args) {
