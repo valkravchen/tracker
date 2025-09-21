@@ -39,8 +39,41 @@ public class NoTypeSafetyProblem {
         System.out.println("\nОшибок времени выполнения: " + runtimeErrors);
     }
 
+    public void mixedTypesInGrades() {
+        System.out.println("\n=== СМЕШАННЫЕ ТИПЫ В ОЦЕНКАХ ===\n");
+        studentGrades.add(5);
+        studentGrades.add(4);
+        studentGrades.add(3.5);
+        studentGrades.add("отлично");
+        studentGrades.add(null);
+        System.out.println("Попытка вычислить средний балл:");
+        double sum = 0;
+        int validGrades = 0;
+        for (Object grade : studentGrades) {
+            try {
+                if (grade != null) {
+                    Number number = (Number) grade;
+                    sum += number.doubleValue();
+                    validGrades++;
+                    System.out.println("  Оценка: " + grade + " (" +
+                            grade.getClass().getSimpleName() + ")");
+                } else {
+                    System.out.println("  !!! NULL в оценках !!!");
+                }
+            } catch (ClassCastException e) {
+                runtimeErrors++;
+                System.out.println("  !!! NULL в оценках !!!");
+            }
+        }
+        if (validGrades > 0) {
+            System.out.println("Средний балл: " + (sum / validGrades));
+        }
+        System.out.println("Ошибок обработки: " + runtimeErrors);
+    }
+
     public static void main(String[] args) {
         NoTypeSafetyProblem noTypeSafetyProblem = new NoTypeSafetyProblem();
         noTypeSafetyProblem.demonstrateTypeSafetyProblem();
+        noTypeSafetyProblem.mixedTypesInGrades();
     }
 }
