@@ -36,6 +36,7 @@ public class NoTypeSafetyProblem {
                         studentNames.get(i).getClass().getSimpleName());
             }
         }
+        System.out.println("\nОшибок времени выполнения: " + runtimeErrors);
     }
 
     public static void main(String[] args) {
