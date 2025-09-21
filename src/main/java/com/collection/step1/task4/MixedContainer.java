@@ -20,12 +20,12 @@ public class MixedContainer {
     }
 
     public String[] getStrings() {
-        String[] strings = new String[items.length];
+        String[] strings = new String[size]; // Используем size, а не items.length
         int count = 0;
-        for (Object item : items) {
-            if (item instanceof String) {
-                instanceOfCount++;
-                strings[count++] = (String) item;
+        for (int i = 0; i < size; i++) { // Итерируем только до size
+            instanceOfCount++; // Увеличиваем счетчик ДО проверки
+            if (items[i] instanceof String) {
+                strings[count++] = (String) items[i];
             }
         }
         return Arrays.copyOf(strings, count);
@@ -33,10 +33,10 @@ public class MixedContainer {
 
     public int sumIntegers() {
         int sum = 0;
-        for (Object item : items) {
-            instanceOfCount++;
-            if (item instanceof Integer) {
-                sum += (int) item;
+        for (int i = 0; i < size; i++) { // Итерируем только до size
+            instanceOfCount++; // Увеличиваем счетчик перед проверкой instanceof
+            if (items[i] instanceof Integer) {
+                sum += (Integer) items[i];
             }
         }
         return sum;
