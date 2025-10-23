@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 class ItemDescByNameTest {
-
     @Test
     public void whenSortDescByName() {
         List<Item> items = Arrays.asList(

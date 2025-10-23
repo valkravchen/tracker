@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 class ItemAscByNameTest {
-
     @Test
     public void whenSortAscByName() {
         List<Item> items = Arrays.asList(
