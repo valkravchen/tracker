@@ -30,3 +30,5 @@ hs_err_pid*
 
 target
 out
+/src/main/java/ru/collection/JobDescByNameLength.java
+/src/main/java/ru/collection/JobDescByName.java

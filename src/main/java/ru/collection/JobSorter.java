@@ -1,7 +1,7 @@
 package ru.collection;
 
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class JobSorter {
@@ -11,12 +11,10 @@ public class JobSorter {
                 new Job("Impl task", 2),
                 new Job("Reboot server", 1)
         );
-        System.out.println(jobs);
-        Collections.sort(jobs);
-        System.out.println(jobs);
-        jobs.sort(new SortByNameJob());
-        System.out.println(jobs);
-        jobs.sort(new SortDescByNameJob());
+        Comparator<Job> combine = new JobDescByNameLength()
+                .thenComparing(new JobDescByName())
+                .thenComparing(new SortDescByPriorityJob());
+        jobs.sort(combine);
         System.out.println(jobs);
     }
 }
