@@ -12,9 +12,7 @@ public class JobSorter {
                 new Job("Reboot server", 1)
         );
 
-        Comparator<Job> combine = new JobDescByNameLength()
-                .thenComparing(new JobDescByName())
-                .thenComparing(new SortDescByPriorityJob());
+        Comparator<Job> combine = new JobDescByNameLength().thenComparing(new JobDescByName()).thenComparing(new SortDescByPriorityJob());
 
         jobs.sort(combine);
         System.out.println(jobs);
