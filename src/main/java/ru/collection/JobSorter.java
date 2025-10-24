@@ -11,10 +11,12 @@ public class JobSorter {
                 new Job("Impl task", 2),
                 new Job("Reboot server", 1)
         );
+
         Comparator<Job> combine = new JobDescByNameLength()
                 .thenComparing(new JobDescByName())
                 .thenComparing(new SortDescByPriorityJob());
         jobs.sort(combine);
+
         System.out.println(jobs);
     }
 }
