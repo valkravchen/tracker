@@ -11,6 +11,7 @@ public class FI {
         };
 
         Comparator<Attachment> comparatorSize = (left, right) -> {
+            System.out.println("compare - " + left.getSize() + " : " + right.getSize());
             return Integer.compare(left.getSize(), right.getSize());
         };
 
@@ -25,5 +26,7 @@ public class FI {
         Comparator<Attachment> comparatorDescName = (left, right) -> {
             return right.getName().compareTo(left.getName());
         };
+        Arrays.sort(attachments, comparatorSize);
+        System.out.println(Arrays.toString(attachments));
     }
 }
