@@ -11,11 +11,4 @@ public class FunctionCalculator {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        FunctionCalculator calc = new FunctionCalculator();
-        System.out.println(calc.diapason(5, 8, x -> 2 * x + 1));
-        System.out.println(calc.diapason(1, 4, x -> x * x));
-        System.out.println(calc.diapason(0, 3, x -> Math.pow(2, x)));
-    }
 }
