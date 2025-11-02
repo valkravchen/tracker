@@ -1,4 +1,6 @@
-package ru.stream.mapto;
+package ru.stream;
+
+import ru.stream.mapto.Person;
 
 import java.util.*;
 
