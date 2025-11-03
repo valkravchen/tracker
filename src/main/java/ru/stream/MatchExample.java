@@ -4,10 +4,10 @@ import java.util.*;
 
 public class MatchExample {
     public static void main(String[] args) {
-        List<String> strings = Arrays.asList("Один", "Два", "Три", "Четыре", "Пять");
+        List<String> strings = Arrays.asList("Трижды", "Три", "Триста", "Три тысячи");
         boolean result = strings
                 .stream()
-                .anyMatch(element -> element.endsWith("ь"));
+                .allMatch(element -> element.startsWith("Три"));
         System.out.println(result);
     }
 }
