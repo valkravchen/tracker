@@ -25,5 +25,13 @@ public class ReduceExample {
                         (left, right) -> left + right
                 );
         System.out.println(sum);
+
+        int min = people.parallelStream()
+                .reduce(
+                        0,
+                        (left, right) -> left + right.getAge(),
+                        Integer::min
+                );
+        System.out.println(min);
     }
 }
