@@ -7,7 +7,7 @@ public class MatchExample {
         List<String> strings = Arrays.asList("Один", "Два", "Три", "Четыре", "Пять");
         boolean result = strings
                 .stream()
-                .noneMatch("Шесть"::contains);
+                .anyMatch(element -> element.endsWith("ь"));
         System.out.println(result);
     }
 }
