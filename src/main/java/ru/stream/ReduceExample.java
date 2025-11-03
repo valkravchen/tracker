@@ -1,20 +1,29 @@
 package ru.stream;
 
+import ru.stream.mapto.Person;
+
 import java.util.*;
 
 public class ReduceExample {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(1, 2, 3, 4);
-        Optional<Integer> sum = numbers.stream()
-                        .reduce(Integer::sum);
-        System.out.println(sum.get());
-
-        List<String> nums = List.of("Один", "Два", "Три");
-        Optional<String> sum1 = nums.stream()
-                .reduce((left, right) -> left + ", " + right);
-        System.out.println(sum1.get());
-        int sum2 = numbers.stream()
-                .reduce(2, (a, b) -> a + b);
-        System.out.println(sum2);
+        List<Person> people = Arrays.asList(
+                new Person("Михаил", 35),
+                new Person("Ольга", 26),
+                new Person("Антон", 20),
+                new Person("Виктор", 16),
+                new Person("Анна", 29)
+        );
+        int sum = people.stream()
+                .reduce(0,
+                        (left, right) -> {
+                            if (right.getAge() > 25) {
+                                return left + right.getAge();
+                            } else {
+                                return left;
+                            }
+                        },
+                        (left, right) -> left + right
+                );
+        System.out.println(sum);
     }
 }
