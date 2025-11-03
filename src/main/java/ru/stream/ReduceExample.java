@@ -13,5 +13,8 @@ public class ReduceExample {
         Optional<String> sum1 = nums.stream()
                 .reduce((left, right) -> left + ", " + right);
         System.out.println(sum1.get());
+        int sum2 = numbers.stream()
+                .reduce(2, (a, b) -> a + b);
+        System.out.println(sum2);
     }
 }
