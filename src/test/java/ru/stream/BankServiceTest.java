@@ -16,9 +16,9 @@ class BankServiceTest {
                         new Account("123321", 100D)
                 )
         );
-        User result = new BankService(users).findByPassport("123");
+        Optional<User> result = new BankService(users).findByPassport("123");
         User expected = new User("123", "name_1");
-        assertThat(result).isEqualTo(expected);
+        assertThat(result.get()).isEqualTo(expected);
     }
 
     @Test
@@ -29,8 +29,8 @@ class BankServiceTest {
                         new Account("123321", 100D)
                 )
         );
-        User result = new BankService(users).findByPassport("321");
-        assertThat(result).isNull();
+        Optional<User> result = new BankService(users).findByPassport("321");
+        assertThat(result).isEmpty();
     }
 
     @Test
@@ -41,9 +41,9 @@ class BankServiceTest {
                         new Account("123321", 100D)
                 )
         );
-        Account result = new BankService(users).findByRequisite("123", "321123");
+        Optional<Account> result = new BankService(users).findByRequisite("123", "321123");
         Account expected = new Account("321123", 200D);
-        assertThat(result).isEqualTo(expected);
+        assertThat(result.get()).isEqualTo(expected);
     }
 
     @Test
@@ -54,7 +54,7 @@ class BankServiceTest {
                         new Account("123321", 100D)
                 )
         );
-        Account result = new BankService(users).findByRequisite("123", "123456");
-        assertThat(result).isNull();
+        Optional<Account> result = new BankService(users).findByRequisite("123", "123456");
+        assertThat(result).isEmpty();
     }
 }

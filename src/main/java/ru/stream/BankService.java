@@ -9,23 +9,18 @@ public class BankService {
         this.users = users;
     }
 
-    public User findByPassport(String passport) {
+    public Optional<User> findByPassport(String passport) {
         return users.keySet()
                 .stream()
                 .filter(user -> user.passport().equals(passport))
-                .findFirst()
-                .orElse(null);
+                .findFirst();
     }
 
-    public Account findByRequisite(String passport, String requisite) {
-        User user = findByPassport(passport);
-        if (user == null) {
-            return null;
-        }
-        return users.get(user)
+    public Optional<Account> findByRequisite(String passport, String requisite) {
+        return findByPassport(passport)
+                .flatMap(user -> users.get(user)
                 .stream()
                 .filter(account -> account.requisite().equals(requisite))
-                .findFirst()
-                .orElse(null);
+                .findFirst());
     }
 }
