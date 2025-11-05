@@ -25,4 +25,4 @@ class PriorityQueueTest {
         var result = queue.take();
         assertThat(result.getDescription()).isEqualTo("low");
     }
-}//
+}

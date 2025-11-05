@@ -39,4 +39,4 @@ public class PriorityQueue {
     public Task take() {
         return tasks.poll();
     }
-}//
+}
