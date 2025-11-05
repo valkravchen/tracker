@@ -23,4 +23,4 @@ public class College {
                 .filter(subject -> subject.name().equals(name))
                 .findFirst());
     }
-}//
+}

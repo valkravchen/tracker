@@ -96,4 +96,4 @@ class CollegeTest {
         College college = new College(students);
         assertThat(college.findBySubjectName("000002", "Sociology").get().score()).isEqualTo(65);
     }
-}//
+}
