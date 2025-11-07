@@ -59,7 +59,7 @@ public class Analyze {
                 ))
                 .entrySet()
                 .stream()
-                .map(entry-> new Tuple(entry.getKey(), entry.getValue()))
+                .map(entry -> new Tuple(entry.getKey(), entry.getValue()))
                 .max(Comparator.comparingDouble(Tuple::score))
                 .orElse(new Tuple("", 0.0));
     }
