@@ -5,9 +5,9 @@ import java.util.*;
 public class FilteringApples {
     public static void main(String[] args) {
         List<Apple> inventory = List.of(
-                new Apple(80, "green" ),
-                new Apple(155, "green" ),
-                new Apple(120, "red" )
+                new Apple(80, "green"),
+                new Apple(155, "green"),
+                new Apple(120, "red")
         );
 
         System.out.println(filterGreenApples(inventory));
