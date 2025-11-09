@@ -14,6 +14,16 @@ public class FilteringApples {
         System.out.println(greenApples);
         List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);
         System.out.println(heavyApples);
+        List<Apple> greenApples2 = filterApples(inventory, (Apple apple) ->
+                "green".equals(apple.getColor()));
+        System.out.println(greenApples2);
+        List<Apple> heavyApples2 = filterApples(inventory, (Apple apple) ->
+                apple.getWeight() > 150);
+        System.out.println(heavyApples2);
+        List<Apple> weirdApples = filterApples(inventory, (Apple apple) ->
+                apple.getWeight() < 80 || "red".equals(apple.getColor())
+        );
+        System.out.println(weirdApples);
     }
 
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
