@@ -1,17 +1,19 @@
 package ru.modernjavainaction.chap01;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class FilteringApples {
     public static void main(String[] args) {
         List<Apple> inventory = List.of(
-                new Apple(80, "green"),
-                new Apple(155, "green"),
-                new Apple(120, "red")
+                new Apple(80, "green" ),
+                new Apple(155, "green" ),
+                new Apple(120, "red" )
         );
-
-        System.out.println(filterGreenApples(inventory));
-        System.out.println(filterHeavyApples(inventory));
+        List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
+        System.out.println(greenApples);
+        List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApple);
+        System.out.println(heavyApples);
     }
 
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
@@ -40,6 +42,16 @@ public class FilteringApples {
 
     public static boolean isHeavyApple(Apple apple) {
         return apple.getWeight() > 150;
+    }
+
+    public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (predicate.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
     }
 
     public static class Apple {
