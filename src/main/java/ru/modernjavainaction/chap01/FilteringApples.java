@@ -1,7 +1,6 @@
 package ru.modernjavainaction.chap01;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class FilteringApples {
     public static void main(String[] args) {
@@ -10,7 +9,9 @@ public class FilteringApples {
                 new Apple(155, "green" ),
                 new Apple(120, "red" )
         );
+
         System.out.println(filterGreenApples(inventory));
+        System.out.println(filterHeavyApples(inventory));
     }
 
     public static List<Apple> filterGreenApples(List<Apple> inventory) {
@@ -21,6 +22,24 @@ public class FilteringApples {
             }
         }
         return result;
+    }
+
+    public static List<Apple> filterHeavyApples(List<Apple> inventory) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if (apple.getWeight() > 150) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+    public static boolean isGreenApple(Apple apple) {
+        return "green".equals(apple.getColor());
+    }
+
+    public static boolean isHeavyApple(Apple apple) {
+        return apple.getWeight() > 150;
     }
 
     public static class Apple {
