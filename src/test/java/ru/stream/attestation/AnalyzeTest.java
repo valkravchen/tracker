@@ -3,6 +3,7 @@ package ru.stream.attestation;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.offset;
@@ -109,7 +110,7 @@ class AnalyzeTest {
 
     @Test
     public void whenBestPupil() {
-        Tuple best = Analyze.bestStudent(
+        Optional<Tuple> best = Analyze.bestStudent(
                 List.of(
                         new Pupil("Ivanov",
                                 List.of(
@@ -134,12 +135,12 @@ class AnalyzeTest {
                         )
                 ).stream()
         );
-        assertThat(best).isEqualTo(new Tuple("Ivanov", 240D));
+        assertThat(best.get()).isEqualTo(new Tuple("Ivanov", 240D));
     }
 
     @Test
     public void whenBestSubject() {
-        Tuple best = Analyze.bestSubject(
+       Optional<Tuple> best = Analyze.bestSubject(
                 List.of(
                         new Pupil("Ivanov",
                                 List.of(
@@ -164,6 +165,6 @@ class AnalyzeTest {
                         )
                 ).stream()
         );
-        assertThat(best).isEqualTo(new Tuple("Math", 250D));
+        assertThat(best.get()).isEqualTo(new Tuple("Math", 250D));
     }
 }

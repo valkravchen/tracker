@@ -6,8 +6,7 @@ import java.util.stream.*;
 public class Analyze {
     public static double averageScore(Stream<Pupil> stream) {
         return stream
-                .map(Pupil::subjects)
-                .flatMap(Collection::stream)
+                .flatMap(pupil -> pupil.subjects().stream())
                 .mapToInt(Subject::score)
                 .average()
                 .orElse(0.0);
@@ -15,14 +14,15 @@ public class Analyze {
 
     public static List<Tuple> averageScoreByPupil(Stream<Pupil> stream) {
         return stream
-                .map(pupil -> new Tuple(
-                        pupil.name(),
-                        pupil.subjects()
-                                .stream()
-                                .mapToInt(Subject::score)
-                                .average()
-                                .orElse(0D)
-                )).toList();
+                .map(pupil -> new Tuple(pupil.name(), averageScore(pupil)))
+                .toList();
+    }
+
+    private static double averageScore(Pupil pupil) {
+        return pupil.subjects().stream()
+                .mapToInt(Subject::score)
+                .average()
+                .orElse(0D);
     }
 
     public static List<Tuple> averageScoreBySubject(Stream<Pupil> stream) {
@@ -35,22 +35,22 @@ public class Analyze {
                 .entrySet()
                 .stream()
                 .map(entry -> new Tuple(entry.getKey(), entry.getValue()))
-                .collect(Collectors.toList());
+                .toList();
     }
 
-    public static Tuple bestStudent(Stream<Pupil> stream) {
+    public static Optional<Tuple> bestStudent(Stream<Pupil> stream) {
         return stream
-                .map(pupil -> new Tuple(
-                        pupil.name(),
-                        pupil.subjects().stream()
-                                .mapToInt(Subject::score)
-                                .sum()
-                ))
-                .max(Comparator.comparingDouble(Tuple::score))
-                .orElse(new Tuple("", 0D));
+                .map(pupil -> new Tuple(pupil.name(), totalScore(pupil)))
+                .max(Comparator.comparingDouble(Tuple::score));
     }
 
-    public static Tuple bestSubject(Stream<Pupil> stream) {
+    private static int totalScore(Pupil pupil) {
+        return pupil.subjects().stream()
+                .mapToInt(Subject::score)
+                .sum();
+    }
+
+    public static Optional<Tuple> bestSubject(Stream<Pupil> stream) {
         return stream
                 .flatMap(pupil -> pupil.subjects().stream())
                 .collect(Collectors.groupingBy(
@@ -60,8 +60,7 @@ public class Analyze {
                 .entrySet()
                 .stream()
                 .map(entry -> new Tuple(entry.getKey(), entry.getValue()))
-                .max(Comparator.comparingDouble(Tuple::score))
-                .orElse(new Tuple("", 0.0));
+                .max(Comparator.comparingDouble(Tuple::score));
     }
 }
 
