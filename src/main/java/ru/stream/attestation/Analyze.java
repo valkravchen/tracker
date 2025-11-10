@@ -62,6 +62,6 @@ public class Analyze {
                 .map(entry -> new Tuple(entry.getKey(), entry.getValue()))
                 .max(Comparator.comparingDouble(Tuple::score));
     }
-}//
+}
 
 

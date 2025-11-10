@@ -167,4 +167,4 @@ class AnalyzeTest {
         );
         assertThat(best.get()).isEqualTo(new Tuple("Math", 250D));
     }
-}//
+}
